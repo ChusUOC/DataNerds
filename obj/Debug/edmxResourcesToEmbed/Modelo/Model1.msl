@@ -20,6 +20,7 @@
           <ScalarProperty Name="fechaFactura" ColumnName="fechaFactura" />
           <ScalarProperty Name="precioTotal" ColumnName="precioTotal" />
           <ScalarProperty Name="servicioID" ColumnName="servicioID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -29,6 +30,7 @@
           <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
           <ScalarProperty Name="tipoHabitacion" ColumnName="tipoHabitacion" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipoID" ColumnName="tipoID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -39,6 +41,9 @@
           <ScalarProperty Name="firmado" ColumnName="firmado" />
           <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
           <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="NIF" ColumnName="NIF" />
+          <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
+          <ScalarProperty Name="temporadaID" ColumnName="temporadaID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -48,6 +53,7 @@
           <ScalarProperty Name="idServicio" ColumnName="idServicio" />
           <ScalarProperty Name="precioServicio" ColumnName="precioServicio" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipoServicioID" ColumnName="tipoServicioID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -104,53 +110,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="FK_Reservas_Clientes" TypeName="HotelSQLModel.FK_Reservas_Clientes" StoreEntitySet="Reservas">
-      <EndProperty Name="Clientes">
-        <ScalarProperty Name="NIF" ColumnName="NIF" />
-      </EndProperty>
-      <EndProperty Name="Reservas">
-        <ScalarProperty Name="ID" ColumnName="ID" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="FK_Factura_Reservas" TypeName="HotelSQLModel.FK_Factura_Reservas" StoreEntitySet="Factura">
-      <EndProperty Name="Reservas">
-        <ScalarProperty Name="ID" ColumnName="ID" />
-      </EndProperty>
-      <EndProperty Name="Factura">
-        <ScalarProperty Name="numeroFactura" ColumnName="numeroFactura" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="FK_Habitacion_TipoHabitacion" TypeName="HotelSQLModel.FK_Habitacion_TipoHabitacion" StoreEntitySet="Habitacion">
-      <EndProperty Name="TipoHabitacion">
-        <ScalarProperty Name="tipoID" ColumnName="tipoID" />
-      </EndProperty>
-      <EndProperty Name="Habitacion">
-        <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="FK_Reservas_Habitacion" TypeName="HotelSQLModel.FK_Reservas_Habitacion" StoreEntitySet="Reservas">
-      <EndProperty Name="Habitacion">
-        <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
-      </EndProperty>
-      <EndProperty Name="Reservas">
-        <ScalarProperty Name="ID" ColumnName="ID" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="FK_Reservas_Temporada" TypeName="HotelSQLModel.FK_Reservas_Temporada" StoreEntitySet="Reservas">
-      <EndProperty Name="Temporada">
-        <ScalarProperty Name="temporadaID" ColumnName="temporadaID" />
-      </EndProperty>
-      <EndProperty Name="Reservas">
-        <ScalarProperty Name="ID" ColumnName="ID" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="FK_Servicio_TipoServicio" TypeName="HotelSQLModel.FK_Servicio_TipoServicio" StoreEntitySet="Servicio">
-      <EndProperty Name="TipoServicio">
-        <ScalarProperty Name="tipoServicioID" ColumnName="tipoServicioID" />
-      </EndProperty>
-      <EndProperty Name="Servicio">
-        <ScalarProperty Name="idServicio" ColumnName="idServicio" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -23,6 +23,7 @@ namespace Producto_2.Modelo
         public int idServicio { get; set; }
         public Nullable<double> precioServicio { get; set; }
         public string descripcion { get; set; }
+        public int tipoServicioID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HistoricoServicios> HistoricoServicios { get; set; }

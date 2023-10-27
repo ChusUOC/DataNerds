@@ -25,6 +25,9 @@ namespace Producto_2.Modelo
         public Nullable<byte> firmado { get; set; }
         public Nullable<System.DateTime> fechaEntrada { get; set; }
         public Nullable<System.DateTime> fechaSalida { get; set; }
+        public string NIF { get; set; }
+        public int numeroHabitacion { get; set; }
+        public int temporadaID { get; set; }
     
         public virtual Clientes Clientes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
