@@ -1,0 +1,9 @@
+<clientes>
+  <cliente>
+    <NIF>777777777777777</NIF>
+    <nombre>UOC</nombre>
+    <apellidos>Jesuitas</apellidos>
+    <telefono>uoc</telefono>
+    <email>uoc@uoc.com</email>
+  </cliente>
+ </clientes>
