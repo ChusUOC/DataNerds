@@ -1,0 +1,15 @@
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.AssemblyReference.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.Properties.Resources.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.Vista.Form2.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.GenerateResource.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.CoreCompileInputs.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\Producto_2.exe.config
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\Producto_2.exe
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\Producto_2.pdb
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\EntityFramework.dll
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\EntityFramework.xml
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.CopyComplete
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.exe
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.pdb

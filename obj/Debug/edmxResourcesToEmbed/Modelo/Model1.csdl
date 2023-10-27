@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelSQLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="NIF" />
+    </Key>
+    <Property Name="NIF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VIP" Type="Byte" />
+    <NavigationProperty Name="Reservas" Relationship="Self.FK_Reservas_Clientes" FromRole="Clientes" ToRole="Reservas" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="numeroFactura" />
+    </Key>
+    <Property Name="numeroFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fechaFactura" Type="DateTime" Precision="3" />
+    <Property Name="precioTotal" Type="Double" />
+    <Property Name="servicioID" Type="Int32" />
+    <NavigationProperty Name="Reservas" Relationship="Self.FK_Factura_Reservas" FromRole="Factura" ToRole="Reservas" />
+  </EntityType>
+  <EntityType Name="Habitacion">
+    <Key>
+      <PropertyRef Name="numeroHabitacion" />
+    </Key>
+    <Property Name="numeroHabitacion" Type="Int32" Nullable="false" />
+    <Property Name="tipoHabitacion" Type="Int32" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="TipoHabitacion1" Relationship="Self.FK_Habitacion_TipoHabitacion" FromRole="Habitacion" ToRole="TipoHabitacion" />
+    <NavigationProperty Name="Reservas" Relationship="Self.FK_Reservas_Habitacion" FromRole="Habitacion" ToRole="Reservas" />
+  </EntityType>
+  <EntityType Name="Reservas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firmado" Type="Byte" />
+    <Property Name="fechaEntrada" Type="DateTime" Precision="3" />
+    <Property Name="fechaSalida" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK_Reservas_Clientes" FromRole="Reservas" ToRole="Clientes" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK_Factura_Reservas" FromRole="Reservas" ToRole="Factura" />
+    <NavigationProperty Name="Habitacion" Relationship="Self.FK_Reservas_Habitacion" FromRole="Reservas" ToRole="Habitacion" />
+    <NavigationProperty Name="HistoricoServicios" Relationship="Self.FK_HistoricoServicios_Reservas" FromRole="Reservas" ToRole="HistoricoServicios" />
+    <NavigationProperty Name="Temporada" Relationship="Self.FK_Reservas_Temporada" FromRole="Reservas" ToRole="Temporada" />
+  </EntityType>
+  <EntityType Name="Servicio">
+    <Key>
+      <PropertyRef Name="idServicio" />
+    </Key>
+    <Property Name="idServicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="precioServicio" Type="Double" />
+    <Property Name="descripcion" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="HistoricoServicios" Relationship="Self.FK_HistoricoServicios_Servicio" FromRole="Servicio" ToRole="HistoricoServicios" />
+    <NavigationProperty Name="TipoServicio" Relationship="Self.FK_Servicio_TipoServicio" FromRole="Servicio" ToRole="TipoServicio" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Temporada">
+    <Key>
+      <PropertyRef Name="temporadaID" />
+    </Key>
+    <Property Name="temporadaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="45" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Reservas" Relationship="Self.FK_Reservas_Temporada" FromRole="Temporada" ToRole="Reservas" />
+  </EntityType>
+  <EntityType Name="TipoHabitacion">
+    <Key>
+      <PropertyRef Name="tipoID" />
+    </Key>
+    <Property Name="tipoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Habitacion" Relationship="Self.FK_Habitacion_TipoHabitacion" FromRole="TipoHabitacion" ToRole="Habitacion" />
+  </EntityType>
+  <EntityType Name="TipoServicio">
+    <Key>
+      <PropertyRef Name="tipoServicioID" />
+    </Key>
+    <Property Name="tipoServicioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Servicio" Relationship="Self.FK_Servicio_TipoServicio" FromRole="TipoServicio" ToRole="Servicio" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistoricoServicios">
+    <Key>
+      <PropertyRef Name="idServicio" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="historicoID" />
+    </Key>
+    <Property Name="idServicio" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="historicoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Reservas" Relationship="Self.FK_HistoricoServicios_Reservas" FromRole="HistoricoServicios" ToRole="Reservas" />
+    <NavigationProperty Name="Servicio" Relationship="Self.FK_HistoricoServicios_Servicio" FromRole="HistoricoServicios" ToRole="Servicio" />
+  </EntityType>
+  <Association Name="FK_Reservas_Clientes">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Factura_Reservas">
+    <End Role="Reservas" Type="Self.Reservas" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Habitacion_TipoHabitacion">
+    <End Role="TipoHabitacion" Type="Self.TipoHabitacion" Multiplicity="1" />
+    <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Reservas_Habitacion">
+    <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="1" />
+    <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_HistoricoServicios_Reservas">
+    <End Role="Reservas" Type="Self.Reservas" Multiplicity="1" />
+    <End Role="HistoricoServicios" Type="Self.HistoricoServicios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reservas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HistoricoServicios">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservas_Temporada">
+    <End Role="Temporada" Type="Self.Temporada" Multiplicity="1" />
+    <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_HistoricoServicios_Servicio">
+    <End Role="Servicio" Type="Self.Servicio" Multiplicity="1" />
+    <End Role="HistoricoServicios" Type="Self.HistoricoServicios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio">
+        <PropertyRef Name="idServicio" />
+      </Principal>
+      <Dependent Role="HistoricoServicios">
+        <PropertyRef Name="idServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Servicio_TipoServicio">
+    <End Role="TipoServicio" Type="Self.TipoServicio" Multiplicity="1" />
+    <End Role="Servicio" Type="Self.Servicio" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="dbHotelSQLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" />
+    <EntitySet Name="Habitacion" EntityType="Self.Habitacion" />
+    <EntitySet Name="Reservas" EntityType="Self.Reservas" />
+    <EntitySet Name="Servicio" EntityType="Self.Servicio" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Temporada" EntityType="Self.Temporada" />
+    <EntitySet Name="TipoHabitacion" EntityType="Self.TipoHabitacion" />
+    <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="HistoricoServicios" EntityType="Self.HistoricoServicios" />
+    <AssociationSet Name="FK_Reservas_Clientes" Association="Self.FK_Reservas_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Reservas" EntitySet="Reservas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_Reservas" Association="Self.FK_Factura_Reservas">
+      <End Role="Reservas" EntitySet="Reservas" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Habitacion_TipoHabitacion" Association="Self.FK_Habitacion_TipoHabitacion">
+      <End Role="TipoHabitacion" EntitySet="TipoHabitacion" />
+      <End Role="Habitacion" EntitySet="Habitacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservas_Habitacion" Association="Self.FK_Reservas_Habitacion">
+      <End Role="Habitacion" EntitySet="Habitacion" />
+      <End Role="Reservas" EntitySet="Reservas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoricoServicios_Reservas" Association="Self.FK_HistoricoServicios_Reservas">
+      <End Role="Reservas" EntitySet="Reservas" />
+      <End Role="HistoricoServicios" EntitySet="HistoricoServicios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservas_Temporada" Association="Self.FK_Reservas_Temporada">
+      <End Role="Temporada" EntitySet="Temporada" />
+      <End Role="Reservas" EntitySet="Reservas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoricoServicios_Servicio" Association="Self.FK_HistoricoServicios_Servicio">
+      <End Role="Servicio" EntitySet="Servicio" />
+      <End Role="HistoricoServicios" EntitySet="HistoricoServicios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Servicio_TipoServicio" Association="Self.FK_Servicio_TipoServicio">
+      <End Role="TipoServicio" EntitySet="TipoServicio" />
+      <End Role="Servicio" EntitySet="Servicio" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
