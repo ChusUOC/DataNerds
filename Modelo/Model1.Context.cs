@@ -30,7 +30,6 @@ namespace Producto_2.Modelo
         public virtual DbSet<Habitacion> Habitacion { get; set; }
         public virtual DbSet<Reservas> Reservas { get; set; }
         public virtual DbSet<Servicio> Servicio { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Temporada> Temporada { get; set; }
         public virtual DbSet<TipoHabitacion> TipoHabitacion { get; set; }
         public virtual DbSet<TipoServicio> TipoServicio { get; set; }
