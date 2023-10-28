@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.inicioBtn = new System.Windows.Forms.Button();
             this.ClientesBtn = new System.Windows.Forms.Button();
             this.reservasVtb = new System.Windows.Forms.Button();
             this.habitacionesBtn = new System.Windows.Forms.Button();
@@ -55,28 +54,21 @@
             this.modClienteBtn = new System.Windows.Forms.Button();
             this.labelNombre = new System.Windows.Forms.Label();
             this.grpClientes = new System.Windows.Forms.GroupBox();
-            this.chkVIP = new System.Windows.Forms.CheckBox();
+            this.btnImportar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnImportar = new System.Windows.Forms.Button();
+            this.chkVIP = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dbGrid)).BeginInit();
             this.grpClientes.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // inicioBtn
-            // 
-            this.inicioBtn.Location = new System.Drawing.Point(64, 12);
-            this.inicioBtn.Name = "inicioBtn";
-            this.inicioBtn.Size = new System.Drawing.Size(69, 60);
-            this.inicioBtn.TabIndex = 3;
-            this.inicioBtn.Text = "Inicio";
-            this.inicioBtn.UseVisualStyleBackColor = true;
             // 
             // ClientesBtn
             // 
             this.ClientesBtn.Location = new System.Drawing.Point(139, 12);
             this.ClientesBtn.Name = "ClientesBtn";
-            this.ClientesBtn.Size = new System.Drawing.Size(69, 60);
+            this.ClientesBtn.Size = new System.Drawing.Size(0, 0);
             this.ClientesBtn.TabIndex = 4;
             this.ClientesBtn.Text = "Clientes";
             this.ClientesBtn.UseVisualStyleBackColor = true;
@@ -84,54 +76,60 @@
             // 
             // reservasVtb
             // 
+            this.reservasVtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reservasVtb.Location = new System.Drawing.Point(214, 12);
             this.reservasVtb.Name = "reservasVtb";
-            this.reservasVtb.Size = new System.Drawing.Size(69, 60);
+            this.reservasVtb.Size = new System.Drawing.Size(74, 42);
             this.reservasVtb.TabIndex = 5;
             this.reservasVtb.Text = "Reservas";
             this.reservasVtb.UseVisualStyleBackColor = true;
             // 
             // habitacionesBtn
             // 
+            this.habitacionesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.habitacionesBtn.Location = new System.Drawing.Point(289, 12);
             this.habitacionesBtn.Name = "habitacionesBtn";
-            this.habitacionesBtn.Size = new System.Drawing.Size(69, 60);
+            this.habitacionesBtn.Size = new System.Drawing.Size(74, 42);
             this.habitacionesBtn.TabIndex = 6;
             this.habitacionesBtn.Text = "Habitaciones";
             this.habitacionesBtn.UseVisualStyleBackColor = true;
             // 
             // SrvidioBtn
             // 
+            this.SrvidioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SrvidioBtn.Location = new System.Drawing.Point(364, 12);
             this.SrvidioBtn.Name = "SrvidioBtn";
-            this.SrvidioBtn.Size = new System.Drawing.Size(69, 60);
+            this.SrvidioBtn.Size = new System.Drawing.Size(74, 42);
             this.SrvidioBtn.TabIndex = 7;
             this.SrvidioBtn.Text = "Servicio";
             this.SrvidioBtn.UseVisualStyleBackColor = true;
             // 
             // facturasBtn
             // 
+            this.facturasBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.facturasBtn.Location = new System.Drawing.Point(439, 12);
             this.facturasBtn.Name = "facturasBtn";
-            this.facturasBtn.Size = new System.Drawing.Size(69, 60);
+            this.facturasBtn.Size = new System.Drawing.Size(74, 42);
             this.facturasBtn.TabIndex = 8;
             this.facturasBtn.Text = "Facturas";
             this.facturasBtn.UseVisualStyleBackColor = true;
             // 
             // incidenciasbtn
             // 
+            this.incidenciasbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incidenciasbtn.Location = new System.Drawing.Point(514, 12);
             this.incidenciasbtn.Name = "incidenciasbtn";
-            this.incidenciasbtn.Size = new System.Drawing.Size(69, 60);
+            this.incidenciasbtn.Size = new System.Drawing.Size(74, 42);
             this.incidenciasbtn.TabIndex = 9;
             this.incidenciasbtn.Text = "Insidencias";
             this.incidenciasbtn.UseVisualStyleBackColor = true;
             // 
             // Usuariosbtn
             // 
+            this.Usuariosbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuariosbtn.Location = new System.Drawing.Point(589, 12);
             this.Usuariosbtn.Name = "Usuariosbtn";
-            this.Usuariosbtn.Size = new System.Drawing.Size(69, 60);
+            this.Usuariosbtn.Size = new System.Drawing.Size(74, 42);
             this.Usuariosbtn.TabIndex = 10;
             this.Usuariosbtn.Text = "Usuarios";
             this.Usuariosbtn.UseVisualStyleBackColor = true;
@@ -139,9 +137,10 @@
             // 
             // ajustesbtn
             // 
+            this.ajustesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ajustesbtn.Location = new System.Drawing.Point(664, 12);
             this.ajustesbtn.Name = "ajustesbtn";
-            this.ajustesbtn.Size = new System.Drawing.Size(69, 60);
+            this.ajustesbtn.Size = new System.Drawing.Size(74, 42);
             this.ajustesbtn.TabIndex = 11;
             this.ajustesbtn.Text = "Ajustes";
             this.ajustesbtn.UseVisualStyleBackColor = true;
@@ -158,9 +157,9 @@
             // 
             // addCliente
             // 
-            this.addCliente.Location = new System.Drawing.Point(318, 62);
+            this.addCliente.Location = new System.Drawing.Point(493, 329);
             this.addCliente.Name = "addCliente";
-            this.addCliente.Size = new System.Drawing.Size(75, 23);
+            this.addCliente.Size = new System.Drawing.Size(139, 22);
             this.addCliente.TabIndex = 29;
             this.addCliente.Text = "Añadir Cliente";
             this.addCliente.UseVisualStyleBackColor = true;
@@ -168,7 +167,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(118, 328);
+            this.deleteButton.Location = new System.Drawing.Point(49, 328);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(118, 23);
             this.deleteButton.TabIndex = 30;
@@ -197,7 +196,7 @@
             // 
             // textBoxNIF
             // 
-            this.textBoxNIF.Location = new System.Drawing.Point(100, 378);
+            this.textBoxNIF.Location = new System.Drawing.Point(74, 378);
             this.textBoxNIF.Name = "textBoxNIF";
             this.textBoxNIF.Size = new System.Drawing.Size(95, 20);
             this.textBoxNIF.TabIndex = 33;
@@ -213,7 +212,7 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(198, 378);
+            this.textBoxNombre.Location = new System.Drawing.Point(172, 378);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(92, 20);
             this.textBoxNombre.TabIndex = 36;
@@ -229,7 +228,7 @@
             // 
             // textBoxApellido
             // 
-            this.textBoxApellido.Location = new System.Drawing.Point(296, 378);
+            this.textBoxApellido.Location = new System.Drawing.Point(270, 378);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(92, 20);
             this.textBoxApellido.TabIndex = 38;
@@ -245,7 +244,7 @@
             // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(394, 378);
+            this.textBoxTelefono.Location = new System.Drawing.Point(368, 378);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(92, 20);
             this.textBoxTelefono.TabIndex = 40;
@@ -261,14 +260,14 @@
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(492, 378);
+            this.textBoxMail.Location = new System.Drawing.Point(466, 378);
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(92, 20);
             this.textBoxMail.TabIndex = 42;
             // 
             // delClienteBtn
             // 
-            this.delClienteBtn.Location = new System.Drawing.Point(254, 328);
+            this.delClienteBtn.Location = new System.Drawing.Point(183, 328);
             this.delClienteBtn.Name = "delClienteBtn";
             this.delClienteBtn.Size = new System.Drawing.Size(139, 23);
             this.delClienteBtn.TabIndex = 43;
@@ -278,7 +277,7 @@
             // 
             // modClienteBtn
             // 
-            this.modClienteBtn.Location = new System.Drawing.Point(411, 328);
+            this.modClienteBtn.Location = new System.Drawing.Point(338, 328);
             this.modClienteBtn.Name = "modClienteBtn";
             this.modClienteBtn.Size = new System.Drawing.Size(139, 23);
             this.modClienteBtn.TabIndex = 44;
@@ -307,6 +306,7 @@
             this.grpClientes.Controls.Add(this.textBoxMail);
             this.grpClientes.Controls.Add(this.labelMail);
             this.grpClientes.Controls.Add(this.textBoxTelefono);
+            this.grpClientes.Controls.Add(this.addCliente);
             this.grpClientes.Controls.Add(this.labelTelefono);
             this.grpClientes.Controls.Add(this.textBoxApellido);
             this.grpClientes.Controls.Add(this.labelApellido);
@@ -316,7 +316,6 @@
             this.grpClientes.Controls.Add(this.txtBuscarCli);
             this.grpClientes.Controls.Add(this.labelDClientes);
             this.grpClientes.Controls.Add(this.deleteButton);
-            this.grpClientes.Controls.Add(this.addCliente);
             this.grpClientes.Controls.Add(this.dbGrid);
             this.grpClientes.Location = new System.Drawing.Point(64, 78);
             this.grpClientes.Name = "grpClientes";
@@ -325,19 +324,19 @@
             this.grpClientes.TabStop = false;
             this.grpClientes.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // chkVIP
+            // btnImportar
             // 
-            this.chkVIP.AutoSize = true;
-            this.chkVIP.Location = new System.Drawing.Point(589, 378);
-            this.chkVIP.Name = "chkVIP";
-            this.chkVIP.Size = new System.Drawing.Size(43, 17);
-            this.chkVIP.TabIndex = 46;
-            this.chkVIP.Text = "VIP";
-            this.chkVIP.UseVisualStyleBackColor = true;
+            this.btnImportar.Location = new System.Drawing.Point(373, 59);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(87, 23);
+            this.btnImportar.TabIndex = 29;
+            this.btnImportar.Text = "Importar XML";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(497, 59);
+            this.btnExportar.Location = new System.Drawing.Point(471, 59);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(87, 23);
             this.btnExportar.TabIndex = 48;
@@ -356,15 +355,36 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // btnImportar
+            // chkVIP
             // 
-            this.btnImportar.Location = new System.Drawing.Point(497, 30);
-            this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(87, 23);
-            this.btnImportar.TabIndex = 29;
-            this.btnImportar.Text = "Importar XML";
-            this.btnImportar.UseVisualStyleBackColor = true;
-            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
+            this.chkVIP.AutoSize = true;
+            this.chkVIP.Location = new System.Drawing.Point(563, 378);
+            this.chkVIP.Name = "chkVIP";
+            this.chkVIP.Size = new System.Drawing.Size(43, 17);
+            this.chkVIP.TabIndex = 46;
+            this.chkVIP.Text = "VIP";
+            this.chkVIP.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(64, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(74, 42);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Inicio";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(139, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(74, 42);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Clientes";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.ClientesBtn_Click);
             // 
             // Form2
             // 
@@ -380,8 +400,9 @@
             this.Controls.Add(this.SrvidioBtn);
             this.Controls.Add(this.habitacionesBtn);
             this.Controls.Add(this.reservasVtb);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.ClientesBtn);
-            this.Controls.Add(this.inicioBtn);
+            this.Controls.Add(this.button2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -393,7 +414,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button inicioBtn;
         private System.Windows.Forms.Button ClientesBtn;
         private System.Windows.Forms.Button reservasVtb;
         private System.Windows.Forms.Button habitacionesBtn;
@@ -424,5 +444,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnImportar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
