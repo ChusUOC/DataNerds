@@ -43,3 +43,18 @@ C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.csproj
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.exe
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.pdb
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\bin\Debug\Producto_2.exe.config
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\bin\Debug\Producto_2.exe
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\bin\Debug\Producto_2.pdb
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\bin\Debug\EntityFramework.dll
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\bin\Debug\EntityFramework.xml
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\obj\Debug\Producto_2.csproj.AssemblyReference.cache
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\obj\Debug\Producto_2.Properties.Resources.resources
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\obj\Debug\Producto_2.Vista.Form2.resources
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\obj\Debug\Producto_2.csproj.GenerateResource.cache
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\obj\Debug\Producto_2.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\obj\Debug\Producto_2.exe
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\DataNerds\obj\Debug\Producto_2.pdb
