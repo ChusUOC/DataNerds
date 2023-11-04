@@ -31,6 +31,8 @@
           <ScalarProperty Name="tipoHabitacion" ColumnName="tipoHabitacion" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="tipoID" ColumnName="tipoID" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fueraServicio" ColumnName="fueraServicio" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

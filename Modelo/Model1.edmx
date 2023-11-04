@@ -16,13 +16,6 @@
           <Property Name="email" Type="varchar" MaxLength="50" />
           <Property Name="VIP" Type="tinyint" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'HotelSQL.dbo.EstadoHabitacion' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="EstadoHabitacion">
-          <Property Name="habitacion" Type="int" />
-          <Property Name="fueraServicio" Type="tinyint" />
-          <Property Name="estado" Type="varchar" MaxLength="50" />
-        </EntityType>-->
         <EntityType Name="Factura">
           <Key>
             <PropertyRef Name="numeroFactura" />
@@ -41,6 +34,8 @@ advertencia 6013: La tabla o vista 'HotelSQL.dbo.EstadoHabitacion' no tiene defi
           <Property Name="tipoHabitacion" Type="int" />
           <Property Name="descripcion" Type="nchar" MaxLength="200" />
           <Property Name="tipoID" Type="int" Nullable="false" />
+          <Property Name="estado" Type="varchar" MaxLength="50" />
+          <Property Name="fueraServicio" Type="tinyint" />
         </EntityType>
         <EntityType Name="historicoReservas">
           <Key>
@@ -318,6 +313,8 @@ advertencia 6013: La tabla o vista 'HotelSQL.dbo.Incidencias' no tiene definida 
           <Property Name="tipoHabitacion" Type="Int32" />
           <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
           <Property Name="tipoID" Type="Int32" Nullable="false" />
+          <Property Name="estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fueraServicio" Type="Byte" />
           <NavigationProperty Name="TipoHabitacion1" Relationship="Self.FK_Habitacion_TipoHabitacion" FromRole="Habitacion" ToRole="TipoHabitacion" />
           <NavigationProperty Name="Reservas" Relationship="Self.FK_Reservas_Habitacion" FromRole="Habitacion" ToRole="Reservas" />
         </EntityType>
@@ -593,6 +590,8 @@ advertencia 6013: La tabla o vista 'HotelSQL.dbo.Incidencias' no tiene definida 
                 <ScalarProperty Name="tipoHabitacion" ColumnName="tipoHabitacion" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="tipoID" ColumnName="tipoID" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="fueraServicio" ColumnName="fueraServicio" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

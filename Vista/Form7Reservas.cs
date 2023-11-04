@@ -17,5 +17,19 @@ namespace Producto_2.Vista
             InitializeComponent();
         }
 
+        private void Form7Reservas_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void Form7Reservas_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'confirmacionDS.historicoReservas' Puede moverla o quitarla según sea necesario.
+            this.historicoReservasTableAdapter2.Fill(this.confirmacionDS.historicoReservas);
+            // TODO: esta línea de código carga datos en la tabla 'checkInDS.historicoReservas' Puede moverla o quitarla según sea necesario.
+            this.historicoReservasTableAdapter1.Fill(this.checkInDS.historicoReservas);
+            // TODO: esta línea de código carga datos en la tabla 'checkoutDS.historicoReservas' Puede moverla o quitarla según sea necesario.
+            this.historicoReservasTableAdapter.Fill(this.checkoutDS.historicoReservas);
+
+        }
     }
 }
