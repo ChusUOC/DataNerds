@@ -43,3 +43,19 @@ C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.csproj
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.exe
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.pdb
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.csproj.AssemblyReference.cache
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.Properties.Resources.resources
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.Vista.Form2.resources
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.Vista.FormMenuInicioAdmin.resources
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.csproj.GenerateResource.cache
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.csproj.CoreCompileInputs.cache
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.exe
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.pdb
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\Producto_2.exe.config
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\Producto_2.exe
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\Producto_2.pdb
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\EntityFramework.dll
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\EntityFramework.xml
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.csproj.CopyComplete

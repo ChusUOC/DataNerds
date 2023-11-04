@@ -28,6 +28,7 @@ namespace Producto_2.Modelo
         public virtual DbSet<Clientes> Clientes { get; set; }
         public virtual DbSet<Factura> Factura { get; set; }
         public virtual DbSet<Habitacion> Habitacion { get; set; }
+        public virtual DbSet<historicoReservas> historicoReservas { get; set; }
         public virtual DbSet<Reservas> Reservas { get; set; }
         public virtual DbSet<Servicio> Servicio { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
