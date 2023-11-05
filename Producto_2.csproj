@@ -56,26 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\ClienteControlador.cs" />
-    <Compile Include="HotelSQLDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelSQLDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HotelSQLDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelSQLDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HotelSQLDataSet21.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelSQLDataSet21.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HotelSQLDataSet31.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelSQLDataSet31.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Modelo\Clientes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -83,6 +63,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Habitacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\historicoReservas.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\HistoricoServicios.cs">
@@ -132,11 +115,23 @@
     <Compile Include="Vista\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Form7Reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Form7Reservas.Designer.cs">
+      <DependentUpon>Form7Reservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormMenuInicioAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\FormMenuInicioAdmin.Designer.cs">
       <DependentUpon>FormMenuInicioAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormServicios11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormServicios11.Designer.cs">
+      <DependentUpon>FormServicios11.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,58 +146,20 @@
     <EmbeddedResource Include="Vista\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Form7Reservas.resx">
+      <DependentUpon>Form7Reservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormMenuInicioAdmin.resx">
       <DependentUpon>FormMenuInicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormServicios11.resx">
+      <DependentUpon>FormServicios11.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.Config" />
-    <None Include="HotelSQLDataSet.xsc">
-      <DependentUpon>HotelSQLDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSQLDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelSQLDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelSQLDataSet.xss">
-      <DependentUpon>HotelSQLDataSet.xsd</DependentUpon>
-    </None>
     <EntityDeploy Include="Modelo\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="HotelSQLDataSet1.xsc">
-      <DependentUpon>HotelSQLDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSQLDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelSQLDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelSQLDataSet1.xss">
-      <DependentUpon>HotelSQLDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSQLDataSet21.xsc">
-      <DependentUpon>HotelSQLDataSet21.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSQLDataSet21.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelSQLDataSet21.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelSQLDataSet21.xss">
-      <DependentUpon>HotelSQLDataSet21.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSQLDataSet31.xsc">
-      <DependentUpon>HotelSQLDataSet31.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSQLDataSet31.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelSQLDataSet31.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelSQLDataSet31.xss">
-      <DependentUpon>HotelSQLDataSet31.xsd</DependentUpon>
-    </None>
     <None Include="Modelo\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -230,7 +187,9 @@
     <None Include="icons\eye.png" />
     <None Include="icons\eyeRS.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataSets\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Modelo\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

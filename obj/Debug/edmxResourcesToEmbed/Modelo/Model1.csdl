@@ -34,6 +34,18 @@
     <NavigationProperty Name="TipoHabitacion1" Relationship="Self.FK_Habitacion_TipoHabitacion" FromRole="Habitacion" ToRole="TipoHabitacion" />
     <NavigationProperty Name="Reservas" Relationship="Self.FK_Reservas_Habitacion" FromRole="Habitacion" ToRole="Reservas" />
   </EntityType>
+  <EntityType Name="historicoReservas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="habitacion" Type="Int32" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="entrada" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="salida" Type="DateTime" Precision="0" />
+    <Property Name="estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idIncidencia" Type="Int32" />
+  </EntityType>
   <EntityType Name="Reservas">
     <Key>
       <PropertyRef Name="ID" />
@@ -216,6 +228,7 @@
     <EntitySet Name="Clientes" EntityType="Self.Clientes" />
     <EntitySet Name="Factura" EntityType="Self.Factura" />
     <EntitySet Name="Habitacion" EntityType="Self.Habitacion" />
+    <EntitySet Name="historicoReservas" EntityType="Self.historicoReservas" />
     <EntitySet Name="Reservas" EntityType="Self.Reservas" />
     <EntitySet Name="Servicio" EntityType="Self.Servicio" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />

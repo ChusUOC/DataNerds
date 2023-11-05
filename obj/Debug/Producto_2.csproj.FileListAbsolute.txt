@@ -76,4 +76,9 @@ C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Product
 C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\EntityFramework.xml
 C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.csproj.CopyComplete
+<<<<<<< HEAD
 >>>>>>> f026f26... Added form of admin window
+=======
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.Vista.Form7Reservas.resources
+C:\Users\jjoya\Desktop\FPC2\TÉCNICAS DE PERSISTENCIA DE DATOS\producto2\Producto_2\Producto2\obj\Debug\Producto_2.Vista.FormServicios11.resources
+>>>>>>> bd9792e... Added VIEW 7 + 11

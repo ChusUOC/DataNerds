@@ -10,15 +10,12 @@ using System.Windows.Forms;
 
 namespace Producto_2.Vista
 {
-    public partial class FormMenuInicioAdmin : Form
+    public partial class Form7Reservas : Form
     {
-        public FormMenuInicioAdmin()
+        public Form7Reservas()
         {
             InitializeComponent();
         }
 
-        private void FormMenuInicioAdmin_Load(object sender, EventArgs e)
-        {
-        }
     }
 }

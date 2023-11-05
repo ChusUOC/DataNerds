@@ -34,6 +34,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="historicoReservas">
+      <EntityTypeMapping TypeName="HotelSQLModel.historicoReservas">
+        <MappingFragment StoreEntitySet="historicoReservas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="habitacion" ColumnName="habitacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="entrada" ColumnName="entrada" />
+          <ScalarProperty Name="salida" ColumnName="salida" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idIncidencia" ColumnName="idIncidencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Reservas">
       <EntityTypeMapping TypeName="HotelSQLModel.Reservas">
         <MappingFragment StoreEntitySet="Reservas">
