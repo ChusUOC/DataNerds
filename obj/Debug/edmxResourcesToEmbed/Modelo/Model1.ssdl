@@ -11,6 +11,13 @@
     <Property Name="email" Type="varchar" MaxLength="50" />
     <Property Name="VIP" Type="tinyint" />
   </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'HotelSQL.dbo.EstadoHabitacion' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="EstadoHabitacion">
+          <Property Name="habitacion" Type="int" />
+          <Property Name="fueraServicio" Type="tinyint" />
+          <Property Name="estado" Type="varchar" MaxLength="50" />
+        </EntityType>-->
   <EntityType Name="Factura">
     <Key>
       <PropertyRef Name="numeroFactura" />
@@ -30,11 +37,18 @@
     <Property Name="descripcion" Type="nchar" MaxLength="200" />
     <Property Name="tipoID" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'HotelSQL.dbo.historicoReservas' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="historicoReservas">
-          <Property Name="id" Type="nchar" MaxLength="10" />
-        </EntityType>-->
+  <EntityType Name="historicoReservas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="habitacion" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="entrada" Type="nchar" MaxLength="10" />
+    <Property Name="salida" Type="date" />
+    <Property Name="estado" Type="varchar" MaxLength="50" />
+    <Property Name="idIncidencia" Type="int" />
+  </EntityType>
   <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="HistoricoServicios">
@@ -50,7 +64,7 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
   <!--Errores durante la generación:
 advertencia 6013: La tabla o vista 'HotelSQL.dbo.Incidencias' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
         <EntityType Name="Incidencias">
-          <Property Name="id" Type="int" />
+          <Property Name="idIncidencia" Type="int" />
           <Property Name="descripcion" Type="varchar" MaxLength="50" />
           <Property Name="resulta" Type="tinyint" />
           <Property Name="tipo" Type="varchar" MaxLength="50" />
@@ -215,6 +229,7 @@ advertencia 6013: La tabla o vista 'HotelSQL.dbo.Incidencias' no tiene definida 
     <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Habitacion" EntityType="Self.Habitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="historicoReservas" EntityType="Self.historicoReservas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Reservas" EntityType="Self.Reservas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Servicio" EntityType="Self.Servicio" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />

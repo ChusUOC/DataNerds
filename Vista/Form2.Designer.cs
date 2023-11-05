@@ -57,8 +57,8 @@
             this.grpClientes = new System.Windows.Forms.GroupBox();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.chkVIP = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dbGrid)).BeginInit();
             this.grpClientes.SuspendLayout();
             this.SuspendLayout();
@@ -354,6 +354,16 @@
             this.btnExportar.UseVisualStyleBackColor = true;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
+            // chkVIP
+            // 
+            this.chkVIP.AutoSize = true;
+            this.chkVIP.Location = new System.Drawing.Point(563, 378);
+            this.chkVIP.Name = "chkVIP";
+            this.chkVIP.Size = new System.Drawing.Size(43, 17);
+            this.chkVIP.TabIndex = 46;
+            this.chkVIP.Text = "VIP";
+            this.chkVIP.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::Producto_2.Properties.Resources.lupa;
@@ -364,16 +374,6 @@
             this.button1.TabIndex = 47;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // chkVIP
-            // 
-            this.chkVIP.AutoSize = true;
-            this.chkVIP.Location = new System.Drawing.Point(563, 378);
-            this.chkVIP.Name = "chkVIP";
-            this.chkVIP.Size = new System.Drawing.Size(43, 17);
-            this.chkVIP.TabIndex = 46;
-            this.chkVIP.Text = "VIP";
-            this.chkVIP.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 

@@ -17,7 +17,7 @@ namespace Producto_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form miFormulario = new FormMenuInicioAdmin();
+            Form miFormulario = new Form7Reservas();
             Application.Run(miFormulario);
         }
     }
