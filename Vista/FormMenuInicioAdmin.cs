@@ -19,8 +19,8 @@ namespace Producto_2.Vista
 
         private void FormMenuInicioAdmin_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'hotelSQLDataSet.Habitacion' Puede moverla o quitarla según sea necesario.
-            this.habitacionTableAdapter.Fill(this.hotelSQLDataSet.Habitacion);
+            // TODO: esta línea de código carga datos en la tabla 'estadoHabDS.Habitacion' Puede moverla o quitarla según sea necesario.
+            this.habitacionTableAdapter.Fill(this.estadoHabDS.Habitacion);
             // TODO: esta línea de código carga datos en la tabla 'historicoRDS.historicoReservas' Puede moverla o quitarla según sea necesario.
             this.historicoReservasTableAdapter.Fill(this.historicoRDS.historicoReservas);
             // TODO: esta línea de código carga datos en la tabla 'incidenciasDS.Incidencias' Puede moverla o quitarla según sea necesario.

@@ -40,9 +40,9 @@
             this.grpBoxAmin = new System.Windows.Forms.GroupBox();
             this.checkoutLBL = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.habitacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.habitacionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hgridHistoricoReservas = new System.Windows.Forms.DataGridView();
-            this.historicoReservasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.historicoReservasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.gridIncidencias = new System.Windows.Forms.DataGridView();
             this.idIncidenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -68,6 +68,8 @@
             this.incidenciasLBL = new System.Windows.Forms.Label();
             this.historicoReservasLBL = new System.Windows.Forms.Label();
             this.usuarioEditBtn = new System.Windows.Forms.Button();
+            this.habitacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.historicoReservasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.estadoHabitacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.historicoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.incidenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -77,41 +79,42 @@
             this.incidenciasTableAdapter = new Producto_2.incidenciasDSTableAdapters.IncidenciasTableAdapter();
             this.historicoReservasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.historicoRDS = new Producto_2.historicoRDS();
-            this.historicoReservasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.historicoReservasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.historicoReservasTableAdapter = new Producto_2.historicoRDSTableAdapters.historicoReservasTableAdapter();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facturaBtn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.hotelSQLDataSet = new Producto_2.HotelSQLDataSet();
-            this.habitacionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.habitacionTableAdapter = new Producto_2.HotelSQLDataSetTableAdapters.HabitacionTableAdapter();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generarFacturaBtn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.estadoHabDS = new Producto_2.estadoHabDS();
+            this.habitacionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.habitacionTableAdapter = new Producto_2.estadoHabDSTableAdapters.HabitacionTableAdapter();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoHabitacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.grpBoxAmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hgridHistoricoReservas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridIncidencias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoHabitacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoRDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelSQLDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoHabDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // ajustesbtn
@@ -234,40 +237,39 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn22});
-            this.dataGridView1.DataSource = this.habitacionBindingSource1;
+            this.dataGridViewTextBoxColumn28,
+            this.tipoHabitacionDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30});
+            this.dataGridView1.DataSource = this.habitacionBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(367, 230);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(284, 149);
+            this.dataGridView1.Size = new System.Drawing.Size(359, 149);
             this.dataGridView1.TabIndex = 16;
             // 
-            // habitacionBindingSource
+            // habitacionBindingSource1
             // 
-            this.habitacionBindingSource.DataMember = "Habitacion";
+            this.habitacionBindingSource1.DataMember = "Habitacion";
             // 
             // hgridHistoricoReservas
             // 
             this.hgridHistoricoReservas.AutoGenerateColumns = false;
             this.hgridHistoricoReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hgridHistoricoReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.facturaBtn});
-            this.hgridHistoricoReservas.DataSource = this.historicoReservasBindingSource3;
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.generarFacturaBtn});
+            this.hgridHistoricoReservas.DataSource = this.historicoReservasBindingSource4;
             this.hgridHistoricoReservas.Location = new System.Drawing.Point(361, 37);
             this.hgridHistoricoReservas.Name = "hgridHistoricoReservas";
-            this.hgridHistoricoReservas.Size = new System.Drawing.Size(411, 152);
+            this.hgridHistoricoReservas.Size = new System.Drawing.Size(403, 152);
             this.hgridHistoricoReservas.TabIndex = 15;
             // 
-            // historicoReservasBindingSource1
+            // historicoReservasBindingSource3
             // 
-            this.historicoReservasBindingSource1.DataMember = "historicoReservas";
+            this.historicoReservasBindingSource3.DataMember = "historicoReservas";
             // 
             // gridIncidencias
             // 
@@ -384,7 +386,7 @@
             // 
             // userTXTBX
             // 
-            this.userTXTBX.Location = new System.Drawing.Point(616, 390);
+            this.userTXTBX.Location = new System.Drawing.Point(652, 393);
             this.userTXTBX.Name = "userTXTBX";
             this.userTXTBX.Size = new System.Drawing.Size(100, 20);
             this.userTXTBX.TabIndex = 11;
@@ -394,7 +396,7 @@
             // adminLBL
             // 
             this.adminLBL.AutoSize = true;
-            this.adminLBL.Location = new System.Drawing.Point(529, 393);
+            this.adminLBL.Location = new System.Drawing.Point(565, 398);
             this.adminLBL.Name = "adminLBL";
             this.adminLBL.Size = new System.Drawing.Size(81, 13);
             this.adminLBL.TabIndex = 10;
@@ -496,6 +498,14 @@
             this.usuarioEditBtn.UseMnemonic = false;
             this.usuarioEditBtn.UseVisualStyleBackColor = false;
             // 
+            // habitacionBindingSource
+            // 
+            this.habitacionBindingSource.DataMember = "Habitacion";
+            // 
+            // historicoReservasBindingSource1
+            // 
+            this.historicoReservasBindingSource1.DataMember = "historicoReservas";
+            // 
             // estadoHabitacionBindingSource
             // 
             this.estadoHabitacionBindingSource.DataMember = "EstadoHabitacion";
@@ -535,101 +545,92 @@
             this.historicoRDS.DataSetName = "historicoRDS";
             this.historicoRDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // historicoReservasBindingSource3
+            // historicoReservasBindingSource4
             // 
-            this.historicoReservasBindingSource3.DataMember = "historicoReservas";
-            this.historicoReservasBindingSource3.DataSource = this.historicoRDS;
+            this.historicoReservasBindingSource4.DataMember = "historicoReservas";
+            this.historicoReservasBindingSource4.DataSource = this.historicoRDS;
             // 
             // historicoReservasTableAdapter
             // 
             this.historicoReservasTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn15
+            // dataGridViewTextBoxColumn24
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn15.HeaderText = "id";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Width = 35;
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn24.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 30;
             // 
-            // dataGridViewTextBoxColumn16
+            // dataGridViewTextBoxColumn25
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "habitacion";
-            this.dataGridViewTextBoxColumn16.HeaderText = "HAB";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 35;
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "habitacion";
+            this.dataGridViewTextBoxColumn25.HeaderText = "NumH";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Width = 60;
             // 
-            // dataGridViewTextBoxColumn17
+            // dataGridViewTextBoxColumn26
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn17.HeaderText = "nombre";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Width = 90;
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn26.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Width = 150;
             // 
-            // dataGridViewTextBoxColumn18
+            // dataGridViewTextBoxColumn27
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "entrada";
-            this.dataGridViewTextBoxColumn18.HeaderText = "entrada";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.Width = 60;
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "salida";
+            this.dataGridViewTextBoxColumn27.HeaderText = "salida";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.Width = 80;
             // 
-            // dataGridViewTextBoxColumn19
+            // generarFacturaBtn
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "salida";
-            this.dataGridViewTextBoxColumn19.HeaderText = "salida";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.Width = 60;
+            this.generarFacturaBtn.HeaderText = "FCT";
+            this.generarFacturaBtn.Name = "generarFacturaBtn";
+            this.generarFacturaBtn.Width = 40;
             // 
-            // dataGridViewTextBoxColumn20
+            // estadoHabDS
             // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "estado";
-            this.dataGridViewTextBoxColumn20.HeaderText = "estado";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Width = 60;
+            this.estadoHabDS.DataSetName = "estadoHabDS";
+            this.estadoHabDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // facturaBtn
+            // habitacionBindingSource2
             // 
-            this.facturaBtn.HeaderText = "FCT";
-            this.facturaBtn.Name = "facturaBtn";
-            this.facturaBtn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.facturaBtn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.facturaBtn.Width = 30;
-            // 
-            // hotelSQLDataSet
-            // 
-            this.hotelSQLDataSet.DataSetName = "HotelSQLDataSet";
-            this.hotelSQLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // habitacionBindingSource1
-            // 
-            this.habitacionBindingSource1.DataMember = "Habitacion";
-            this.habitacionBindingSource1.DataSource = this.hotelSQLDataSet;
+            this.habitacionBindingSource2.DataMember = "Habitacion";
+            this.habitacionBindingSource2.DataSource = this.estadoHabDS;
             // 
             // habitacionTableAdapter
             // 
             this.habitacionTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn21
+            // dataGridViewTextBoxColumn28
             // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "numeroHabitacion";
-            this.dataGridViewTextBoxColumn21.HeaderText = "NUM";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Width = 40;
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "numeroHabitacion";
+            this.dataGridViewTextBoxColumn28.HeaderText = "NumH";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.Width = 60;
             // 
-            // dataGridViewTextBoxColumn23
+            // tipoHabitacionDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "fueraServicio";
-            this.dataGridViewTextBoxColumn23.HeaderText = "OUT";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tipoHabitacionDataGridViewTextBoxColumn.DataPropertyName = "tipoHabitacion";
+            this.tipoHabitacionDataGridViewTextBoxColumn.HeaderText = "tipoHabitacion";
+            this.tipoHabitacionDataGridViewTextBoxColumn.Name = "tipoHabitacionDataGridViewTextBoxColumn";
             // 
-            // dataGridViewTextBoxColumn22
+            // dataGridViewTextBoxColumn29
             // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "estado";
-            this.dataGridViewTextBoxColumn22.HeaderText = "estado";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn29.HeaderText = "estado";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "fueraServicio";
+            this.dataGridViewTextBoxColumn30.HeaderText = "OUT";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn30.Width = 50;
             // 
             // FormMenuInicioAdmin
             // 
@@ -653,24 +654,26 @@
             this.grpBoxAmin.ResumeLayout(false);
             this.grpBoxAmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hgridHistoricoReservas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridIncidencias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoHabitacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoRDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelSQLDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoHabDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -750,21 +753,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.BindingSource historicoReservasBindingSource2;
-        private historicoRDS historicoRDS;
         private System.Windows.Forms.BindingSource historicoReservasBindingSource3;
-        private historicoRDSTableAdapters.historicoReservasTableAdapter historicoReservasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewButtonColumn facturaBtn;
-        private HotelSQLDataSet hotelSQLDataSet;
         private System.Windows.Forms.BindingSource habitacionBindingSource1;
-        private HotelSQLDataSetTableAdapters.HabitacionTableAdapter habitacionTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn22;
+        private historicoRDS historicoRDS;
+        private System.Windows.Forms.BindingSource historicoReservasBindingSource4;
+        private historicoRDSTableAdapters.historicoReservasTableAdapter historicoReservasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewButtonColumn generarFacturaBtn;
+        private estadoHabDS estadoHabDS;
+        private System.Windows.Forms.BindingSource habitacionBindingSource2;
+        private estadoHabDSTableAdapters.HabitacionTableAdapter habitacionTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoHabitacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn30;
     }
 }
