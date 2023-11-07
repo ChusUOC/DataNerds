@@ -19,6 +19,8 @@ namespace Producto_2.Vista
 
         private void FormServicios11_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'serviciosDS.Servicio' Puede moverla o quitarla según sea necesario.
+            this.servicioTableAdapter.Fill(this.serviciosDS.Servicio);
 
         }
     }

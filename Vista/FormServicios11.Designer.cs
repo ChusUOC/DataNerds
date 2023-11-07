@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpClientes = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.facturasBtn = new System.Windows.Forms.Button();
             this.ajustesbtn = new System.Windows.Forms.Button();
             this.Usuariosbtn = new System.Windows.Forms.Button();
@@ -39,24 +41,38 @@
             this.reservasVtb = new System.Windows.Forms.Button();
             this.ClientesBtn = new System.Windows.Forms.Button();
             this.inicioBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TEMPORADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BAJA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MEDIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ALTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BAJA_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MEDIA_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ALTA_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tipoServicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviciosDS = new Producto_2.serviciosDS();
+            this.servicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.servicioTableAdapter = new Producto_2.serviciosDSTableAdapters.ServicioTableAdapter();
+            this.idServicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoServicioIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioAltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioBajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioMediaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.permisoAltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.permisoMediaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.permisoBajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descVIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEMPORADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MEDIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BAJA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ALTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioNocheG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dscVipG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addServiceBTN = new System.Windows.Forms.Button();
             this.grpClientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServicioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviciosDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grpClientes
             // 
+            this.grpClientes.Controls.Add(this.addServiceBTN);
             this.grpClientes.Controls.Add(this.dataGridView2);
             this.grpClientes.Controls.Add(this.dataGridView1);
             this.grpClientes.Location = new System.Drawing.Point(12, 94);
@@ -64,6 +80,46 @@
             this.grpClientes.Size = new System.Drawing.Size(778, 432);
             this.grpClientes.TabIndex = 29;
             this.grpClientes.TabStop = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idServicioDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.tipoServicioIDDataGridViewTextBoxColumn,
+            this.precioAltaDataGridViewTextBoxColumn,
+            this.precioBajaDataGridViewTextBoxColumn,
+            this.precioMediaDataGridViewTextBoxColumn,
+            this.permisoAltaDataGridViewTextBoxColumn,
+            this.permisoMediaDataGridViewTextBoxColumn,
+            this.permisoBajaDataGridViewTextBoxColumn,
+            this.descVIPDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.servicioBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 44);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(766, 281);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TEMPORADA,
+            this.MEDIA,
+            this.BAJA,
+            this.ALTA,
+            this.precioNocheG,
+            this.dscVipG});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(766, 29);
+            this.dataGridView1.TabIndex = 0;
             // 
             // facturasBtn
             // 
@@ -155,67 +211,140 @@
             this.inicioBtn.Text = "Inicio";
             this.inicioBtn.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TEMPORADA,
-            this.BAJA,
-            this.MEDIA,
-            this.ALTA,
-            this.BAJA_,
-            this.MEDIA_,
-            this.ALTA_});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(766, 39);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // TEMPORADA
-            // 
-            this.TEMPORADA.HeaderText = "TEMPORADA";
-            this.TEMPORADA.Name = "TEMPORADA";
-            // 
-            // BAJA
-            // 
-            this.BAJA.HeaderText = "BAJA";
-            this.BAJA.Name = "BAJA";
-            // 
-            // MEDIA
-            // 
-            this.MEDIA.HeaderText = "MEDIA";
-            this.MEDIA.Name = "MEDIA";
-            // 
-            // ALTA
-            // 
-            this.ALTA.HeaderText = "ALTA";
-            this.ALTA.Name = "ALTA";
-            // 
-            // BAJA_
-            // 
-            this.BAJA_.HeaderText = "BAJA";
-            this.BAJA_.Name = "BAJA_";
-            // 
-            // MEDIA_
-            // 
-            this.MEDIA_.HeaderText = "MEDIA";
-            this.MEDIA_.Name = "MEDIA_";
-            // 
-            // ALTA_
-            // 
-            this.ALTA_.HeaderText = "ALTA";
-            this.ALTA_.Name = "ALTA_";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 91);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(766, 281);
-            this.dataGridView2.TabIndex = 1;
             // tipoServicioBindingSource
             // 
             this.tipoServicioBindingSource.DataMember = "TipoServicio";
+            // 
+            // serviciosDS
+            // 
+            this.serviciosDS.DataSetName = "serviciosDS";
+            this.serviciosDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // servicioBindingSource
+            // 
+            this.servicioBindingSource.DataMember = "Servicio";
+            this.servicioBindingSource.DataSource = this.serviciosDS;
+            // 
+            // servicioTableAdapter
+            // 
+            this.servicioTableAdapter.ClearBeforeFill = true;
+            // 
+            // idServicioDataGridViewTextBoxColumn
+            // 
+            this.idServicioDataGridViewTextBoxColumn.DataPropertyName = "idServicio";
+            this.idServicioDataGridViewTextBoxColumn.HeaderText = "";
+            this.idServicioDataGridViewTextBoxColumn.Name = "idServicioDataGridViewTextBoxColumn";
+            this.idServicioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idServicioDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Temporada";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // tipoServicioIDDataGridViewTextBoxColumn
+            // 
+            this.tipoServicioIDDataGridViewTextBoxColumn.DataPropertyName = "tipoServicioID";
+            this.tipoServicioIDDataGridViewTextBoxColumn.HeaderText = "";
+            this.tipoServicioIDDataGridViewTextBoxColumn.Name = "tipoServicioIDDataGridViewTextBoxColumn";
+            // 
+            // precioAltaDataGridViewTextBoxColumn
+            // 
+            this.precioAltaDataGridViewTextBoxColumn.DataPropertyName = "precioAlta";
+            this.precioAltaDataGridViewTextBoxColumn.HeaderText = "Alta";
+            this.precioAltaDataGridViewTextBoxColumn.Name = "precioAltaDataGridViewTextBoxColumn";
+            this.precioAltaDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // precioBajaDataGridViewTextBoxColumn
+            // 
+            this.precioBajaDataGridViewTextBoxColumn.DataPropertyName = "precioBaja";
+            this.precioBajaDataGridViewTextBoxColumn.HeaderText = "Baja";
+            this.precioBajaDataGridViewTextBoxColumn.Name = "precioBajaDataGridViewTextBoxColumn";
+            this.precioBajaDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // precioMediaDataGridViewTextBoxColumn
+            // 
+            this.precioMediaDataGridViewTextBoxColumn.DataPropertyName = "precioMedia";
+            this.precioMediaDataGridViewTextBoxColumn.HeaderText = "Media";
+            this.precioMediaDataGridViewTextBoxColumn.Name = "precioMediaDataGridViewTextBoxColumn";
+            this.precioMediaDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // permisoAltaDataGridViewTextBoxColumn
+            // 
+            this.permisoAltaDataGridViewTextBoxColumn.DataPropertyName = "permisoAlta";
+            this.permisoAltaDataGridViewTextBoxColumn.HeaderText = "Alta";
+            this.permisoAltaDataGridViewTextBoxColumn.Name = "permisoAltaDataGridViewTextBoxColumn";
+            this.permisoAltaDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // permisoMediaDataGridViewTextBoxColumn
+            // 
+            this.permisoMediaDataGridViewTextBoxColumn.DataPropertyName = "permisoMedia";
+            this.permisoMediaDataGridViewTextBoxColumn.HeaderText = "Media";
+            this.permisoMediaDataGridViewTextBoxColumn.Name = "permisoMediaDataGridViewTextBoxColumn";
+            this.permisoMediaDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // permisoBajaDataGridViewTextBoxColumn
+            // 
+            this.permisoBajaDataGridViewTextBoxColumn.DataPropertyName = "permisoBaja";
+            this.permisoBajaDataGridViewTextBoxColumn.HeaderText = "Baja";
+            this.permisoBajaDataGridViewTextBoxColumn.Name = "permisoBajaDataGridViewTextBoxColumn";
+            this.permisoBajaDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // descVIPDataGridViewTextBoxColumn
+            // 
+            this.descVIPDataGridViewTextBoxColumn.DataPropertyName = "descVIP";
+            this.descVIPDataGridViewTextBoxColumn.HeaderText = "";
+            this.descVIPDataGridViewTextBoxColumn.Name = "descVIPDataGridViewTextBoxColumn";
+            this.descVIPDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // TEMPORADA
+            // 
+            this.TEMPORADA.HeaderText = "ID";
+            this.TEMPORADA.Name = "TEMPORADA";
+            this.TEMPORADA.ReadOnly = true;
+            this.TEMPORADA.Width = 40;
+            // 
+            // MEDIA
+            // 
+            this.MEDIA.HeaderText = "DESCRIPCION";
+            this.MEDIA.Name = "MEDIA";
+            this.MEDIA.ReadOnly = true;
+            // 
+            // BAJA
+            // 
+            this.BAJA.HeaderText = "TIPO";
+            this.BAJA.Name = "BAJA";
+            this.BAJA.ReadOnly = true;
+            // 
+            // ALTA
+            // 
+            this.ALTA.HeaderText = "PERMITIDO";
+            this.ALTA.Name = "ALTA";
+            this.ALTA.ReadOnly = true;
+            this.ALTA.Width = 210;
+            // 
+            // precioNocheG
+            // 
+            this.precioNocheG.HeaderText = "PRECIO NOCHE";
+            this.precioNocheG.Name = "precioNocheG";
+            this.precioNocheG.ReadOnly = true;
+            this.precioNocheG.Width = 210;
+            // 
+            // dscVipG
+            // 
+            this.dscVipG.HeaderText = "DESC VIP";
+            this.dscVipG.Name = "dscVipG";
+            this.dscVipG.ReadOnly = true;
+            // 
+            // addServiceBTN
+            // 
+            this.addServiceBTN.Location = new System.Drawing.Point(301, 353);
+            this.addServiceBTN.Name = "addServiceBTN";
+            this.addServiceBTN.Size = new System.Drawing.Size(197, 23);
+            this.addServiceBTN.TabIndex = 2;
+            this.addServiceBTN.Text = "Add nuevo servicio";
+            this.addServiceBTN.UseVisualStyleBackColor = true;
             // 
             // FormServicios11
             // 
@@ -237,9 +366,11 @@
             this.Text = "FormServicios11";
             this.Load += new System.EventHandler(this.FormServicios11_Load);
             this.grpClientes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviciosDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,13 +389,26 @@
         private System.Windows.Forms.Button inicioBtn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TEMPORADA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BAJA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MEDIA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ALTA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BAJA_;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MEDIA_;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ALTA_;
         private System.Windows.Forms.BindingSource tipoServicioBindingSource;
+        private serviciosDS serviciosDS;
+        private System.Windows.Forms.BindingSource servicioBindingSource;
+        private serviciosDSTableAdapters.ServicioTableAdapter servicioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoServicioIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioAltaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioBajaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioMediaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn permisoAltaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn permisoMediaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn permisoBajaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descVIPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEMPORADA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MEDIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BAJA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ALTA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioNocheG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dscVipG;
+        private System.Windows.Forms.Button addServiceBTN;
     }
 }
