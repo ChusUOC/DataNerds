@@ -57,8 +57,8 @@
             this.grpClientes = new System.Windows.Forms.GroupBox();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.chkVIP = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dbGrid)).BeginInit();
             this.grpClientes.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,7 @@
             this.inicioBtn.TabIndex = 3;
             this.inicioBtn.Text = "Inicio";
             this.inicioBtn.UseVisualStyleBackColor = true;
+            this.inicioBtn.Click += new System.EventHandler(this.inicioBtn_Click);
             // 
             // ClientesBtn
             // 
@@ -93,6 +94,7 @@
             this.reservasVtb.TabIndex = 5;
             this.reservasVtb.Text = "Reservas";
             this.reservasVtb.UseVisualStyleBackColor = true;
+            this.reservasVtb.Click += new System.EventHandler(this.reservasVtb_Click);
             // 
             // habitacionesBtn
             // 
@@ -113,6 +115,7 @@
             this.SrvidioBtn.TabIndex = 7;
             this.SrvidioBtn.Text = "Servicio";
             this.SrvidioBtn.UseVisualStyleBackColor = true;
+            this.SrvidioBtn.Click += new System.EventHandler(this.SrvidioBtn_Click);
             // 
             // facturasBtn
             // 
@@ -123,6 +126,7 @@
             this.facturasBtn.TabIndex = 8;
             this.facturasBtn.Text = "Facturas";
             this.facturasBtn.UseVisualStyleBackColor = true;
+            this.facturasBtn.Click += new System.EventHandler(this.facturasBtn_Click);
             // 
             // incidenciasbtn
             // 
@@ -133,6 +137,7 @@
             this.incidenciasbtn.TabIndex = 9;
             this.incidenciasbtn.Text = "Incidencias";
             this.incidenciasbtn.UseVisualStyleBackColor = true;
+            this.incidenciasbtn.Click += new System.EventHandler(this.incidenciasbtn_Click);
             // 
             // Usuariosbtn
             // 
@@ -354,6 +359,16 @@
             this.btnExportar.UseVisualStyleBackColor = true;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
+            // chkVIP
+            // 
+            this.chkVIP.AutoSize = true;
+            this.chkVIP.Location = new System.Drawing.Point(563, 378);
+            this.chkVIP.Name = "chkVIP";
+            this.chkVIP.Size = new System.Drawing.Size(43, 17);
+            this.chkVIP.TabIndex = 46;
+            this.chkVIP.Text = "VIP";
+            this.chkVIP.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::Producto_2.Properties.Resources.lupa;
@@ -364,16 +379,6 @@
             this.button1.TabIndex = 47;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // chkVIP
-            // 
-            this.chkVIP.AutoSize = true;
-            this.chkVIP.Location = new System.Drawing.Point(563, 378);
-            this.chkVIP.Name = "chkVIP";
-            this.chkVIP.Size = new System.Drawing.Size(43, 17);
-            this.chkVIP.TabIndex = 46;
-            this.chkVIP.Text = "VIP";
-            this.chkVIP.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 

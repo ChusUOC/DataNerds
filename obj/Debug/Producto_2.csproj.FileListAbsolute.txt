@@ -58,3 +58,6 @@ C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.csproj.CoreComp
 C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
 C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.exe
 C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.pdb
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.InterfazUsuario.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.InterfazReserva.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.InterfazFacturas.resources

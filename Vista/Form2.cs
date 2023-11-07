@@ -34,7 +34,13 @@ namespace Producto_2.Vista
 
         public void activarBtnMenu()
         {
+            inicioBtn.Enabled = true;
             ClientesBtn.Enabled = true;
+            reservasVtb.Enabled = true;
+            habitacionesBtn.Enabled = true;
+            SrvidioBtn.Enabled = true;
+            facturasBtn.Enabled = true;
+            incidenciasbtn.Enabled = true;
             Usuariosbtn.Enabled = true;
             ajustesbtn.Enabled = true;
         }
@@ -101,7 +107,7 @@ namespace Producto_2.Vista
             grpClientes.Visible = true;
             ClientesBtn.Enabled = false;
         }
-
+/*
         private void Usuariosbtn_Click(object sender, EventArgs e)
         {
             ocultarGrupos();
@@ -109,7 +115,7 @@ namespace Producto_2.Vista
 
             Usuariosbtn.Enabled = false;
         }
-
+*/
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -127,8 +133,9 @@ namespace Producto_2.Vista
         {
             ocultarGrupos();
             activarBtnMenu();
-
-            Usuariosbtn.Enabled = false;
+            InterfazUsuario interfazUsuario = new InterfazUsuario();
+            interfazUsuario.Show();
+ //           cerrarForm();
         }
 
         private void delClienteBtn_Click(object sender, EventArgs e)
@@ -295,6 +302,52 @@ namespace Producto_2.Vista
                 dbGrid.DataSource = controlador.ObtenerClientes();
             }
 
+        }
+
+        private void inicioBtn_Click(object sender, EventArgs e)
+        {
+            ocultarGrupos();
+            activarBtnMenu();
+
+ //           cerrarForm();
+        }
+
+        private void incidenciasbtn_Click(object sender, EventArgs e)
+        {
+            ocultarGrupos();
+            activarBtnMenu();
+
+//            cerrarForm();
+        }
+
+        private void facturasBtn_Click(object sender, EventArgs e)
+        {
+            ocultarGrupos();
+            activarBtnMenu();
+
+//            cerrarForm();
+        }
+
+        private void SrvidioBtn_Click(object sender, EventArgs e)
+        {
+            ocultarGrupos();
+            activarBtnMenu();
+
+ //           cerrarForm();
+        }
+
+ /*       private void cerrarForm()
+        {
+            this.Close();
+        }
+ */
+        private void reservasVtb_Click(object sender, EventArgs e)
+        {
+            ocultarGrupos();
+            activarBtnMenu();
+            InterfazReserva interfazReserva = new InterfazReserva();
+            interfazReserva.Show();
+            //           cerrarForm();
         }
     }       
 }
