@@ -55,27 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="checkInDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>checkInDS.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="checkoutDS1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>checkoutDS1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="confirmacionDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>confirmacionDS.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Controlador\ClienteControlador.cs" />
-    <Compile Include="incidenciasDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>incidenciasDS.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="Controlador\ClienteReservas7.cs" />
+    <Compile Include="Controlador\ControladorMenuAdmin2.cs" />
+    <Compile Include="Controlador\ServiciosControlador11.cs" />
     <Compile Include="Modelo\Clientes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -89,6 +72,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\HistoricoServicios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Incidencias.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Model1.Context.cs">
@@ -129,11 +115,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="usuarioDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usuarioDS.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Vista\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,55 +161,11 @@
     <EmbeddedResource Include="Vista\FormServicios11.resx">
       <DependentUpon>FormServicios11.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.Config" />
-    <None Include="checkInDS.xsc">
-      <DependentUpon>checkInDS.xsd</DependentUpon>
-    </None>
-    <None Include="checkInDS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>checkInDS.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="checkInDS.xss">
-      <DependentUpon>checkInDS.xsd</DependentUpon>
-    </None>
-    <None Include="checkoutDS1.xsc">
-      <DependentUpon>checkoutDS1.xsd</DependentUpon>
-    </None>
-    <None Include="checkoutDS1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>checkoutDS1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="checkoutDS1.xss">
-      <DependentUpon>checkoutDS1.xsd</DependentUpon>
-    </None>
-    <None Include="confirmacionDS.xsc">
-      <DependentUpon>confirmacionDS.xsd</DependentUpon>
-    </None>
-    <None Include="confirmacionDS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>confirmacionDS.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="confirmacionDS.xss">
-      <DependentUpon>confirmacionDS.xsd</DependentUpon>
-    </None>
-    <None Include="incidenciasDS.xsc">
-      <DependentUpon>incidenciasDS.xsd</DependentUpon>
-    </None>
-    <None Include="incidenciasDS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>incidenciasDS.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="incidenciasDS.xss">
-      <DependentUpon>incidenciasDS.xsd</DependentUpon>
-    </None>
     <EntityDeploy Include="Modelo\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="Modelo\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -242,17 +179,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="usuarioDS.xsc">
-      <DependentUpon>usuarioDS.xsd</DependentUpon>
-    </None>
-    <None Include="usuarioDS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>usuarioDS.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="usuarioDS.xss">
-      <DependentUpon>usuarioDS.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="lupa.png" />
