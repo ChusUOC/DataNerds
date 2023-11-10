@@ -29,6 +29,20 @@
     <Property Name="tipoHabitacion" Type="int" />
     <Property Name="descripcion" Type="nchar" MaxLength="200" />
     <Property Name="tipoID" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="50" />
+    <Property Name="fueraServicio" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="historicoReservas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="habitacion" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="entrada" Type="nchar" MaxLength="10" />
+    <Property Name="salida" Type="date" />
+    <Property Name="estado" Type="varchar" MaxLength="50" />
+    <Property Name="idIncidencia" Type="int" />
   </EntityType>
   <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -41,6 +55,15 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
     <Property Name="idServicio" Type="int" Nullable="false" />
     <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="historicoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Incidencias">
+    <Key>
+      <PropertyRef Name="idIncidencia" />
+    </Key>
+    <Property Name="idIncidencia" Type="int" Nullable="false" />
+    <Property Name="tipo" Type="varchar" MaxLength="50" />
+    <Property Name="detalle" Type="varchar" MaxLength="50" />
+    <Property Name="resuelta" Type="tinyint" />
   </EntityType>
   <EntityType Name="Reservas">
     <Key>
@@ -62,16 +85,13 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
     <Property Name="precioServicio" Type="float" />
     <Property Name="descripcion" Type="nchar" MaxLength="500" />
     <Property Name="tipoServicioID" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
+    <Property Name="precioAlta" Type="float" />
+    <Property Name="precioBaja" Type="float" />
+    <Property Name="precioMedia" Type="float" />
+    <Property Name="permisoAlta" Type="tinyint" />
+    <Property Name="permisoMedia" Type="tinyint" />
+    <Property Name="permisoBaja" Type="tinyint" />
+    <Property Name="descVIP" Type="float" />
   </EntityType>
   <EntityType Name="Temporada">
     <Key>
@@ -202,9 +222,10 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
     <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Habitacion" EntityType="Self.Habitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="historicoReservas" EntityType="Self.historicoReservas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Incidencias" EntityType="Self.Incidencias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Reservas" EntityType="Self.Reservas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Servicio" EntityType="Self.Servicio" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Temporada" EntityType="Self.Temporada" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoHabitacion" EntityType="Self.TipoHabitacion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" Schema="dbo" store:Type="Tables" />

@@ -12,12 +12,14 @@ namespace Producto_2.Modelo
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class historicoReservas
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int id { get; set; }
+        public Nullable<int> habitacion { get; set; }
+        public string nombre { get; set; }
+        public string entrada { get; set; }
+        public Nullable<System.DateTime> salida { get; set; }
+        public string estado { get; set; }
+        public Nullable<int> idIncidencia { get; set; }
     }
 }

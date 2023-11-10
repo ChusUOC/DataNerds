@@ -4,18 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="619047502f9f4e23a4af18147315ba08" Name="Diagram1">
-        <EntityTypeShape EntityType="HotelSQLModel.Clientes" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Factura" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Habitacion" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Reservas" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Servicio" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Temporada" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+      <Diagram DiagramId="2020960547d74890b940189d12d0e3dd" Name="Diagram1">
+        <EntityTypeShape EntityType="HotelSQLModel.Clientes" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Factura" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Habitacion" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.historicoReservas" Width="1.5" PointX="7.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Incidencias" Width="1.5" PointX="9.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Reservas" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Servicio" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Temporada" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HotelSQLModel.TipoHabitacion" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.TipoServicio" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Usuario" Width="1.5" PointX="7.75" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.HistoricoServicios" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.TipoServicio" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Usuario" Width="1.5" PointX="9.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.HistoricoServicios" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="HotelSQLModel.FK_Reservas_Clientes" ManuallyRouted="false" />
         <AssociationConnector Association="HotelSQLModel.FK_Factura_Reservas" ManuallyRouted="false" />
         <AssociationConnector Association="HotelSQLModel.FK_Habitacion_TipoHabitacion" ManuallyRouted="false" />

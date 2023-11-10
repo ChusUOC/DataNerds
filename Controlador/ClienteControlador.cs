@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using Microsoft.VisualBasic.FileIO;
+using Producto_2.Vista;
 
 namespace Producto_2.Controlador
 {
@@ -28,7 +30,6 @@ namespace Producto_2.Controlador
                 return db.Clientes.Where(c => c.nombre.Contains(nombre)).ToList();
             }
         }
-
         public void AgregarCliente(Clientes cliente)
         {
             using (dbHotelSQLEntities db = new dbHotelSQLEntities())
@@ -60,7 +61,6 @@ namespace Producto_2.Controlador
                 }
             }
         }
-
         public void EliminarCliente(string nif)
         {
             using (dbHotelSQLEntities db = new dbHotelSQLEntities())
@@ -83,7 +83,6 @@ namespace Producto_2.Controlador
                 }
             }
         }
-
         public void ActualizarCliente(String nif, string nombre, string apellidos, string email, string telefono, byte vipStatus)
         {
             using (dbHotelSQLEntities db = new dbHotelSQLEntities())
@@ -109,7 +108,6 @@ namespace Producto_2.Controlador
                 }
             }
         }
-
         public void ExportarClientesAXML(List<Clientes> listaClientes, string rutaArchivo)
         {
             XmlDocument xmlDoc = new XmlDocument();
@@ -146,7 +144,6 @@ namespace Producto_2.Controlador
 
             xmlDoc.Save(rutaArchivo);
         }
-
         public List<Clientes> ImportarXML(String rutaArchivo)
         {
             List<Clientes> listaClientes = new List<Clientes>();
@@ -169,5 +166,6 @@ namespace Producto_2.Controlador
             }
             return listaClientes;
         }
+
     }
 }

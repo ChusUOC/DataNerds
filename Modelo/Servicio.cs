@@ -24,6 +24,13 @@ namespace Producto_2.Modelo
         public Nullable<double> precioServicio { get; set; }
         public string descripcion { get; set; }
         public int tipoServicioID { get; set; }
+        public Nullable<double> precioAlta { get; set; }
+        public Nullable<double> precioBaja { get; set; }
+        public Nullable<double> precioMedia { get; set; }
+        public Nullable<byte> permisoAlta { get; set; }
+        public Nullable<byte> permisoMedia { get; set; }
+        public Nullable<byte> permisoBaja { get; set; }
+        public Nullable<double> descVIP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HistoricoServicios> HistoricoServicios { get; set; }
