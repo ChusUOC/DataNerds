@@ -1,14 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\bin",
-    "\\Controlador",
-    "\\Modelo",
-    "\\obj\\Debug",
-    "\\packages",
-    "\\Properties",
-    "\\Vista"
+    ""
   ],
-  "SelectedNode": "\\App.Config",
   "PreviewInSolutionExplorer": false
 }
