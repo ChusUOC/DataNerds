@@ -24,6 +24,8 @@ namespace Producto_2.Modelo
         public Nullable<int> tipoHabitacion { get; set; }
         public string descripcion { get; set; }
         public int tipoID { get; set; }
+        public string estado { get; set; }
+        public Nullable<byte> fueraServicio { get; set; }
     
         public virtual TipoHabitacion TipoHabitacion1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
