@@ -59,8 +59,14 @@
     <Compile Include="Controlador\ClienteControlador.cs" />
     <Compile Include="Controlador\ClienteReservas7.cs" />
     <Compile Include="Controlador\ControladorMenuAdmin2.cs" />
+    <Compile Include="Controlador\DatosHabitacionesControlador.cs" />
+    <Compile Include="Controlador\FacturaControlador.cs" />
+    <Compile Include="Controlador\HabitacionesControlador.cs" />
     <Compile Include="Controlador\mdiHotelSolControlador.cs" />
+    <Compile Include="Controlador\MenuInicioControlador.cs" />
+    <Compile Include="Controlador\ReservaControlador.cs" />
     <Compile Include="Controlador\ServiciosControlador11.cs" />
+    <Compile Include="Controlador\UsuarioControlador.cs" />
     <Compile Include="Controlador\UtenticacionControlador.cs" />
     <Compile Include="Modelo\Clientes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -95,10 +101,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\RegimenPension.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Reservas.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Servicio.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Temporada.cs">
@@ -145,6 +157,42 @@
     <Compile Include="Vista\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmDatosHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmDatosHabitaciones.Designer.cs">
+      <DependentUpon>FrmDatosHabitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmHabitaciones.Designer.cs">
+      <DependentUpon>FrmHabitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmMenuInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmMenuInicio.Designer.cs">
+      <DependentUpon>FrmMenuInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\InterfazFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\InterfazFacturas.Designer.cs">
+      <DependentUpon>InterfazFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\InterfazReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\InterfazReserva.Designer.cs">
+      <DependentUpon>InterfazReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\InterfazUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\InterfazUsuario.Designer.cs">
+      <DependentUpon>InterfazUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\mdiHotelSol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,14 +224,32 @@
     <EmbeddedResource Include="Vista\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmDatosHabitaciones.resx">
+      <DependentUpon>FrmDatosHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmHabitaciones.resx">
+      <DependentUpon>FrmHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmMenuInicio.resx">
+      <DependentUpon>FrmMenuInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\InterfazFacturas.resx">
+      <DependentUpon>InterfazFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\InterfazReserva.resx">
+      <DependentUpon>InterfazReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\InterfazUsuario.resx">
+      <DependentUpon>InterfazUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\mdiHotelSol.resx">
       <DependentUpon>mdiHotelSol.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.Config" />
     <EntityDeploy Include="Modelo\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="Modelo\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

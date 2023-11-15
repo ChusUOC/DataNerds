@@ -10,6 +10,16 @@
     <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="VIP" Type="Byte" />
+    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cp" Type="Int32" />
+    <Property Name="pais" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaN" Type="DateTime" Precision="0" />
+    <Property Name="detalle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nombreCuenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numeroCuenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaAlta" Type="DateTime" Precision="0" />
+    <Property Name="incidencias" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Reservas" Relationship="Self.FK_Reservas_Clientes" FromRole="Clientes" ToRole="Reservas" />
   </EntityType>
   <EntityType Name="Factura">
@@ -20,7 +30,8 @@
     <Property Name="fechaFactura" Type="DateTime" Precision="3" />
     <Property Name="precioTotal" Type="Double" />
     <Property Name="servicioID" Type="Int32" />
-    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="reservaID" Type="Int32" Nullable="false" />
+    <Property Name="idCliente" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Reservas" Relationship="Self.FK_Factura_Reservas" FromRole="Factura" ToRole="Reservas" />
   </EntityType>
   <EntityType Name="Habitacion">
@@ -38,15 +49,16 @@
   </EntityType>
   <EntityType Name="historicoReservas">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="reservaID" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="reservaID" Type="Int32" Nullable="false" />
     <Property Name="habitacion" Type="Int32" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="entrada" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="salida" Type="DateTime" Precision="0" />
     <Property Name="estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="idIncidencia" Type="Int32" />
+    <NavigationProperty Name="Reservas" Relationship="Self.FK_HistoricoReservas_Reservas" FromRole="historicoReservas" ToRole="Reservas" />
   </EntityType>
   <EntityType Name="Incidencias">
     <Key>
@@ -57,20 +69,32 @@
     <Property Name="detalle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="resuelta" Type="Byte" />
   </EntityType>
+  <EntityType Name="RegimenPension">
+    <Key>
+      <PropertyRef Name="pensionID" />
+    </Key>
+    <Property Name="pensionID" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="precio" Type="Double" />
+    <NavigationProperty Name="Reservas" Relationship="Self.FK_Regimen_Pension" FromRole="RegimenPension" ToRole="Reservas" />
+  </EntityType>
   <EntityType Name="Reservas">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="reservaID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="reservaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="firmado" Type="Byte" />
     <Property Name="fechaEntrada" Type="DateTime" Precision="3" />
     <Property Name="fechaSalida" Type="DateTime" Precision="3" />
     <Property Name="NIF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="numeroHabitacion" Type="Int32" Nullable="false" />
     <Property Name="temporadaID" Type="Int32" Nullable="false" />
+    <Property Name="pensionID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Clientes" Relationship="Self.FK_Reservas_Clientes" FromRole="Reservas" ToRole="Clientes" />
     <NavigationProperty Name="Factura" Relationship="Self.FK_Factura_Reservas" FromRole="Reservas" ToRole="Factura" />
     <NavigationProperty Name="Habitacion" Relationship="Self.FK_Reservas_Habitacion" FromRole="Reservas" ToRole="Habitacion" />
+    <NavigationProperty Name="historicoReservas" Relationship="Self.FK_HistoricoReservas_Reservas" FromRole="Reservas" ToRole="historicoReservas" />
+    <NavigationProperty Name="RegimenPension" Relationship="Self.FK_Regimen_Pension" FromRole="Reservas" ToRole="RegimenPension" />
     <NavigationProperty Name="HistoricoServicios" Relationship="Self.FK_HistoricoServicios_Reservas" FromRole="Reservas" ToRole="HistoricoServicios" />
     <NavigationProperty Name="Temporada" Relationship="Self.FK_Reservas_Temporada" FromRole="Reservas" ToRole="Temporada" />
   </EntityType>
@@ -91,6 +115,16 @@
     <Property Name="descVIP" Type="Double" />
     <NavigationProperty Name="HistoricoServicios" Relationship="Self.FK_HistoricoServicios_Servicio" FromRole="Servicio" ToRole="HistoricoServicios" />
     <NavigationProperty Name="TipoServicio" Relationship="Self.FK_Servicio_TipoServicio" FromRole="Servicio" ToRole="TipoServicio" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Temporada">
     <Key>
@@ -118,20 +152,20 @@
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="usuarioID" />
     </Key>
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
   <EntityType Name="HistoricoServicios">
     <Key>
       <PropertyRef Name="idServicio" />
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="reservaID" />
       <PropertyRef Name="historicoID" />
     </Key>
     <Property Name="idServicio" Type="Int32" Nullable="false" />
-    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="reservaID" Type="Int32" Nullable="false" />
     <Property Name="historicoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="Reservas" Relationship="Self.FK_HistoricoServicios_Reservas" FromRole="HistoricoServicios" ToRole="Reservas" />
     <NavigationProperty Name="Servicio" Relationship="Self.FK_HistoricoServicios_Servicio" FromRole="HistoricoServicios" ToRole="Servicio" />
@@ -153,10 +187,10 @@
     <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Reservas">
-        <PropertyRef Name="ID" />
+        <PropertyRef Name="reservaID" />
       </Principal>
       <Dependent Role="Factura">
-        <PropertyRef Name="ID" />
+        <PropertyRef Name="reservaID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -184,15 +218,39 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_HistoricoReservas_Reservas">
+    <End Role="Reservas" Type="Self.Reservas" Multiplicity="1" />
+    <End Role="historicoReservas" Type="Self.historicoReservas" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Reservas">
+        <PropertyRef Name="reservaID" />
+      </Principal>
+      <Dependent Role="historicoReservas">
+        <PropertyRef Name="reservaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Regimen_Pension">
+    <End Role="RegimenPension" Type="Self.RegimenPension" Multiplicity="1" />
+    <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegimenPension">
+        <PropertyRef Name="pensionID" />
+      </Principal>
+      <Dependent Role="Reservas">
+        <PropertyRef Name="pensionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_HistoricoServicios_Reservas">
     <End Role="Reservas" Type="Self.Reservas" Multiplicity="1" />
     <End Role="HistoricoServicios" Type="Self.HistoricoServicios" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Reservas">
-        <PropertyRef Name="ID" />
+        <PropertyRef Name="reservaID" />
       </Principal>
       <Dependent Role="HistoricoServicios">
-        <PropertyRef Name="ID" />
+        <PropertyRef Name="reservaID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -238,8 +296,10 @@
     <EntitySet Name="Habitacion" EntityType="Self.Habitacion" />
     <EntitySet Name="historicoReservas" EntityType="Self.historicoReservas" />
     <EntitySet Name="Incidencias" EntityType="Self.Incidencias" />
+    <EntitySet Name="RegimenPension" EntityType="Self.RegimenPension" />
     <EntitySet Name="Reservas" EntityType="Self.Reservas" />
     <EntitySet Name="Servicio" EntityType="Self.Servicio" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Temporada" EntityType="Self.Temporada" />
     <EntitySet Name="TipoHabitacion" EntityType="Self.TipoHabitacion" />
     <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" />
@@ -259,6 +319,14 @@
     </AssociationSet>
     <AssociationSet Name="FK_Reservas_Habitacion" Association="Self.FK_Reservas_Habitacion">
       <End Role="Habitacion" EntitySet="Habitacion" />
+      <End Role="Reservas" EntitySet="Reservas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoricoReservas_Reservas" Association="Self.FK_HistoricoReservas_Reservas">
+      <End Role="Reservas" EntitySet="Reservas" />
+      <End Role="historicoReservas" EntitySet="historicoReservas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Regimen_Pension" Association="Self.FK_Regimen_Pension">
+      <End Role="RegimenPension" EntitySet="RegimenPension" />
       <End Role="Reservas" EntitySet="Reservas" />
     </AssociationSet>
     <AssociationSet Name="FK_HistoricoServicios_Reservas" Association="Self.FK_HistoricoServicios_Reservas">

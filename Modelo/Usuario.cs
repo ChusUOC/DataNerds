@@ -15,7 +15,7 @@ namespace Producto_2.Modelo
     public partial class Usuario
     {
         public string nombre { get; set; }
-        public int ID { get; set; }
+        public int usuarioID { get; set; }
         public string password { get; set; }
     }
 }

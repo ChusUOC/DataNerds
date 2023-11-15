@@ -45,22 +45,44 @@ namespace Producto_2.Vista
             abrirFomulario(typeof(frmAutenticacion));
         }
 
-        private void inicioToolStripButton_Click(object sender, EventArgs e)
+        
+
+        private void mnuFacturas_Click(object sender, EventArgs e)
+        {
+            abrirFomulario(typeof(InterfazFacturas));
+        }
+
+        private void mnuIncidencias_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void mnuUsuarios_Click(object sender, EventArgs e)
+        {
+            abrirFomulario(typeof(InterfazUsuario));
+        }
+
+        private void mnuInicio_Click(object sender, EventArgs e)
+        {
+            abrirFomulario(typeof(FrmMenuInicio));
+        }
+
+        private void mnuClientes_Click(object sender, EventArgs e)
         {
             abrirFomulario(typeof(frmCliente));
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void mnuReservas_Click(object sender, EventArgs e)
         {
-            abrirFomulario(typeof(Form7Reservas));
+            abrirFomulario(typeof(InterfazReserva));
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void mnuHabitaciones_Click(object sender, EventArgs e)
         {
-            abrirFomulario(typeof(FormMenuInicioAdmin));
+            abrirFomulario(typeof(FrmHabitaciones));
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void mnuServicios_Click(object sender, EventArgs e)
         {
             abrirFomulario(typeof(FormServicios11));
         }

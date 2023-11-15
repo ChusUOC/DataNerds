@@ -14,12 +14,14 @@ namespace Producto_2.Modelo
     
     public partial class historicoReservas
     {
-        public int id { get; set; }
+        public int reservaID { get; set; }
         public Nullable<int> habitacion { get; set; }
         public string nombre { get; set; }
         public string entrada { get; set; }
         public Nullable<System.DateTime> salida { get; set; }
         public string estado { get; set; }
         public Nullable<int> idIncidencia { get; set; }
+    
+        public virtual Reservas Reservas { get; set; }
     }
 }

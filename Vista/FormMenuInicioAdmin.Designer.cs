@@ -29,20 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ajustesbtn = new System.Windows.Forms.Button();
-            this.Usuariosbtn = new System.Windows.Forms.Button();
-            this.incidenciasbtn = new System.Windows.Forms.Button();
-            this.SrvidioBtn = new System.Windows.Forms.Button();
-            this.habitacionesBtn = new System.Windows.Forms.Button();
-            this.reservasVtb = new System.Windows.Forms.Button();
-            this.ClientesBtn = new System.Windows.Forms.Button();
-            this.inicioBtn = new System.Windows.Forms.Button();
             this.grpBoxAmin = new System.Windows.Forms.GroupBox();
+            this.incDG = new System.Windows.Forms.DataGridView();
+            this.estadoDG = new System.Windows.Forms.DataGridView();
+            this.histResDG = new System.Windows.Forms.DataGridView();
+            this.usuariosDG = new System.Windows.Forms.DataGridView();
             this.checkoutLBL = new System.Windows.Forms.Label();
-            this.habitacionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.historicoReservasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.incidenciasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userTXTBX = new System.Windows.Forms.TextBox();
             this.adminLBL = new System.Windows.Forms.Label();
             this.modDtoshabBtn = new System.Windows.Forms.Button();
@@ -54,6 +46,10 @@
             this.incidenciasLBL = new System.Windows.Forms.Label();
             this.historicoReservasLBL = new System.Windows.Forms.Label();
             this.usuarioEditBtn = new System.Windows.Forms.Button();
+            this.habitacionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.historicoReservasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.incidenciasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.habitacionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.historicoReservasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.habitacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -62,13 +58,12 @@
             this.historicoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.incidenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facturasBtn = new System.Windows.Forms.Button();
             this.historicoReservasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosDG = new System.Windows.Forms.DataGridView();
-            this.histResDG = new System.Windows.Forms.DataGridView();
-            this.estadoDG = new System.Windows.Forms.DataGridView();
-            this.incDG = new System.Windows.Forms.DataGridView();
             this.grpBoxAmin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.incDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histResDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource1)).BeginInit();
@@ -82,91 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosDG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histResDG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadoDG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.incDG)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ajustesbtn
-            // 
-            this.ajustesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ajustesbtn.Location = new System.Drawing.Point(661, 29);
-            this.ajustesbtn.Name = "ajustesbtn";
-            this.ajustesbtn.Size = new System.Drawing.Size(74, 42);
-            this.ajustesbtn.TabIndex = 20;
-            this.ajustesbtn.Text = "Ajustes";
-            this.ajustesbtn.UseVisualStyleBackColor = true;
-            // 
-            // Usuariosbtn
-            // 
-            this.Usuariosbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuariosbtn.Location = new System.Drawing.Point(586, 29);
-            this.Usuariosbtn.Name = "Usuariosbtn";
-            this.Usuariosbtn.Size = new System.Drawing.Size(74, 42);
-            this.Usuariosbtn.TabIndex = 19;
-            this.Usuariosbtn.Text = "Usuarios";
-            this.Usuariosbtn.UseVisualStyleBackColor = true;
-            // 
-            // incidenciasbtn
-            // 
-            this.incidenciasbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incidenciasbtn.Location = new System.Drawing.Point(511, 29);
-            this.incidenciasbtn.Name = "incidenciasbtn";
-            this.incidenciasbtn.Size = new System.Drawing.Size(74, 42);
-            this.incidenciasbtn.TabIndex = 18;
-            this.incidenciasbtn.Text = "Incidencias";
-            this.incidenciasbtn.UseVisualStyleBackColor = true;
-            // 
-            // SrvidioBtn
-            // 
-            this.SrvidioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SrvidioBtn.Location = new System.Drawing.Point(361, 29);
-            this.SrvidioBtn.Name = "SrvidioBtn";
-            this.SrvidioBtn.Size = new System.Drawing.Size(74, 42);
-            this.SrvidioBtn.TabIndex = 16;
-            this.SrvidioBtn.Text = "Servicio";
-            this.SrvidioBtn.UseVisualStyleBackColor = true;
-            // 
-            // habitacionesBtn
-            // 
-            this.habitacionesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.habitacionesBtn.Location = new System.Drawing.Point(286, 29);
-            this.habitacionesBtn.Name = "habitacionesBtn";
-            this.habitacionesBtn.Size = new System.Drawing.Size(74, 42);
-            this.habitacionesBtn.TabIndex = 15;
-            this.habitacionesBtn.Text = "Habitaciones";
-            this.habitacionesBtn.UseVisualStyleBackColor = true;
-            // 
-            // reservasVtb
-            // 
-            this.reservasVtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reservasVtb.Location = new System.Drawing.Point(211, 29);
-            this.reservasVtb.Name = "reservasVtb";
-            this.reservasVtb.Size = new System.Drawing.Size(74, 42);
-            this.reservasVtb.TabIndex = 14;
-            this.reservasVtb.Text = "Reservas";
-            this.reservasVtb.UseVisualStyleBackColor = true;
-            // 
-            // ClientesBtn
-            // 
-            this.ClientesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientesBtn.Location = new System.Drawing.Point(136, 29);
-            this.ClientesBtn.Name = "ClientesBtn";
-            this.ClientesBtn.Size = new System.Drawing.Size(74, 42);
-            this.ClientesBtn.TabIndex = 13;
-            this.ClientesBtn.Text = "Clientes";
-            this.ClientesBtn.UseVisualStyleBackColor = true;
-            // 
-            // inicioBtn
-            // 
-            this.inicioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inicioBtn.Location = new System.Drawing.Point(61, 29);
-            this.inicioBtn.Name = "inicioBtn";
-            this.inicioBtn.Size = new System.Drawing.Size(74, 42);
-            this.inicioBtn.TabIndex = 12;
-            this.inicioBtn.Text = "Inicio";
-            this.inicioBtn.UseVisualStyleBackColor = true;
             // 
             // grpBoxAmin
             // 
@@ -186,12 +97,44 @@
             this.grpBoxAmin.Controls.Add(this.incidenciasLBL);
             this.grpBoxAmin.Controls.Add(this.historicoReservasLBL);
             this.grpBoxAmin.Controls.Add(this.usuarioEditBtn);
-            this.grpBoxAmin.Location = new System.Drawing.Point(9, 94);
+            this.grpBoxAmin.Location = new System.Drawing.Point(9, 41);
             this.grpBoxAmin.Name = "grpBoxAmin";
-            this.grpBoxAmin.Size = new System.Drawing.Size(778, 432);
+            this.grpBoxAmin.Size = new System.Drawing.Size(778, 485);
             this.grpBoxAmin.TabIndex = 21;
             this.grpBoxAmin.TabStop = false;
             this.grpBoxAmin.Text = "groupBox1";
+            // 
+            // incDG
+            // 
+            this.incDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.incDG.Location = new System.Drawing.Point(10, 220);
+            this.incDG.Name = "incDG";
+            this.incDG.Size = new System.Drawing.Size(341, 150);
+            this.incDG.TabIndex = 21;
+            // 
+            // estadoDG
+            // 
+            this.estadoDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.estadoDG.Location = new System.Drawing.Point(367, 220);
+            this.estadoDG.Name = "estadoDG";
+            this.estadoDG.Size = new System.Drawing.Size(385, 150);
+            this.estadoDG.TabIndex = 20;
+            // 
+            // histResDG
+            // 
+            this.histResDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.histResDG.Location = new System.Drawing.Point(367, 34);
+            this.histResDG.Name = "histResDG";
+            this.histResDG.Size = new System.Drawing.Size(385, 150);
+            this.histResDG.TabIndex = 19;
+            // 
+            // usuariosDG
+            // 
+            this.usuariosDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuariosDG.Location = new System.Drawing.Point(10, 34);
+            this.usuariosDG.Name = "usuariosDG";
+            this.usuariosDG.Size = new System.Drawing.Size(341, 150);
+            this.usuariosDG.TabIndex = 18;
             // 
             // checkoutLBL
             // 
@@ -202,22 +145,6 @@
             this.checkoutLBL.Size = new System.Drawing.Size(82, 18);
             this.checkoutLBL.TabIndex = 17;
             this.checkoutLBL.Text = "USUARIO";
-            // 
-            // habitacionBindingSource2
-            // 
-            this.habitacionBindingSource2.DataMember = "Habitacion";
-            // 
-            // historicoReservasBindingSource4
-            // 
-            this.historicoReservasBindingSource4.DataMember = "historicoReservas";
-            // 
-            // incidenciasBindingSource1
-            // 
-            this.incidenciasBindingSource1.DataMember = "Incidencias";
-            // 
-            // usuarioBindingSource1
-            // 
-            this.usuarioBindingSource1.DataMember = "Usuario";
             // 
             // userTXTBX
             // 
@@ -269,7 +196,6 @@
             this.indicenciasBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.indicenciasBtn.FlatAppearance.BorderSize = 0;
             this.indicenciasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            //this.indicenciasBtn.Image = global::Producto_2.Properties.Resources.eyeRS;
             this.indicenciasBtn.Location = new System.Drawing.Point(265, 195);
             this.indicenciasBtn.Name = "indicenciasBtn";
             this.indicenciasBtn.Size = new System.Drawing.Size(27, 29);
@@ -282,7 +208,6 @@
             this.historicoRBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.historicoRBtn.FlatAppearance.BorderSize = 0;
             this.historicoRBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-           // this.historicoRBtn.Image = global::Producto_2.Properties.Resources.eyeRS;
             this.historicoRBtn.Location = new System.Drawing.Point(549, 9);
             this.historicoRBtn.Name = "historicoRBtn";
             this.historicoRBtn.Size = new System.Drawing.Size(27, 29);
@@ -325,13 +250,28 @@
             this.usuarioEditBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.usuarioEditBtn.FlatAppearance.BorderSize = 0;
             this.usuarioEditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            //this.usuarioEditBtn.Image = global::Producto_2.Properties.Resources.PencilRS10x;
             this.usuarioEditBtn.Location = new System.Drawing.Point(102, 6);
             this.usuarioEditBtn.Name = "usuarioEditBtn";
             this.usuarioEditBtn.Size = new System.Drawing.Size(24, 25);
             this.usuarioEditBtn.TabIndex = 1;
             this.usuarioEditBtn.UseMnemonic = false;
             this.usuarioEditBtn.UseVisualStyleBackColor = false;
+            // 
+            // habitacionBindingSource2
+            // 
+            this.habitacionBindingSource2.DataMember = "Habitacion";
+            // 
+            // historicoReservasBindingSource4
+            // 
+            this.historicoReservasBindingSource4.DataMember = "historicoReservas";
+            // 
+            // incidenciasBindingSource1
+            // 
+            this.incidenciasBindingSource1.DataMember = "Incidencias";
+            // 
+            // usuarioBindingSource1
+            // 
+            this.usuarioBindingSource1.DataMember = "Usuario";
             // 
             // habitacionBindingSource1
             // 
@@ -361,51 +301,9 @@
             // 
             this.incidenciasBindingSource.DataMember = "Incidencias";
             // 
-            // facturasBtn
-            // 
-            this.facturasBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facturasBtn.Location = new System.Drawing.Point(436, 29);
-            this.facturasBtn.Name = "facturasBtn";
-            this.facturasBtn.Size = new System.Drawing.Size(74, 42);
-            this.facturasBtn.TabIndex = 22;
-            this.facturasBtn.Text = "Facturas";
-            this.facturasBtn.UseVisualStyleBackColor = true;
-            // 
             // historicoReservasBindingSource2
             // 
             this.historicoReservasBindingSource2.DataMember = "historicoReservas";
-            // 
-            // usuariosDG
-            // 
-            this.usuariosDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usuariosDG.Location = new System.Drawing.Point(10, 34);
-            this.usuariosDG.Name = "usuariosDG";
-            this.usuariosDG.Size = new System.Drawing.Size(341, 150);
-            this.usuariosDG.TabIndex = 18;
-            // 
-            // histResDG
-            // 
-            this.histResDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.histResDG.Location = new System.Drawing.Point(367, 34);
-            this.histResDG.Name = "histResDG";
-            this.histResDG.Size = new System.Drawing.Size(385, 150);
-            this.histResDG.TabIndex = 19;
-            // 
-            // estadoDG
-            // 
-            this.estadoDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.estadoDG.Location = new System.Drawing.Point(367, 220);
-            this.estadoDG.Name = "estadoDG";
-            this.estadoDG.Size = new System.Drawing.Size(385, 150);
-            this.estadoDG.TabIndex = 20;
-            // 
-            // incDG
-            // 
-            this.incDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.incDG.Location = new System.Drawing.Point(10, 220);
-            this.incDG.Name = "incDG";
-            this.incDG.Size = new System.Drawing.Size(341, 150);
-            this.incDG.TabIndex = 21;
             // 
             // FormMenuInicioAdmin
             // 
@@ -413,21 +311,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(799, 538);
-            this.Controls.Add(this.facturasBtn);
             this.Controls.Add(this.grpBoxAmin);
-            this.Controls.Add(this.ajustesbtn);
-            this.Controls.Add(this.Usuariosbtn);
-            this.Controls.Add(this.incidenciasbtn);
-            this.Controls.Add(this.SrvidioBtn);
-            this.Controls.Add(this.habitacionesBtn);
-            this.Controls.Add(this.reservasVtb);
-            this.Controls.Add(this.ClientesBtn);
-            this.Controls.Add(this.inicioBtn);
             this.Name = "FormMenuInicioAdmin";
             this.Text = "FormMenuInicioAdmin";
             this.Load += new System.EventHandler(this.FormMenuInicioAdmin_Load);
             this.grpBoxAmin.ResumeLayout(false);
             this.grpBoxAmin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.incDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histResDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource1)).EndInit();
@@ -441,24 +334,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosDG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histResDG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadoDG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.incDG)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ajustesbtn;
-        private System.Windows.Forms.Button Usuariosbtn;
-        private System.Windows.Forms.Button incidenciasbtn;
-        private System.Windows.Forms.Button SrvidioBtn;
-        private System.Windows.Forms.Button habitacionesBtn;
-        private System.Windows.Forms.Button reservasVtb;
-        private System.Windows.Forms.Button ClientesBtn;
-        private System.Windows.Forms.Button inicioBtn;
         private System.Windows.Forms.GroupBox grpBoxAmin;
         private System.Windows.Forms.Label usuariosLBL;
         private System.Windows.Forms.Button usuarioEditBtn;
@@ -473,7 +353,6 @@
         private System.Windows.Forms.Button modDtoshabBtn;
         private System.Windows.Forms.Button gestionDtsVIP;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private System.Windows.Forms.Button facturasBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;

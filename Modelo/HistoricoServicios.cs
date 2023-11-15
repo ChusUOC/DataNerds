@@ -15,7 +15,7 @@ namespace Producto_2.Modelo
     public partial class HistoricoServicios
     {
         public int idServicio { get; set; }
-        public int ID { get; set; }
+        public int reservaID { get; set; }
         public int historicoID { get; set; }
     
         public virtual Reservas Reservas { get; set; }
