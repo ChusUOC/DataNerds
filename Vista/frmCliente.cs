@@ -300,7 +300,7 @@ namespace Producto_2.Vista
         private void CargarComboBoxPrefijos()
         {
 
-            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Pruebas C#\\DataNerds\\prefijos.csv";
+            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Persistencia\\DataNerds\\prefijos.csv";
 
             List<string> datosCombo = new List<string>();
 
@@ -331,7 +331,7 @@ namespace Producto_2.Vista
         private void CargarComboBoxPaises()
         {
 
-            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Pruebas C#\\DataNerds\\Paises.csv";
+            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Persistencia\\DataNerds\\Paises.csv";
 
             List<string> datosCombo = new List<string>();
 
