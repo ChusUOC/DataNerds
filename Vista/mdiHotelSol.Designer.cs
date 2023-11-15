@@ -37,7 +37,6 @@
             this.mnuHabitaciones = new System.Windows.Forms.ToolStripButton();
             this.mnuServicios = new System.Windows.Forms.ToolStripButton();
             this.mnuFacturas = new System.Windows.Forms.ToolStripButton();
-            this.mnuUsuarios = new System.Windows.Forms.ToolStripButton();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -51,8 +50,7 @@
             this.mnuReservas,
             this.mnuHabitaciones,
             this.mnuServicios,
-            this.mnuFacturas,
-            this.mnuUsuarios});
+            this.mnuFacturas});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -66,7 +64,7 @@
             this.mnuInicio.Image = ((System.Drawing.Image)(resources.GetObject("mnuInicio.Image")));
             this.mnuInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuInicio.Name = "mnuInicio";
-            this.mnuInicio.Size = new System.Drawing.Size(88, 50);
+            this.mnuInicio.Size = new System.Drawing.Size(95, 50);
             this.mnuInicio.Text = "toolStripButton1";
             this.mnuInicio.ToolTipText = "Inicio";
             this.mnuInicio.Click += new System.EventHandler(this.mnuInicio_Click);
@@ -78,7 +76,7 @@
             this.mnuClientes.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuClientes.Name = "mnuClientes";
             this.mnuClientes.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-            this.mnuClientes.Size = new System.Drawing.Size(88, 50);
+            this.mnuClientes.Size = new System.Drawing.Size(95, 50);
             this.mnuClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.mnuClientes.ToolTipText = "Clientes";
             this.mnuClientes.Click += new System.EventHandler(this.mnuClientes_Click);
@@ -127,17 +125,6 @@
             this.mnuFacturas.ToolTipText = "Facturas";
             this.mnuFacturas.Click += new System.EventHandler(this.mnuFacturas_Click);
             // 
-            // mnuUsuarios
-            // 
-            this.mnuUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("mnuUsuarios.Image")));
-            this.mnuUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.mnuUsuarios.Name = "mnuUsuarios";
-            this.mnuUsuarios.Size = new System.Drawing.Size(95, 50);
-            this.mnuUsuarios.Text = "toolStripButton1";
-            this.mnuUsuarios.ToolTipText = "Usuarios";
-            this.mnuUsuarios.Click += new System.EventHandler(this.mnuUsuarios_Click);
-            // 
             // mdiHotelSol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +154,6 @@
         private System.Windows.Forms.ToolStripButton mnuHabitaciones;
         private System.Windows.Forms.ToolStripButton mnuServicios;
         private System.Windows.Forms.ToolStripButton mnuFacturas;
-        private System.Windows.Forms.ToolStripButton mnuUsuarios;
     }
 }
 

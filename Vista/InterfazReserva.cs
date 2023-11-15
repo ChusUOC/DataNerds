@@ -126,8 +126,8 @@ namespace Producto_2.Vista
         {
             ocultarGrupos();
             activarBtnMenu();
-            InterfazUsuario interfazUsuario = new InterfazUsuario();
-            interfazUsuario.Show();
+            //InterfazUsuario interfazUsuario = new InterfazUsuario();
+          //  interfazUsuario.Show();
             cerrarForm();
         }
 

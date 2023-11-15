@@ -59,7 +59,7 @@ namespace Producto_2.Vista
 
         private void mnuUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFomulario(typeof(InterfazUsuario));
+          //  abrirFomulario(typeof(InterfazUsuario));
         }
 
         private void mnuInicio_Click(object sender, EventArgs e)
