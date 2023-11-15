@@ -33,6 +33,7 @@
             this.addServiceBTN = new System.Windows.Forms.Button();
             this.serviciosDG = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.servicioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.servicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturasBtn = new System.Windows.Forms.Button();
@@ -45,12 +46,20 @@
             this.ClientesBtn = new System.Windows.Forms.Button();
             this.inicioBtn = new System.Windows.Forms.Button();
             this.tipoServicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+=======
+>>>>>>> juan
             this.TEMPORADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MEDIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BAJA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ALTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioNocheG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dscVipG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
+=======
+            this.servicioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.servicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoServicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+>>>>>>> juan
             this.grpClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serviciosDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,9 +73,15 @@
             this.grpClientes.Controls.Add(this.addServiceBTN);
             this.grpClientes.Controls.Add(this.serviciosDG);
             this.grpClientes.Controls.Add(this.dataGridView1);
+<<<<<<< HEAD
             this.grpClientes.Location = new System.Drawing.Point(12, 94);
             this.grpClientes.Name = "grpClientes";
             this.grpClientes.Size = new System.Drawing.Size(778, 432);
+=======
+            this.grpClientes.Location = new System.Drawing.Point(12, 29);
+            this.grpClientes.Name = "grpClientes";
+            this.grpClientes.Size = new System.Drawing.Size(778, 497);
+>>>>>>> juan
             this.grpClientes.TabIndex = 29;
             this.grpClientes.TabStop = false;
             // 
@@ -106,6 +121,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(766, 29);
             this.dataGridView1.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // servicioBindingSource1
             // 
             this.servicioBindingSource1.DataMember = "Servicio";
@@ -208,6 +224,8 @@
             // 
             this.tipoServicioBindingSource.DataMember = "TipoServicio";
             // 
+=======
+>>>>>>> juan
             // TEMPORADA
             // 
             this.TEMPORADA.HeaderText = "ID";
@@ -248,12 +266,28 @@
             this.dscVipG.ReadOnly = true;
             this.dscVipG.Width = 60;
             // 
+<<<<<<< HEAD
+=======
+            // servicioBindingSource1
+            // 
+            this.servicioBindingSource1.DataMember = "Servicio";
+            // 
+            // servicioBindingSource
+            // 
+            this.servicioBindingSource.DataMember = "Servicio";
+            // 
+            // tipoServicioBindingSource
+            // 
+            this.tipoServicioBindingSource.DataMember = "TipoServicio";
+            // 
+>>>>>>> juan
             // FormServicios11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(799, 538);
+<<<<<<< HEAD
             this.Controls.Add(this.facturasBtn);
             this.Controls.Add(this.ajustesbtn);
             this.Controls.Add(this.Usuariosbtn);
@@ -263,6 +297,8 @@
             this.Controls.Add(this.reservasVtb);
             this.Controls.Add(this.ClientesBtn);
             this.Controls.Add(this.inicioBtn);
+=======
+>>>>>>> juan
             this.Controls.Add(this.grpClientes);
             this.Name = "FormServicios11";
             this.Text = "FormServicios11";
@@ -280,6 +316,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpClientes;
+<<<<<<< HEAD
         private System.Windows.Forms.Button facturasBtn;
         private System.Windows.Forms.Button ajustesbtn;
         private System.Windows.Forms.Button Usuariosbtn;
@@ -289,6 +326,8 @@
         private System.Windows.Forms.Button reservasVtb;
         private System.Windows.Forms.Button ClientesBtn;
         private System.Windows.Forms.Button inicioBtn;
+=======
+>>>>>>> juan
         private System.Windows.Forms.DataGridView serviciosDG;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource tipoServicioBindingSource;

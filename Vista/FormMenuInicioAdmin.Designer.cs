@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
             this.ajustesbtn = new System.Windows.Forms.Button();
             this.Usuariosbtn = new System.Windows.Forms.Button();
             this.incidenciasbtn = new System.Windows.Forms.Button();
@@ -43,6 +44,14 @@
             this.historicoReservasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.incidenciasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+=======
+            this.grpBoxAmin = new System.Windows.Forms.GroupBox();
+            this.incDG = new System.Windows.Forms.DataGridView();
+            this.estadoDG = new System.Windows.Forms.DataGridView();
+            this.histResDG = new System.Windows.Forms.DataGridView();
+            this.usuariosDG = new System.Windows.Forms.DataGridView();
+            this.checkoutLBL = new System.Windows.Forms.Label();
+>>>>>>> juan
             this.userTXTBX = new System.Windows.Forms.TextBox();
             this.adminLBL = new System.Windows.Forms.Label();
             this.modDtoshabBtn = new System.Windows.Forms.Button();
@@ -54,6 +63,13 @@
             this.incidenciasLBL = new System.Windows.Forms.Label();
             this.historicoReservasLBL = new System.Windows.Forms.Label();
             this.usuarioEditBtn = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+            this.habitacionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.historicoReservasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.incidenciasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+>>>>>>> juan
             this.habitacionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.historicoReservasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.habitacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -62,6 +78,7 @@
             this.historicoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.incidenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
             this.facturasBtn = new System.Windows.Forms.Button();
             this.historicoReservasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosDG = new System.Windows.Forms.DataGridView();
@@ -69,6 +86,14 @@
             this.estadoDG = new System.Windows.Forms.DataGridView();
             this.incDG = new System.Windows.Forms.DataGridView();
             this.grpBoxAmin.SuspendLayout();
+=======
+            this.historicoReservasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.grpBoxAmin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.incDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histResDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDG)).BeginInit();
+>>>>>>> juan
             ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource1)).BeginInit();
@@ -82,6 +107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource2)).BeginInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.histResDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoDG)).BeginInit();
@@ -168,6 +194,10 @@
             this.inicioBtn.Text = "Inicio";
             this.inicioBtn.UseVisualStyleBackColor = true;
             // 
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> juan
             // grpBoxAmin
             // 
             this.grpBoxAmin.Controls.Add(this.incDG);
@@ -186,13 +216,54 @@
             this.grpBoxAmin.Controls.Add(this.incidenciasLBL);
             this.grpBoxAmin.Controls.Add(this.historicoReservasLBL);
             this.grpBoxAmin.Controls.Add(this.usuarioEditBtn);
+<<<<<<< HEAD
             this.grpBoxAmin.Location = new System.Drawing.Point(9, 94);
             this.grpBoxAmin.Name = "grpBoxAmin";
             this.grpBoxAmin.Size = new System.Drawing.Size(778, 432);
+=======
+            this.grpBoxAmin.Location = new System.Drawing.Point(9, 41);
+            this.grpBoxAmin.Name = "grpBoxAmin";
+            this.grpBoxAmin.Size = new System.Drawing.Size(778, 485);
+>>>>>>> juan
             this.grpBoxAmin.TabIndex = 21;
             this.grpBoxAmin.TabStop = false;
             this.grpBoxAmin.Text = "groupBox1";
             // 
+<<<<<<< HEAD
+=======
+            // incDG
+            // 
+            this.incDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.incDG.Location = new System.Drawing.Point(10, 220);
+            this.incDG.Name = "incDG";
+            this.incDG.Size = new System.Drawing.Size(341, 150);
+            this.incDG.TabIndex = 21;
+            // 
+            // estadoDG
+            // 
+            this.estadoDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.estadoDG.Location = new System.Drawing.Point(367, 220);
+            this.estadoDG.Name = "estadoDG";
+            this.estadoDG.Size = new System.Drawing.Size(385, 150);
+            this.estadoDG.TabIndex = 20;
+            // 
+            // histResDG
+            // 
+            this.histResDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.histResDG.Location = new System.Drawing.Point(367, 34);
+            this.histResDG.Name = "histResDG";
+            this.histResDG.Size = new System.Drawing.Size(385, 150);
+            this.histResDG.TabIndex = 19;
+            // 
+            // usuariosDG
+            // 
+            this.usuariosDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuariosDG.Location = new System.Drawing.Point(10, 34);
+            this.usuariosDG.Name = "usuariosDG";
+            this.usuariosDG.Size = new System.Drawing.Size(341, 150);
+            this.usuariosDG.TabIndex = 18;
+            // 
+>>>>>>> juan
             // checkoutLBL
             // 
             this.checkoutLBL.AutoSize = true;
@@ -203,6 +274,7 @@
             this.checkoutLBL.TabIndex = 17;
             this.checkoutLBL.Text = "USUARIO";
             // 
+<<<<<<< HEAD
             // habitacionBindingSource2
             // 
             this.habitacionBindingSource2.DataMember = "Habitacion";
@@ -219,6 +291,8 @@
             // 
             this.usuarioBindingSource1.DataMember = "Usuario";
             // 
+=======
+>>>>>>> juan
             // userTXTBX
             // 
             this.userTXTBX.Location = new System.Drawing.Point(652, 393);
@@ -269,7 +343,10 @@
             this.indicenciasBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.indicenciasBtn.FlatAppearance.BorderSize = 0;
             this.indicenciasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             //this.indicenciasBtn.Image = global::Producto_2.Properties.Resources.eyeRS;
+=======
+>>>>>>> juan
             this.indicenciasBtn.Location = new System.Drawing.Point(265, 195);
             this.indicenciasBtn.Name = "indicenciasBtn";
             this.indicenciasBtn.Size = new System.Drawing.Size(27, 29);
@@ -282,7 +359,10 @@
             this.historicoRBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.historicoRBtn.FlatAppearance.BorderSize = 0;
             this.historicoRBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
            // this.historicoRBtn.Image = global::Producto_2.Properties.Resources.eyeRS;
+=======
+>>>>>>> juan
             this.historicoRBtn.Location = new System.Drawing.Point(549, 9);
             this.historicoRBtn.Name = "historicoRBtn";
             this.historicoRBtn.Size = new System.Drawing.Size(27, 29);
@@ -325,7 +405,10 @@
             this.usuarioEditBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.usuarioEditBtn.FlatAppearance.BorderSize = 0;
             this.usuarioEditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             //this.usuarioEditBtn.Image = global::Producto_2.Properties.Resources.PencilRS10x;
+=======
+>>>>>>> juan
             this.usuarioEditBtn.Location = new System.Drawing.Point(102, 6);
             this.usuarioEditBtn.Name = "usuarioEditBtn";
             this.usuarioEditBtn.Size = new System.Drawing.Size(24, 25);
@@ -333,6 +416,25 @@
             this.usuarioEditBtn.UseMnemonic = false;
             this.usuarioEditBtn.UseVisualStyleBackColor = false;
             // 
+<<<<<<< HEAD
+=======
+            // habitacionBindingSource2
+            // 
+            this.habitacionBindingSource2.DataMember = "Habitacion";
+            // 
+            // historicoReservasBindingSource4
+            // 
+            this.historicoReservasBindingSource4.DataMember = "historicoReservas";
+            // 
+            // incidenciasBindingSource1
+            // 
+            this.incidenciasBindingSource1.DataMember = "Incidencias";
+            // 
+            // usuarioBindingSource1
+            // 
+            this.usuarioBindingSource1.DataMember = "Usuario";
+            // 
+>>>>>>> juan
             // habitacionBindingSource1
             // 
             this.habitacionBindingSource1.DataMember = "Habitacion";
@@ -361,6 +463,7 @@
             // 
             this.incidenciasBindingSource.DataMember = "Incidencias";
             // 
+<<<<<<< HEAD
             // facturasBtn
             // 
             this.facturasBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,10 +474,13 @@
             this.facturasBtn.Text = "Facturas";
             this.facturasBtn.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> juan
             // historicoReservasBindingSource2
             // 
             this.historicoReservasBindingSource2.DataMember = "historicoReservas";
             // 
+<<<<<<< HEAD
             // usuariosDG
             // 
             this.usuariosDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -407,12 +513,15 @@
             this.incDG.Size = new System.Drawing.Size(341, 150);
             this.incDG.TabIndex = 21;
             // 
+=======
+>>>>>>> juan
             // FormMenuInicioAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(799, 538);
+<<<<<<< HEAD
             this.Controls.Add(this.facturasBtn);
             this.Controls.Add(this.grpBoxAmin);
             this.Controls.Add(this.ajustesbtn);
@@ -423,11 +532,21 @@
             this.Controls.Add(this.reservasVtb);
             this.Controls.Add(this.ClientesBtn);
             this.Controls.Add(this.inicioBtn);
+=======
+            this.Controls.Add(this.grpBoxAmin);
+>>>>>>> juan
             this.Name = "FormMenuInicioAdmin";
             this.Text = "FormMenuInicioAdmin";
             this.Load += new System.EventHandler(this.FormMenuInicioAdmin_Load);
             this.grpBoxAmin.ResumeLayout(false);
             this.grpBoxAmin.PerformLayout();
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.incDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histResDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDG)).EndInit();
+>>>>>>> juan
             ((System.ComponentModel.ISupportInitialize)(this.habitacionBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource1)).EndInit();
@@ -441,15 +560,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoReservasBindingSource2)).EndInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.histResDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incDG)).EndInit();
+=======
+>>>>>>> juan
             this.ResumeLayout(false);
 
         }
 
         #endregion
+<<<<<<< HEAD
 
         private System.Windows.Forms.Button ajustesbtn;
         private System.Windows.Forms.Button Usuariosbtn;
@@ -459,6 +582,8 @@
         private System.Windows.Forms.Button reservasVtb;
         private System.Windows.Forms.Button ClientesBtn;
         private System.Windows.Forms.Button inicioBtn;
+=======
+>>>>>>> juan
         private System.Windows.Forms.GroupBox grpBoxAmin;
         private System.Windows.Forms.Label usuariosLBL;
         private System.Windows.Forms.Button usuarioEditBtn;
@@ -473,7 +598,10 @@
         private System.Windows.Forms.Button modDtoshabBtn;
         private System.Windows.Forms.Button gestionDtsVIP;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
+<<<<<<< HEAD
         private System.Windows.Forms.Button facturasBtn;
+=======
+>>>>>>> juan
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;

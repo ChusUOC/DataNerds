@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.AssemblyReference.cache
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.Properties.Resources.resources
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.Vista.Form2.resources
@@ -48,3 +49,87 @@ C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.Form7Reservas.resources
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.FormMenuInicioAdmin.resources
 C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.FormServicios11.resources
+=======
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.AssemblyReference.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.Properties.Resources.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.Vista.Form2.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.GenerateResource.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.CoreCompileInputs.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\Producto_2.exe.config
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\Producto_2.exe
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\Producto_2.pdb
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\EntityFramework.dll
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\EntityFramework.xml
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.csproj.CopyComplete
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.exe
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\Producto_2\obj\Debug\Producto_2.pdb
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\obj\Debug\Producto_2.exe
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\obj\Debug\Producto_2.pdb
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\obj\Debug\Producto_2.csproj.AssemblyReference.cache
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\obj\Debug\Producto_2.Properties.Resources.resources
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\obj\Debug\Producto_2.Vista.Form2.resources
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\obj\Debug\Producto_2.csproj.GenerateResource.cache
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\obj\Debug\Producto_2.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\bin\Debug\Producto_2.exe.config
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\bin\Debug\Producto_2.exe
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\bin\Debug\Producto_2.pdb
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\bin\Debug\EntityFramework.dll
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\bin\Debug\EntityFramework.xml
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\OneDrive\DAM\FP 4to semestre\FP.059 - (P) Técnicas de persistencia datos con .NET y programas ERP\Producto 2\Producto2\obj\Debug\Producto_2.csproj.CopyComplete
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\bin\Debug\Producto_2.exe.config
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\bin\Debug\Producto_2.exe
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\bin\Debug\Producto_2.pdb
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\bin\Debug\EntityFramework.dll
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\bin\Debug\EntityFramework.xml
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.csproj.AssemblyReference.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Properties.Resources.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.csproj.GenerateResource.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.csproj.CoreCompileInputs.cache
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.exe
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.pdb
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.frmCliente.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.frmAutenticacion.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.mdiHotelSol.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.Form7Reservas.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.FormMenuInicioAdmin.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.FormServicios11.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.FrmDatosHabitaciones.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.FrmHabitaciones.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.FrmMenuInicio.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.InterfazFacturas.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.InterfazReserva.resources
+C:\Users\jf3pa\OneDrive\Desktop\Pruebas C#\DataNerds\obj\Debug\Producto_2.Vista.InterfazUsuario.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.csproj.AssemblyReference.cache
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Properties.Resources.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.Form7Reservas.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.FormMenuInicioAdmin.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.FormServicios11.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.frmAutenticacion.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.frmCliente.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.FrmDatosHabitaciones.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.FrmHabitaciones.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.FrmMenuInicio.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.InterfazFacturas.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.InterfazReserva.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.InterfazUsuario.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.mdiHotelSol.resources
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.csproj.GenerateResource.cache
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.csproj.CoreCompileInputs.cache
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.exe
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.pdb
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\Producto_2.exe.config
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\Producto_2.exe
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\Producto_2.pdb
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework.dll
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework.xml
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
+>>>>>>> juan
