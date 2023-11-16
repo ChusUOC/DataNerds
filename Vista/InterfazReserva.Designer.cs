@@ -421,7 +421,9 @@
             this.ClientSize = new System.Drawing.Size(799, 538);
             this.Controls.Add(this.grpReserva);
             this.Name = "InterfazReserva";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hotel SOL";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InterfazServicio_Load);
             this.grpReserva.ResumeLayout(false);
             this.grpReserva.PerformLayout();

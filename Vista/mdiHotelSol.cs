@@ -42,6 +42,7 @@ namespace Producto_2.Vista
 
         private void mdiHotelSol_Load(object sender, EventArgs e)
         {
+            cerrarForms();
             abrirFomulario(typeof(frmAutenticacion));
         }
 
@@ -49,6 +50,7 @@ namespace Producto_2.Vista
 
         private void mnuFacturas_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             abrirFomulario(typeof(InterfazFacturas));
         }
 
@@ -64,27 +66,43 @@ namespace Producto_2.Vista
 
         private void mnuInicio_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             abrirFomulario(typeof(FrmMenuInicio));
         }
 
         private void mnuClientes_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             abrirFomulario(typeof(frmCliente));
         }
 
         private void mnuReservas_Click(object sender, EventArgs e)
         {
-            abrirFomulario(typeof(InterfazReserva));
+            cerrarForms();
+            abrirFomulario(typeof(Form7Reservas));
         }
 
         private void mnuHabitaciones_Click(object sender, EventArgs e)
         {
+            cerrarForms();
             abrirFomulario(typeof(FrmHabitaciones));
         }
 
         private void mnuServicios_Click(object sender, EventArgs e)
         {
+            
             abrirFomulario(typeof(FormServicios11));
         }
+
+        private void cerrarForms()
+        {
+            
+            foreach (Form childForm in this.MdiChildren)
+            {
+                childForm.Close();
+            }
+
+        }
+
     }
 }

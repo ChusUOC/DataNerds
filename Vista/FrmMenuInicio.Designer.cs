@@ -197,7 +197,9 @@
             this.ClientSize = new System.Drawing.Size(799, 538);
             this.Controls.Add(this.grpClientes);
             this.Name = "FrmMenuInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Menú Inicio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMenuInicio_Load);
             this.grpClientes.ResumeLayout(false);
             this.grpClientes.PerformLayout();

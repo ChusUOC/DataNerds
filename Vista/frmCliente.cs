@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.Entity.Validation;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -300,8 +301,7 @@ namespace Producto_2.Vista
         private void CargarComboBoxPrefijos()
         {
 
-            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Persistencia\\DataNerds\\prefijos.csv";
-
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "prefijos.csv");
             List<string> datosCombo = new List<string>();
 
             using (TextFieldParser parser = new TextFieldParser(filePath))
@@ -331,7 +331,7 @@ namespace Producto_2.Vista
         private void CargarComboBoxPaises()
         {
 
-            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Persistencia\\DataNerds\\Paises.csv";
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Paises.csv");
 
             List<string> datosCombo = new List<string>();
 

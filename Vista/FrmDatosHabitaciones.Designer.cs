@@ -338,7 +338,9 @@
             this.ClientSize = new System.Drawing.Size(799, 538);
             this.Controls.Add(this.grpClientes);
             this.Name = "FrmDatosHabitaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Datos Habitaciones";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmDatosHabitaciones_Load);
             this.grpClientes.ResumeLayout(false);
             this.grpClientes.PerformLayout();

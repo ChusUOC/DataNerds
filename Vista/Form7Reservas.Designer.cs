@@ -1,4 +1,4 @@
-﻿namespace Producto_2.Vista
+namespace Producto_2.Vista
 {
     partial class Form7Reservas
     {
@@ -195,12 +195,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(799, 500);
+            this.ClientSize = new System.Drawing.Size(799, 698);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form7Reservas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form7Reservas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form7Reservas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

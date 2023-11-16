@@ -157,7 +157,9 @@
             this.ClientSize = new System.Drawing.Size(799, 538);
             this.Controls.Add(this.grpClientes);
             this.Name = "FormServicios11";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormServicios11";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormServicios11_Load);
             this.grpClientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.serviciosDG)).EndInit();

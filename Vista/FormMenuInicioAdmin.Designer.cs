@@ -313,7 +313,9 @@
             this.ClientSize = new System.Drawing.Size(799, 538);
             this.Controls.Add(this.grpBoxAmin);
             this.Name = "FormMenuInicioAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormMenuInicioAdmin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMenuInicioAdmin_Load);
             this.grpBoxAmin.ResumeLayout(false);
             this.grpBoxAmin.PerformLayout();

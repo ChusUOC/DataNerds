@@ -163,9 +163,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(799, 538);
+            this.ControlBox = false;
             this.Controls.Add(this.grpClientes);
             this.Name = "FrmHabitaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Habitaciones";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmHabitaciones_Load);
             this.grpClientes.ResumeLayout(false);
             this.grpClientes.PerformLayout();
