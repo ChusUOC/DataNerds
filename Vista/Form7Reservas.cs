@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Producto_2.Vista
 {
     public partial class Form7Reservas : Form
@@ -20,6 +21,8 @@ namespace Producto_2.Vista
             InitializeComponent();
            
         }
+
+
 
         private void Form7Reservas_Load(object sender, EventArgs e)
         {
@@ -136,6 +139,15 @@ namespace Producto_2.Vista
             }
             
         }
-      
+
+        private void nuevaReservaBTN_Click(object sender, EventArgs e)
+        {
+            InterfazReserva reservaI = new InterfazReserva();
+
+            reservaI.MdiParent = this.MdiParent;
+            reservaI.Show();
+            this.Close();
+            
+        }
     }
 }
