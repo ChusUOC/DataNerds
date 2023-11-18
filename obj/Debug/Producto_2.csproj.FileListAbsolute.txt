@@ -79,3 +79,28 @@ C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework
 C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework.xml
 C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
+C:\Users\José M. Díaz\Documents\DataNerds\bin\Debug\Producto_2.exe.config
+C:\Users\José M. Díaz\Documents\DataNerds\bin\Debug\Producto_2.exe
+C:\Users\José M. Díaz\Documents\DataNerds\bin\Debug\Producto_2.pdb
+C:\Users\José M. Díaz\Documents\DataNerds\bin\Debug\EntityFramework.dll
+C:\Users\José M. Díaz\Documents\DataNerds\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\José M. Díaz\Documents\DataNerds\bin\Debug\EntityFramework.xml
+C:\Users\José M. Díaz\Documents\DataNerds\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.csproj.AssemblyReference.cache
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Properties.Resources.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.Form7Reservas.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.FormMenuInicioAdmin.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.FormServicios11.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.frmAutenticacion.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.frmCliente.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.FrmDatosHabitaciones.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.FrmHabitaciones.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.FrmMenuInicio.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.InterfazFacturas.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.InterfazReserva.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.Vista.mdiHotelSol.resources
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.csproj.GenerateResource.cache
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.csproj.CoreCompileInputs.cache
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.exe
+C:\Users\José M. Díaz\Documents\DataNerds\obj\Debug\Producto_2.pdb

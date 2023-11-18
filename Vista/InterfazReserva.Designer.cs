@@ -63,6 +63,9 @@
             this.ReservaTXT = new System.Windows.Forms.TextBox();
             this.ReservaLB = new System.Windows.Forms.Label();
             this.labelDReserva = new System.Windows.Forms.Label();
+            this.fechaEDTP = new System.Windows.Forms.DateTimePicker();
+            this.fechaSDTP = new System.Windows.Forms.DateTimePicker();
+            this.TemporadaCbox = new System.Windows.Forms.ComboBox();
             this.grpReserva.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -412,6 +415,30 @@
             this.labelDReserva.Size = new System.Drawing.Size(223, 13);
             this.labelDReserva.TabIndex = 32;
             this.labelDReserva.Text = "DATOS DE SERVICIOS A RESERVAR";
+            // 
+            // fechaEDTP
+            // 
+            this.fechaEDTP.Location = new System.Drawing.Point(123, 160);
+            this.fechaEDTP.Name = "fechaEDTP";
+            this.fechaEDTP.Size = new System.Drawing.Size(84, 20);
+            this.fechaEDTP.TabIndex = 67;
+            // 
+            // fechaSDTP
+            // 
+            this.fechaSDTP.Location = new System.Drawing.Point(213, 160);
+            this.fechaSDTP.Name = "fechaSDTP";
+            this.fechaSDTP.Size = new System.Drawing.Size(84, 20);
+            this.fechaSDTP.TabIndex = 68;
+            // 
+            // TemporadaCbox
+            // 
+            this.TemporadaCbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TemporadaCbox.FormattingEnabled = true;
+            this.TemporadaCbox.Location = new System.Drawing.Point(113, 367);
+            this.TemporadaCbox.Name = "TemporadaCbox";
+            this.TemporadaCbox.Size = new System.Drawing.Size(121, 21);
+            this.TemporadaCbox.TabIndex = 69;
+            this.TemporadaCbox.SelectedIndexChanged += new System.EventHandler(this.TemporadaCbox_SelectedIndexChanged_1);
             // 
             // InterfazReserva
             // 

@@ -1,4 +1,4 @@
-﻿using Producto_2.Controlador;
+using Producto_2.Controlador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

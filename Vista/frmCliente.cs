@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualBasic.FileIO;
+using Microsoft.VisualBasic.FileIO;
 using Producto_2.Controlador;
 using Producto_2.Modelo;
 using System;
@@ -7,9 +7,11 @@ using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.Entity.Validation;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
 
 
 
@@ -300,7 +302,7 @@ namespace Producto_2.Vista
         private void CargarComboBoxPrefijos()
         {
 
-            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Pruebas C#\\DataNerds\\prefijos.csv";
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Prefijos.csv");
 
             List<string> datosCombo = new List<string>();
 
@@ -331,7 +333,7 @@ namespace Producto_2.Vista
         private void CargarComboBoxPaises()
         {
 
-            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Pruebas C#\\DataNerds\\Paises.csv";
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Paises.csv");
 
             List<string> datosCombo = new List<string>();
 
@@ -358,12 +360,21 @@ namespace Producto_2.Vista
 
             cmbPais.Items.AddRange(datosCombo.ToArray());
 
+<<<<<<< HEAD
+        }
+
+        private void dtpFechaNaci_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+=======
         }
 
         private void cmbPrefijos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+>>>>>>> 4ce9023 (Auto stash before cherry pick of "Update Autenticacion 18/11/2023")
     }   
 
 }

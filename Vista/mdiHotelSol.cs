@@ -74,7 +74,7 @@ namespace Producto_2.Vista
 
         private void mnuReservas_Click(object sender, EventArgs e)
         {
-            abrirFomulario(typeof(InterfazReserva));
+            abrirFomulario(typeof(Form7Reservas));
         }
 
         private void mnuHabitaciones_Click(object sender, EventArgs e)
