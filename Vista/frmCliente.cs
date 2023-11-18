@@ -360,12 +360,21 @@ namespace Producto_2.Vista
 
             cmbPais.Items.AddRange(datosCombo.ToArray());
 
+<<<<<<< HEAD
         }
 
         private void dtpFechaNaci_ValueChanged(object sender, EventArgs e)
         {
 
         }
+=======
+        }
+
+        private void cmbPrefijos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 4ce9023 (Auto stash before cherry pick of "Update Autenticacion 18/11/2023")
     }   
 
 }

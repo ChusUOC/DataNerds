@@ -5,12 +5,31 @@ using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Producto_2.Modelo;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+
 
 namespace Producto_2.Controlador
 {
     internal class ReservaControlador
     {
+        public void cargarComboBox<T>(System.Windows.Forms.ComboBox comboBox,string nombreColumna,string nombreColumnaValor) where T:class
+        {
+            using (var db = new dbHotelSQLEntities()) { 
+            
+                var datos = db.Set<T>().ToList();
+                
+                comboBox.DataSource = datos;
+                comboBox.DisplayMember = nombreColumna;
+                comboBox.ValueMember = nombreColumnaValor;
+
+               
+            }
+        }
+        
+
         public List<Reservas> ObtenerReserva()
         {
             using (dbHotelSQLEntities db = new dbHotelSQLEntities())
