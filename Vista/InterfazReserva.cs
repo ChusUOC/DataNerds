@@ -221,15 +221,17 @@ namespace Producto_2.Vista
         {
 
         }
-
-        private void DiasLB_TextChanged(object sender, EventArgs e)
-        {
-            
+        private void calculodias() {
+          
             TimeSpan diferencia = fechaSDTP.Value - fechaEDTP.Value;
             int diasDiferencia = (int)diferencia.TotalDays;
 
             DiasTXT.Text = diasDiferencia.ToString();
-            
+        }
+
+        private void DiasLB_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void Calendario_DateChanged(object sender, DateRangeEventArgs e)
@@ -258,11 +260,8 @@ namespace Producto_2.Vista
                 numeroHabitacion = Convert.ToInt32(HabitacionCBox.SelectedValue),
                 temporadaID = Convert.ToInt32(temporadaCBox.SelectedValue),
                 pensionID = Convert.ToInt32(TipoPensionCB.SelectedValue),
-
                 firmado = especial
-                    
             };
-
             try
             {
                 controlador.AgregarReserva(reserva);
@@ -289,18 +288,18 @@ namespace Producto_2.Vista
                 if (reservaEncontrada.Count > 0)
                 {
                     Reservas reserva = reservaEncontrada[0];
-
+                
                     ReservaTXT.Text = ID.ToString();
                     NIFClienteTXT.Text = reserva.NIF.ToString();
-                    //DateIniTXT.Text = reserva.fechaEntrada.ToString();
-                    //DateFinTXT.Text = reserva.fechaSalida.ToString();
-                    HabitacionCBox.Text = reserva.numeroHabitacion.ToString();
-                    TemporadaCbox.Text = reserva.temporadaID.ToString(); 
+                    fechaEDTP.Value = reserva.fechaEntrada.Value;
+                    fechaSDTP.Value = reserva.fechaSalida.Value;
+                    TipoPensionCB.SelectedValue = reserva.pensionID;
+                    HabitacionCBox.SelectedValue = reserva.numeroHabitacion;      
+                    TemporadaCbox.SelectedValue = reserva.temporadaID;
                     especial = (byte)reserva.firmado;
-                    //DateIniTXT.TextChanged += DiasLB_TextChanged;
-                    //DateFinTXT.TextChanged += DiasLB_TextChanged;
 
                 }
+                calculodias();
             }
             else
             {
@@ -308,9 +307,42 @@ namespace Producto_2.Vista
             }
         }
 
+        private void ModificarReservaBT_Click(object sender, EventArgs e)
+        {
+            byte especial = CHKFirm.Checked ? (byte)1 : (byte)0;
+
+            DateTime fechaEntrada = fechaEDTP.Value.Date;
+            DateTime fechaSalida = fechaSDTP.Value.Date;
+            int numeroHabitacion = Convert.ToInt32(HabitacionCBox.SelectedValue);
+            int temporadaID = Convert.ToInt32(TemporadaCbox.SelectedValue);
+            int reservaNum =Convert.ToInt32(ReservaTXT.Text);
+            
+            try
+            {
+                controlador.ActualizarReserva(reservaNum, especial,fechaEntrada,fechaSalida,NIFClienteTXT.Text,numeroHabitacion,temporadaID);
+                MessageBox.Show("Datos añadidos con éxito!", "Datanerds", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiarForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
         private void AnularReservaBT_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(ReservaTXT.Text);
+            try
+            {
+                controlador.EliminarReserva(id);
 
+                MessageBox.Show("Datos eliminados con éxito!", "Datanerds", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiarForm();
+            }
+            catch (Exception ex) { 
+            MessageBox.Show(ex.Message);    
+            }
         }
 
         private void CancelarBt_Click(object sender, EventArgs e)
@@ -325,8 +357,11 @@ namespace Producto_2.Vista
 
         private void TemporadaCbox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            
             CHKFirm.Focus();
 
         }
+
+       
     }
 }
