@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Producto_2.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,13 @@ namespace Producto_2.Vista
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.ControlBox = false;    
+            this.ControlBox = false;
+            grpUsuariosInicio.Visible = true;
+            grpAltaUsuario.Visible = false;
            
         }
+
+        private UtenticacionControlador autControler = new UtenticacionControlador();
 
         private void FrmAutenticacion_VisibleChanged(object sender, EventArgs e)
         {
@@ -31,6 +36,68 @@ namespace Producto_2.Vista
         private void frmAutenticacion_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            string nombreUsuario = txtUsuario.Text;
+            string password = txtPass.Text;
+
+            if (autControler.inicioSesion(nombreUsuario, password))
+            {
+                MessageBox.Show("Te has logueado con exito");
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.");
+            }
+            
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNuevo_Click(object sender, EventArgs e)
+        {
+            String nombreUsuario = txtUsuario.Text;
+            String password = txtPass.Text;
+
+           if (nombreUsuario == "admin" && password == "admin")
+            {
+                grpAltaUsuario.Visible = true;
+                grpUsuariosInicio.Visible = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Acceso denegado. Debes ser administrador para accede.");
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            string nombreUsu = txtNuevoUsu.Text;
+            string pass = txtNuevaPass.Text;
+            autControler.AgregarUsuario(nombreUsu,pass);
+            MessageBox.Show("Usuario agregado con exito");
+            txtNuevaPass.Text = string.Empty;
+            txtPass.Text = string.Empty;
+            txtNuevoUsu.Text = string.Empty;
+            txtUsuario.Text = string.Empty;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            grpAltaUsuario.Visible = false;
+            grpUsuariosInicio.Visible = true;
+           
         }
     }
 }
