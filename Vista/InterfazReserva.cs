@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Producto_2.Controlador;
 using Producto_2.Modelo;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace Producto_2.Vista
 {
@@ -29,17 +31,18 @@ namespace Producto_2.Vista
             ReservaTXT.Text = "";
             NIFClienteTXT.Text = "";
             NPersonasTXT.Text = "";
-            DateIniTXT.Text = "";
-            DateFinTXT.Text = "";
             HabitacionCBox.Text = "";
             TipoPensionCB.Text = "";
             ServiciosLBox.Text = "";
-            TemporadaCBox.Text = "";
             CHKFirm.Checked = false;
         }
 
         private void InterfazServicio_Load(object sender, EventArgs e)
+
         {
+            controlador.cargarComboBox<Temporada>(TemporadaCbox, "descripcion", "temporadaID");
+            controlador.cargarComboBox<Habitacion>(HabitacionCBox, "numeroHabitacion", "numeroHabitacion");
+            controlador.cargarComboBox<RegimenPension>(TipoPensionCB, "descripcion", "pensionID");
 
         }
 
@@ -193,8 +196,11 @@ namespace Producto_2.Vista
 
         private void TemporadaCBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
 
         }
+
+        
 
         private void PrecioTotal_TextChanged(object sender, EventArgs e)
         {
@@ -218,18 +224,12 @@ namespace Producto_2.Vista
 
         private void DiasLB_TextChanged(object sender, EventArgs e)
         {
-            if (DateTime.TryParse(DateIniTXT.Text, out DateTime fechaEntrada) &&
-       DateTime.TryParse(DateFinTXT.Text, out DateTime fechaSalida))
-            {
-                TimeSpan diferencia = fechaSalida - fechaEntrada;
-                int diasDiferencia = (int)diferencia.TotalDays;
+            
+            TimeSpan diferencia = fechaSDTP.Value - fechaEDTP.Value;
+            int diasDiferencia = (int)diferencia.TotalDays;
 
-                DiasTXT.Text = diasDiferencia.ToString();
-            }
-            else
-            {
-                DiasTXT.Text = "Error: fechas inválidas";
-            }
+            DiasTXT.Text = diasDiferencia.ToString();
+            
         }
 
         private void Calendario_DateChanged(object sender, DateRangeEventArgs e)
@@ -239,39 +239,42 @@ namespace Producto_2.Vista
 
         private void ContratarBT_Click(object sender, EventArgs e)
         {
+            ContratarBT_Click(sender, e, TemporadaCbox);
+        }
+
+        private void ContratarBT_Click(object sender, EventArgs e, System.Windows.Forms.ComboBox temporadaCBox)
+        {
             byte especial = CHKFirm.Checked ? (byte)1 : (byte)0;
 
-            DateTime fechaEntrada;
-            DateTime fechaSalida;
+            DateTime fechaEntrada = fechaEDTP.Value.Date;
+            DateTime fechaSalida = fechaSDTP.Value.Date;
+            MessageBox.Show(fechaSalida.ToString());
 
-            if (DateTime.TryParse(DateIniTXT.Text, out fechaEntrada) && DateTime.TryParse(DateFinTXT.Text, out fechaSalida))
+            Reservas reserva = new Reservas
             {
-                Reservas reserva = new Reservas
-                {
-                    NIF = NIFClienteTXT.Text,
-                    fechaEntrada = fechaEntrada, 
-                    fechaSalida = fechaSalida,
-                    numeroHabitacion = (int)HabitacionCBox.DataSource,
-                    temporadaID = TemporadaCBox.SelectedIndex, 
-                    firmado = especial
+                NIF = NIFClienteTXT.Text,
+                fechaEntrada = fechaEntrada,
+                fechaSalida = fechaSalida,
+                numeroHabitacion = Convert.ToInt32(HabitacionCBox.SelectedValue),
+                temporadaID = Convert.ToInt32(temporadaCBox.SelectedValue),
+                pensionID = Convert.ToInt32(TipoPensionCB.SelectedValue),
+
+                firmado = especial
                     
-                };
+            };
 
-                try
-                {
-                    controlador.AgregarReserva(reserva);
-                    MessageBox.Show("Datos añadidos con éxito!", "Datanerds", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiarForm();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
+            try
             {
-                MessageBox.Show("Las fechas de entrada o salida no son válidas. Por favor, asegúrate de ingresar fechas en el formato correcto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                controlador.AgregarReserva(reserva);
+                MessageBox.Show("Datos añadidos con éxito!", "Datanerds", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiarForm();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            
         }
 
         private void MostrarReservaBT_Click(object sender, EventArgs e)
@@ -289,13 +292,13 @@ namespace Producto_2.Vista
 
                     ReservaTXT.Text = ID.ToString();
                     NIFClienteTXT.Text = reserva.NIF.ToString();
-                    DateIniTXT.Text = reserva.fechaEntrada.ToString();
-                    DateFinTXT.Text = reserva.fechaSalida.ToString();
+                    //DateIniTXT.Text = reserva.fechaEntrada.ToString();
+                    //DateFinTXT.Text = reserva.fechaSalida.ToString();
                     HabitacionCBox.Text = reserva.numeroHabitacion.ToString();
-                    TemporadaCBox.Text = reserva.temporadaID.ToString(); 
+                    TemporadaCbox.Text = reserva.temporadaID.ToString(); 
                     especial = (byte)reserva.firmado;
-                    DateIniTXT.TextChanged += DiasLB_TextChanged;
-                    DateFinTXT.TextChanged += DiasLB_TextChanged;
+                    //DateIniTXT.TextChanged += DiasLB_TextChanged;
+                    //DateFinTXT.TextChanged += DiasLB_TextChanged;
 
                 }
             }
@@ -317,6 +320,12 @@ namespace Producto_2.Vista
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void TemporadaCbox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            CHKFirm.Focus();
 
         }
     }

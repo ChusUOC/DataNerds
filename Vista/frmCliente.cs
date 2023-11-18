@@ -360,8 +360,10 @@ namespace Producto_2.Vista
 
         }
 
+        private void cmbPrefijos_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }   
 
 }
