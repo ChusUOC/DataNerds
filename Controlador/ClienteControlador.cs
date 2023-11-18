@@ -83,7 +83,8 @@ namespace Producto_2.Controlador
                 }
             }
         }
-        public void ActualizarCliente(String nif, string nombre, string apellidos, string email, string telefono, byte vipStatus)
+        public void ActualizarCliente(String nif, string nombre, string apellidos, string email, string telefono, byte vipStatus, string direccion,
+            string ciudad, int cp, string pais, DateTime fechaN, string detalle, string nombreCuenta, string numeroCuenta, DateTime fechaAlta)
         {
             using (dbHotelSQLEntities db = new dbHotelSQLEntities())
             {
@@ -99,6 +100,16 @@ namespace Producto_2.Controlador
                     clienteActualizar.email = email;
                     clienteActualizar.telefono = telefono;
                     clienteActualizar.VIP = vipStatus;
+                    clienteActualizar.direccion = direccion;
+                    clienteActualizar.ciudad = ciudad;
+                    clienteActualizar.cp = cp;
+                    clienteActualizar.pais = pais;
+                    clienteActualizar.fechaN = fechaN;
+                    clienteActualizar.detalle = detalle;
+                    clienteActualizar.nombreCuenta = nombreCuenta;
+                    clienteActualizar.numeroCuenta = numeroCuenta;
+                    clienteActualizar.fechaAlta = fechaAlta;    
+                   
 
                     db.SaveChanges();
                 }

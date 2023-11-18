@@ -34,7 +34,6 @@
             this.dtpFechaAltaDom = new System.Windows.Forms.DateTimePicker();
             this.txtCuentaDom = new System.Windows.Forms.TextBox();
             this.txtNomDom = new System.Windows.Forms.TextBox();
-            this.lblIncidencias = new System.Windows.Forms.Label();
             this.lblFechaAlta = new System.Windows.Forms.Label();
             this.lblCuentaDom = new System.Windows.Forms.Label();
             this.lblNombreDom = new System.Windows.Forms.Label();
@@ -86,7 +85,6 @@
             this.grpClientesDatos.Controls.Add(this.dtpFechaAltaDom);
             this.grpClientesDatos.Controls.Add(this.txtCuentaDom);
             this.grpClientesDatos.Controls.Add(this.txtNomDom);
-            this.grpClientesDatos.Controls.Add(this.lblIncidencias);
             this.grpClientesDatos.Controls.Add(this.lblFechaAlta);
             this.grpClientesDatos.Controls.Add(this.lblCuentaDom);
             this.grpClientesDatos.Controls.Add(this.lblNombreDom);
@@ -165,15 +163,6 @@
             this.txtNomDom.Name = "txtNomDom";
             this.txtNomDom.Size = new System.Drawing.Size(192, 20);
             this.txtNomDom.TabIndex = 79;
-            // 
-            // lblIncidencias
-            // 
-            this.lblIncidencias.AutoSize = true;
-            this.lblIncidencias.Location = new System.Drawing.Point(419, 283);
-            this.lblIncidencias.Name = "lblIncidencias";
-            this.lblIncidencias.Size = new System.Drawing.Size(61, 13);
-            this.lblIncidencias.TabIndex = 78;
-            this.lblIncidencias.Text = "Incidencias";
             // 
             // lblFechaAlta
             // 
@@ -587,7 +576,6 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblDetalles;
         private System.Windows.Forms.TextBox txtNomDom;
-        private System.Windows.Forms.Label lblIncidencias;
         private System.Windows.Forms.Label lblFechaAlta;
         private System.Windows.Forms.Label lblCuentaDom;
         private System.Windows.Forms.Label lblNombreDom;

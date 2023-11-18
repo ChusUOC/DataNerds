@@ -72,7 +72,7 @@ namespace Producto_2.Vista
             {
                 grpClientes.Visible = true;
                 dbGrid.DataSource = controlador.ObtenerClientes();
-                dbGrid.Columns[6].Visible = false;
+                dbGrid.Columns[16].Visible = false;
 
 
             }
@@ -82,45 +82,32 @@ namespace Producto_2.Vista
             }
 
         }
-        /*
-        private void ClientesBtn_Click(object sender, EventArgs e)
-        {
-            this.Text = "Hotel SOL";
-            ocultarGrupos();
-            //activarBtnMenu();
-            grpClientes.Visible = true;
-          //  ClientesBtn.Enabled = false;
-            this.Text += " - Clientes";
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void ajustesbtn_Click(object sender, EventArgs e)
-        {
-            ocultarGrupos();
-            activarBtnMenu();
-
-            //ajustesbtn.Enabled = false;
-        }
-        */
+      
         private void DbGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             grpClientesDatos.Visible = true;
             grpClientes.Visible = false;
             CargarComboBoxPrefijos();
             CargarComboBoxPaises();
+            string Telefono;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dbGrid.Rows[e.RowIndex];
-
+                
                 textBoxNIF.Text = row.Cells["NIF"].Value?.ToString();
                 textBoxNombre.Text = row.Cells["nombre"].Value?.ToString();
                 textBoxApellido.Text = row.Cells["apellidos"].Value?.ToString();
                 textBoxMail.Text = row.Cells["email"].Value?.ToString();
-                textBoxTelefono.Text = row.Cells["telefono"].Value?.ToString();
+                Telefono = row.Cells["telefono"].Value?.ToString();
+                string[] partes = Telefono.Split(new string[] {" - " }, StringSplitOptions.None);
+                if (partes.Length >= 3)
+                {
+                    string prefijo = partes[0] + " - " + partes[1];
+                    string numTel = partes[2];
+
+                    cmbPrefijos.Text = prefijo;
+                    textBoxTelefono.Text = numTel;
+                }
 
                 try
                 {
@@ -132,6 +119,36 @@ namespace Producto_2.Vista
                 {
                     chkVIP.Checked = false;
                 }
+
+                txtDireccion.Text = row.Cells["direccion"].Value?.ToString();
+                txtCiudad.Text = row.Cells["ciudad"].Value?.ToString();
+                txtCP.Text = row.Cells["cp"].Value?.ToString();
+                cmbPais.Text = row.Cells["pais"].Value?.ToString();
+
+                string fechaNacimiento = row.Cells["fechaN"].Value?.ToString();
+                if (DateTime.TryParse(fechaNacimiento, out DateTime fechNac))
+                {
+                    dtpFechaNaci.Value = fechNac;
+                }
+                else
+                {
+                    dtpFechaNaci.Value = DateTime.Now;
+                }
+                
+                txtDetalles.Text = row.Cells["detalle"].Value?.ToString();
+                txtNomDom.Text = row.Cells["nombreCuenta"].Value?.ToString();
+                txtCuentaDom.Text= row.Cells["numeroCuenta"].Value?.ToString();
+
+                string fechaAltaDomStr = row.Cells["fechaAlta"].Value?.ToString();
+                if (DateTime.TryParse(fechaAltaDomStr, out DateTime fechaAltaDom))
+                {
+                    dtpFechaAltaDom.Value = fechaAltaDom;
+                }
+                else
+                {
+                    dtpFechaAltaDom.Value = DateTime.Now;
+                }
+               
 
             }
         }
@@ -194,9 +211,20 @@ namespace Producto_2.Vista
                 NIF = textBoxNIF.Text,
                 nombre = textBoxNombre.Text,
                 apellidos = textBoxApellido.Text,
-                telefono = textBoxTelefono.Text,
+                telefono = cmbPrefijos.Text + " - " + textBoxTelefono.Text ,
                 email = textBoxMail.Text,
-                VIP = especial
+                VIP = especial,
+                direccion = txtDireccion.Text,
+                ciudad = txtCiudad.Text,    
+                cp = int.Parse(txtCP.Text),
+                pais = cmbPais.Text,
+                fechaN = dtpFechaNaci.Value,
+                detalle = txtDetalles.Text,
+                nombreCuenta=txtNomDom.Text,
+                numeroCuenta = txtCuentaDom.Text,
+                fechaAlta = dtpFechaAltaDom.Value
+                
+
             };
 
             try
@@ -205,6 +233,8 @@ namespace Producto_2.Vista
                 MessageBox.Show("Datos añadidos con exito!", "Datanerds", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpiarForm();
                 dbGrid.DataSource = controlador.ObtenerClientes();
+                grpClientes.Visible = true;
+                grpClientesDatos.Visible = false;
             }
             catch (Exception ex)
             {
@@ -222,6 +252,8 @@ namespace Producto_2.Vista
                     controlador.EliminarCliente(nifSeleccionado);
                     MessageBox.Show("Datos eliminados con Exito!", "Datanerds", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dbGrid.DataSource = controlador.ObtenerClientes();
+                    grpClientes.Visible = true;
+                    grpClientesDatos.Visible=false;
 
                 }
                 catch (Exception ex)
@@ -234,10 +266,11 @@ namespace Producto_2.Vista
 
         private void modClienteBtn_Click(object sender, EventArgs e)
         {
-            if (dbGrid.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = dbGrid.SelectedRows[0];
-                String Nif = selectedRow.Cells["NIF"].Value.ToString();
+            
+                string Nif = textBoxNIF.Text;
+                string telfConPrefijo = cmbPrefijos.Text + " - " + textBoxTelefono.Text;
+                int CP;
+                int.TryParse(txtCP.Text, out CP);
 
                 byte vipValue = chkVIP.Checked ? (byte)1 : (byte)0;
 
@@ -248,34 +281,31 @@ namespace Producto_2.Vista
                         textBoxNombre.Text,
                         textBoxApellido.Text,
                         textBoxMail.Text,
-                        textBoxTelefono.Text,
-                        vipValue
+                        telfConPrefijo,
+                        vipValue,
+                        txtDireccion.Text,
+                        txtCiudad.Text, 
+                        CP,
+                        cmbPais.Text,
+                        dtpFechaNaci.Value,
+                        txtDetalles.Text,
+                        txtNomDom.Text,
+                        txtCuentaDom.Text,
+                        dtpFechaAltaDom.Value
+                       
                         );
                     MessageBox.Show("Datos Actualizados con exito.", "Datanerds", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dbGrid.DataSource = controlador.ObtenerClientes();
                     limpiarForm();
+                    grpClientes.Visible = true;
+                    grpClientesDatos.Visible = false;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
-            else
-            {
-                MessageBox.Show("Selecciona un cliente para actualizar.", "Datanerds", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-        /*
-        private void Usuariosbtn_Click(object sender, EventArgs e)
-        {
-            this.Text = "Hotel SOL";
-            ocultarGrupos();
-            activarBtnMenu();
-            this.Text += " - Usuarios";
-            // grpUsuariosInicio.Visible = true;
-          //  Usuariosbtn.Enabled = false;
-        }
-        */
+            
         private void btnBuscarCli_Click(object sender, EventArgs e)
         {
             dbGrid.DataSource = controlador.BuscarClientesPorNombre(txtBuscarCli.Text);
@@ -292,12 +322,7 @@ namespace Producto_2.Vista
         {
             limpiarForm();
         }
-        /*
-        private void btnSalir_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        */
+       
         private void CargarComboBoxPrefijos()
         {
 
