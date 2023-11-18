@@ -46,15 +46,12 @@
             this.PrecioPensionTXT = new System.Windows.Forms.TextBox();
             this.PrecioHabitacionTXT = new System.Windows.Forms.TextBox();
             this.PrecioLB = new System.Windows.Forms.Label();
-            this.TemporadaCBox = new System.Windows.Forms.ComboBox();
             this.TemporadaLB = new System.Windows.Forms.Label();
             this.ServiciosLBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TipoPensionCB = new System.Windows.Forms.ComboBox();
             this.TipoPensionTXT = new System.Windows.Forms.Label();
             this.NHabitacion = new System.Windows.Forms.Label();
-            this.DateFinTXT = new System.Windows.Forms.TextBox();
-            this.DateIniTXT = new System.Windows.Forms.TextBox();
             this.FechasLB = new System.Windows.Forms.Label();
             this.NPersonasTXT = new System.Windows.Forms.TextBox();
             this.PersonasTXT = new System.Windows.Forms.Label();
@@ -63,11 +60,17 @@
             this.ReservaTXT = new System.Windows.Forms.TextBox();
             this.ReservaLB = new System.Windows.Forms.Label();
             this.labelDReserva = new System.Windows.Forms.Label();
+            this.fechaEDTP = new System.Windows.Forms.DateTimePicker();
+            this.fechaSDTP = new System.Windows.Forms.DateTimePicker();
+            this.TemporadaCbox = new System.Windows.Forms.ComboBox();
             this.grpReserva.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpReserva
             // 
+            this.grpReserva.Controls.Add(this.TemporadaCbox);
+            this.grpReserva.Controls.Add(this.fechaSDTP);
+            this.grpReserva.Controls.Add(this.fechaEDTP);
             this.grpReserva.Controls.Add(this.ModificarReservaBT);
             this.grpReserva.Controls.Add(this.CHKFirm);
             this.grpReserva.Controls.Add(this.MostrarReservaBT);
@@ -85,15 +88,12 @@
             this.grpReserva.Controls.Add(this.PrecioPensionTXT);
             this.grpReserva.Controls.Add(this.PrecioHabitacionTXT);
             this.grpReserva.Controls.Add(this.PrecioLB);
-            this.grpReserva.Controls.Add(this.TemporadaCBox);
             this.grpReserva.Controls.Add(this.TemporadaLB);
             this.grpReserva.Controls.Add(this.ServiciosLBox);
             this.grpReserva.Controls.Add(this.label1);
             this.grpReserva.Controls.Add(this.TipoPensionCB);
             this.grpReserva.Controls.Add(this.TipoPensionTXT);
             this.grpReserva.Controls.Add(this.NHabitacion);
-            this.grpReserva.Controls.Add(this.DateFinTXT);
-            this.grpReserva.Controls.Add(this.DateIniTXT);
             this.grpReserva.Controls.Add(this.FechasLB);
             this.grpReserva.Controls.Add(this.NPersonasTXT);
             this.grpReserva.Controls.Add(this.PersonasTXT);
@@ -262,15 +262,6 @@
             this.PrecioLB.TabIndex = 50;
             this.PrecioLB.Text = "Precio: ";
             // 
-            // TemporadaCBox
-            // 
-            this.TemporadaCBox.FormattingEnabled = true;
-            this.TemporadaCBox.Location = new System.Drawing.Point(114, 367);
-            this.TemporadaCBox.Name = "TemporadaCBox";
-            this.TemporadaCBox.Size = new System.Drawing.Size(120, 21);
-            this.TemporadaCBox.TabIndex = 49;
-            this.TemporadaCBox.SelectedIndexChanged += new System.EventHandler(this.TemporadaCBox_SelectedIndexChanged);
-            // 
             // TemporadaLB
             // 
             this.TemporadaLB.AutoSize = true;
@@ -325,22 +316,6 @@
             this.NHabitacion.Size = new System.Drawing.Size(79, 13);
             this.NHabitacion.TabIndex = 42;
             this.NHabitacion.Text = "Nº Habitación: ";
-            // 
-            // DateFinTXT
-            // 
-            this.DateFinTXT.Location = new System.Drawing.Point(215, 160);
-            this.DateFinTXT.Name = "DateFinTXT";
-            this.DateFinTXT.Size = new System.Drawing.Size(84, 20);
-            this.DateFinTXT.TabIndex = 41;
-            this.DateFinTXT.TextChanged += new System.EventHandler(this.DateFinTXT_TextChanged);
-            // 
-            // DateIniTXT
-            // 
-            this.DateIniTXT.Location = new System.Drawing.Point(123, 160);
-            this.DateIniTXT.Name = "DateIniTXT";
-            this.DateIniTXT.Size = new System.Drawing.Size(84, 20);
-            this.DateIniTXT.TabIndex = 40;
-            this.DateIniTXT.TextChanged += new System.EventHandler(this.DateIniTXT_TextChanged);
             // 
             // FechasLB
             // 
@@ -413,6 +388,30 @@
             this.labelDReserva.TabIndex = 32;
             this.labelDReserva.Text = "DATOS DE SERVICIOS A RESERVAR";
             // 
+            // fechaEDTP
+            // 
+            this.fechaEDTP.Location = new System.Drawing.Point(123, 160);
+            this.fechaEDTP.Name = "fechaEDTP";
+            this.fechaEDTP.Size = new System.Drawing.Size(84, 20);
+            this.fechaEDTP.TabIndex = 67;
+            // 
+            // fechaSDTP
+            // 
+            this.fechaSDTP.Location = new System.Drawing.Point(213, 160);
+            this.fechaSDTP.Name = "fechaSDTP";
+            this.fechaSDTP.Size = new System.Drawing.Size(84, 20);
+            this.fechaSDTP.TabIndex = 68;
+            // 
+            // TemporadaCbox
+            // 
+            this.TemporadaCbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TemporadaCbox.FormattingEnabled = true;
+            this.TemporadaCbox.Location = new System.Drawing.Point(113, 367);
+            this.TemporadaCbox.Name = "TemporadaCbox";
+            this.TemporadaCbox.Size = new System.Drawing.Size(121, 21);
+            this.TemporadaCbox.TabIndex = 69;
+            this.TemporadaCbox.SelectedIndexChanged += new System.EventHandler(this.TemporadaCbox_SelectedIndexChanged_1);
+            // 
             // InterfazReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,11 +435,9 @@
         private System.Windows.Forms.TextBox ReservaTXT;
         private System.Windows.Forms.TextBox NIFClienteTXT;
         private System.Windows.Forms.Label ClienteLB;
-        private System.Windows.Forms.TextBox DateIniTXT;
         private System.Windows.Forms.Label FechasLB;
         private System.Windows.Forms.TextBox NPersonasTXT;
         private System.Windows.Forms.Label PersonasTXT;
-        private System.Windows.Forms.TextBox DateFinTXT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox TipoPensionCB;
         private System.Windows.Forms.Label TipoPensionTXT;
@@ -451,7 +448,6 @@
         private System.Windows.Forms.TextBox PrecioPensionTXT;
         private System.Windows.Forms.TextBox PrecioHabitacionTXT;
         private System.Windows.Forms.Label PrecioLB;
-        private System.Windows.Forms.ComboBox TemporadaCBox;
         private System.Windows.Forms.Label TotalPVPTXT;
         private System.Windows.Forms.TextBox PrecioTotal;
         private System.Windows.Forms.TextBox DiasTXT;
@@ -465,5 +461,8 @@
         private System.Windows.Forms.Button MostrarReservaBT;
         private System.Windows.Forms.CheckBox CHKFirm;
         private System.Windows.Forms.Button ModificarReservaBT;
+        private System.Windows.Forms.DateTimePicker fechaSDTP;
+        private System.Windows.Forms.DateTimePicker fechaEDTP;
+        private System.Windows.Forms.ComboBox TemporadaCbox;
     }
 }

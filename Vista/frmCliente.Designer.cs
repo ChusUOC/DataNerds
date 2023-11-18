@@ -142,6 +142,7 @@
             this.cmbPrefijos.Name = "cmbPrefijos";
             this.cmbPrefijos.Size = new System.Drawing.Size(81, 21);
             this.cmbPrefijos.TabIndex = 81;
+            this.cmbPrefijos.SelectedIndexChanged += new System.EventHandler(this.cmbPrefijos_SelectedIndexChanged);
             // 
             // dtpFechaAltaDom
             // 
