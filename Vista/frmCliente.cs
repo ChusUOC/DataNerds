@@ -7,9 +7,11 @@ using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.Entity.Validation;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
 
 
 
@@ -300,7 +302,7 @@ namespace Producto_2.Vista
         private void CargarComboBoxPrefijos()
         {
 
-            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Pruebas C#\\DataNerds\\prefijos.csv";
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Prefijos.csv");
 
             List<string> datosCombo = new List<string>();
 
@@ -331,7 +333,7 @@ namespace Producto_2.Vista
         private void CargarComboBoxPaises()
         {
 
-            string filePath = "C:\\Users\\jf3pa\\OneDrive\\Desktop\\Pruebas C#\\DataNerds\\Paises.csv";
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Paises.csv");
 
             List<string> datosCombo = new List<string>();
 
@@ -360,8 +362,10 @@ namespace Producto_2.Vista
 
         }
 
+        private void dtpFechaNaci_ValueChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }   
 
 }

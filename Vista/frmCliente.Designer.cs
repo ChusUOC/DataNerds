@@ -225,6 +225,7 @@
             this.dtpFechaNaci.Name = "dtpFechaNaci";
             this.dtpFechaNaci.Size = new System.Drawing.Size(117, 20);
             this.dtpFechaNaci.TabIndex = 72;
+            this.dtpFechaNaci.ValueChanged += new System.EventHandler(this.dtpFechaNaci_ValueChanged);
             // 
             // lblFecNacimiento
             // 
