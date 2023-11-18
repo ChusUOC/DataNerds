@@ -144,6 +144,7 @@ namespace Producto_2.Vista
         {
             InterfazReserva reservaI = new InterfazReserva();
 
+
             reservaI.MdiParent = this.MdiParent;
             reservaI.Show();
             this.Close();
