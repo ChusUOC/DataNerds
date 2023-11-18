@@ -1,4 +1,4 @@
-﻿using Producto_2.Controlador;
+using Producto_2.Controlador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -136,6 +136,16 @@ namespace Producto_2.Vista
             }
             
         }
-      
+
+        private void nuevaReservaBTN_Click(object sender, EventArgs e)
+        {
+            InterfazReserva reservaI = new InterfazReserva();
+
+
+            reservaI.MdiParent = this.MdiParent;
+            reservaI.Show();
+            this.Close();
+            
+        }
     }
 }
