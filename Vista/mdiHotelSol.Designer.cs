@@ -38,6 +38,9 @@
             this.mnuServicios = new System.Windows.Forms.ToolStripButton();
             this.mnuFacturas = new System.Windows.Forms.ToolStripButton();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.mnuImportarXML = new System.Windows.Forms.ToolStripButton();
+            this.mnuExportarXML = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,13 +53,17 @@
             this.mnuReservas,
             this.mnuHabitaciones,
             this.mnuServicios,
-            this.mnuFacturas});
+            this.mnuFacturas,
+            this.toolStripSeparator1,
+            this.mnuImportarXML,
+            this.mnuExportarXML});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip.Size = new System.Drawing.Size(824, 53);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
+            this.toolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip_ItemClicked);
             // 
             // mnuInicio
             // 
@@ -120,6 +127,33 @@
             this.mnuFacturas.ToolTipText = "Facturas";
             this.mnuFacturas.Click += new System.EventHandler(this.mnuFacturas_Click);
             // 
+            // mnuImportarXML
+            // 
+            this.mnuImportarXML.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mnuImportarXML.Image = ((System.Drawing.Image)(resources.GetObject("mnuImportarXML.Image")));
+            this.mnuImportarXML.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mnuImportarXML.Name = "mnuImportarXML";
+            this.mnuImportarXML.Size = new System.Drawing.Size(95, 50);
+            this.mnuImportarXML.Text = "toolStripButton1";
+            this.mnuImportarXML.ToolTipText = "Importar";
+            this.mnuImportarXML.Click += new System.EventHandler(this.mnuImportarXML_Click);
+            // 
+            // mnuExportarXML
+            // 
+            this.mnuExportarXML.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mnuExportarXML.Image = ((System.Drawing.Image)(resources.GetObject("mnuExportarXML.Image")));
+            this.mnuExportarXML.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mnuExportarXML.Name = "mnuExportarXML";
+            this.mnuExportarXML.Size = new System.Drawing.Size(95, 50);
+            this.mnuExportarXML.Text = "toolStripButton2";
+            this.mnuExportarXML.ToolTipText = "Exportar";
+            this.mnuExportarXML.Click += new System.EventHandler(this.mnuExportarXML_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
+            // 
             // mdiHotelSol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,6 +183,9 @@
         private System.Windows.Forms.ToolStripButton mnuHabitaciones;
         private System.Windows.Forms.ToolStripButton mnuServicios;
         private System.Windows.Forms.ToolStripButton mnuFacturas;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton mnuImportarXML;
+        private System.Windows.Forms.ToolStripButton mnuExportarXML;
     }
 }
 

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.firmaBTN = new System.Windows.Forms.Button();
             this.pendDG = new System.Windows.Forms.DataGridView();
             this.chinDG = new System.Windows.Forms.DataGridView();
             this.checkoutHDG = new System.Windows.Forms.DataGridView();
@@ -44,7 +45,6 @@
             this.historicoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.historicoReservasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.historicoReservasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.firmaBTN = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pendDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chinDG)).BeginInit();
@@ -68,12 +68,21 @@
             this.groupBox1.Controls.Add(this.pendienteLBL);
             this.groupBox1.Controls.Add(this.checkInLBL);
             this.groupBox1.Controls.Add(this.checkoutLBL);
-            this.groupBox1.Location = new System.Drawing.Point(9, 32);
+            this.groupBox1.Location = new System.Drawing.Point(21, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(778, 463);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            // 
+            // firmaBTN
+            // 
+            this.firmaBTN.Location = new System.Drawing.Point(594, 303);
+            this.firmaBTN.Name = "firmaBTN";
+            this.firmaBTN.Size = new System.Drawing.Size(135, 23);
+            this.firmaBTN.TabIndex = 21;
+            this.firmaBTN.Text = "FIRMAR";
+            this.firmaBTN.UseVisualStyleBackColor = true;
+            this.firmaBTN.Click += new System.EventHandler(this.firmaBTN_Click);
             // 
             // pendDG
             // 
@@ -170,26 +179,18 @@
             // 
             this.historicoReservasBindingSource2.DataMember = "historicoReservas";
             // 
-            // firmaBTN
-            // 
-            this.firmaBTN.Location = new System.Drawing.Point(594, 303);
-            this.firmaBTN.Name = "firmaBTN";
-            this.firmaBTN.Size = new System.Drawing.Size(135, 23);
-            this.firmaBTN.TabIndex = 21;
-            this.firmaBTN.Text = "FIRMAR";
-            this.firmaBTN.UseVisualStyleBackColor = true;
-            this.firmaBTN.Click += new System.EventHandler(this.firmaBTN_Click);
-            // 
             // Form7Reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(799, 500);
+            this.ClientSize = new System.Drawing.Size(820, 583);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form7Reservas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form7Reservas";
             this.Load += new System.EventHandler(this.Form7Reservas_Load);
             this.groupBox1.ResumeLayout(false);

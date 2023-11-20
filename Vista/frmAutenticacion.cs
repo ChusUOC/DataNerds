@@ -18,22 +18,23 @@ namespace Producto_2.Vista
         { 
             InitializeComponent();
             
-            this.Move += new EventHandler(frmAutenticacion_Move);
+            this.Move += new EventHandler(frm_Move);
             grpUsuariosInicio.Visible = true;
             grpAltaUsuario.Visible = false;
-           
+            
+
         }
 
         private UtenticacionControlador autControler = new UtenticacionControlador();
         
-        private void frmAutenticacion_Move (Object sender, EventArgs e)
+        private void frm_Move (Object sender, EventArgs e)
         {
             this.Location = new Point(0, 0);
         }
         private void frmAutenticacion_Load(object sender, EventArgs e)
         {
-          
-           
+
+            MessageBox.Show("Durante la implementación podeis salir de este form pulsando Salir");
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -41,9 +42,15 @@ namespace Producto_2.Vista
             string nombreUsuario = txtUsuario.Text;
             string password = txtPass.Text;
 
+            var mdiHotelSol = this.MdiParent as mdiHotelSol;
+
             if (autControler.inicioSesion(nombreUsuario, password))
             {
                 MessageBox.Show("Te has logueado con exito");
+                mdiHotelSol.HabilitarBoton();
+                this.Close();
+                
+                
             }
             else
             {

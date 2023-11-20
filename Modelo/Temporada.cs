@@ -14,16 +14,7 @@ namespace Producto_2.Modelo
     
     public partial class Temporada
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Temporada()
-        {
-            this.Reservas = new HashSet<Reservas>();
-        }
-    
         public int temporadaID { get; set; }
         public string descripcion { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Reservas> Reservas { get; set; }
     }
 }

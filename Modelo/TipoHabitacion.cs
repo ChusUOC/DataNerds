@@ -14,16 +14,7 @@ namespace Producto_2.Modelo
     
     public partial class TipoHabitacion
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TipoHabitacion()
-        {
-            this.Habitacion = new HashSet<Habitacion>();
-        }
-    
         public int tipoID { get; set; }
         public string descripcion { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Habitacion> Habitacion { get; set; }
     }
 }

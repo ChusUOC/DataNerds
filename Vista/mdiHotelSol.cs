@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Producto_2.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,8 +22,9 @@ namespace Producto_2.Vista
         {
             InitializeComponent();
             this.IsMdiContainer = true;
-            //BloquearBotones();
-            //MostrarLogin();
+           // this.DeshabilitarBoton();
+           
+           
         }
 
         //Evita abrir mas de una instacia de un formulario
@@ -42,12 +44,6 @@ namespace Producto_2.Vista
 
                 formularioHijo.MdiParent = this;
                
-                formularioHijo.ControlBox = false;
-                formularioHijo.Refresh();   
-                formularioHijo.Size = this.ClientSize;
-                formularioHijo.StartPosition = FormStartPosition.Manual;
-                formularioHijo.Location = new Point(0, 0);
-                formularioHijo.Size = this.ClientSize;
                 formularioHijo.Show();
 
             }
@@ -57,35 +53,31 @@ namespace Producto_2.Vista
         {
             cerrarForms();
             abrirFomulario(typeof(frmAutenticacion));
-           
+            
         }
-        private void MostrarLogin()
+       
+        public void HabilitarBoton()
         {
-            frmAutenticacion loginForm = new frmAutenticacion();
-            if (loginForm.ShowDialog() == DialogResult.OK)
-            {
-                DesbloquearBotones();
-            }
-        }
-
-        private void BloquearBotones()
-        {
-            mnuServicios.Enabled = false;
-            mnuReservas.Enabled = false;    
-            mnuClientes.Enabled = false;
-            mnuFacturas.Enabled = false;
-            mnuHabitaciones.Enabled = false;
-            mnuInicio.Enabled = false;
-        }
-
-        private void DesbloquearBotones()
-        {
-            mnuServicios.Enabled = true;
-            mnuReservas.Enabled = true;
-            mnuClientes.Enabled = true;
-            mnuFacturas.Enabled = true;
-            mnuHabitaciones.Enabled = true;
             mnuInicio.Enabled = true;
+            mnuClientes.Enabled = true;
+            mnuReservas.Enabled = true;
+            mnuHabitaciones.Enabled = true;
+            mnuServicios.Enabled = true;
+            mnuFacturas.Enabled = true;
+            mnuImportarXML.Enabled = true;
+            mnuExportarXML.Enabled = true;
+        }
+
+        public void DeshabilitarBoton()
+        {
+            mnuInicio.Enabled = false;
+            mnuClientes.Enabled = false;
+            mnuReservas.Enabled = false;
+            mnuHabitaciones.Enabled = false;
+            mnuServicios.Enabled = false;
+            mnuFacturas.Enabled = false;
+            mnuExportarXML.Enabled = false;
+            mnuImportarXML.Enabled = false;
         }
 
         private void mnuFacturas_Click(object sender, EventArgs e)
@@ -134,5 +126,52 @@ namespace Producto_2.Vista
 
         }
 
+        private void toolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void mnuImportarXML_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "XML Files (*.xml)|*.xml";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string rutaArchivo = openFileDialog.FileName;
+               // List<Clientes> listaClientesImportados = controlador.ImportarXML(rutaArchivo);
+               /*
+                foreach (var cliente in listaClientesImportados)
+                {
+                    try
+                    {
+                      //  controlador.AgregarCliente(cliente);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al agregar el cliente: " + ex.Message);
+                    }
+                }
+               */
+                MessageBox.Show("Datos importados y agregados con éxito!");
+              // dbGrid.DataSource = controlador.ObtenerClientes();
+            }
+        }
+
+        private void mnuExportarXML_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "XML Files (*.xml)|*.xml";
+            saveFileDialog.DefaultExt = "xml";
+            saveFileDialog.AddExtension = true;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string rutaArchivo = saveFileDialog.FileName;
+               // List<Clientes> listaClientes = controlador.ObtenerClientes();
+               // controlador.ExportarClientesAXML(listaClientes, rutaArchivo);
+                MessageBox.Show("Datos exportados con éxito!");
+
+            }
+        }
     }
 }

@@ -22,10 +22,14 @@ namespace Producto_2.Vista
         public InterfazReserva()
         {
             InitializeComponent();
+            this.Move += new EventHandler(frm_Move);
         }
 
         /*Métodos de botones de navegación*/
-
+        private void frm_Move(Object sender, EventArgs e)
+        {
+            this.Location = new Point(0, 0);
+        }
         private void limpiarForm()
         {
             ReservaTXT.Text = "";

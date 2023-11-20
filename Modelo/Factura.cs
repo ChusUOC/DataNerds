@@ -20,7 +20,5 @@ namespace Producto_2.Modelo
         public Nullable<int> servicioID { get; set; }
         public int reservaID { get; set; }
         public string idCliente { get; set; }
-    
-        public virtual Reservas Reservas { get; set; }
     }
 }

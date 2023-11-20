@@ -88,7 +88,7 @@
             this.grpReserva.Controls.Add(this.ReservaTXT);
             this.grpReserva.Controls.Add(this.ReservaLB);
             this.grpReserva.Controls.Add(this.labelDReserva);
-            this.grpReserva.Location = new System.Drawing.Point(61, 42);
+            this.grpReserva.Location = new System.Drawing.Point(70, 56);
             this.grpReserva.Name = "grpReserva";
             this.grpReserva.Size = new System.Drawing.Size(680, 470);
             this.grpReserva.TabIndex = 29;
@@ -344,9 +344,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(799, 538);
+            this.ClientSize = new System.Drawing.Size(820, 583);
             this.Controls.Add(this.grpReserva);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InterfazReserva";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Hotel SOL";
             this.Load += new System.EventHandler(this.InterfazServicio_Load);
             this.grpReserva.ResumeLayout(false);

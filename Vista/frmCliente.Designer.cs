@@ -116,7 +116,7 @@
             this.grpClientesDatos.Controls.Add(this.textBoxNIF);
             this.grpClientesDatos.Controls.Add(this.btnCancelar);
             this.grpClientesDatos.Controls.Add(this.addCliente);
-            this.grpClientesDatos.Location = new System.Drawing.Point(64, 36);
+            this.grpClientesDatos.Location = new System.Drawing.Point(73, 79);
             this.grpClientesDatos.Name = "grpClientesDatos";
             this.grpClientesDatos.Size = new System.Drawing.Size(674, 425);
             this.grpClientesDatos.TabIndex = 6;
@@ -486,7 +486,7 @@
             this.grpClientes.Controls.Add(this.txtBuscarCli);
             this.grpClientes.Controls.Add(this.labelDClientes);
             this.grpClientes.Controls.Add(this.dbGrid);
-            this.grpClientes.Location = new System.Drawing.Point(64, 55);
+            this.grpClientes.Location = new System.Drawing.Point(73, 56);
             this.grpClientes.Name = "grpClientes";
             this.grpClientes.Size = new System.Drawing.Size(674, 470);
             this.grpClientes.TabIndex = 28;
@@ -519,10 +519,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(798, 561);
+            this.ClientSize = new System.Drawing.Size(820, 583);
             this.ControlBox = false;
-            this.Controls.Add(this.grpClientesDatos);
             this.Controls.Add(this.grpClientes);
+            this.Controls.Add(this.grpClientesDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "frmCliente";

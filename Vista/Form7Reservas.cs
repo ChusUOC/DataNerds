@@ -21,7 +21,12 @@ namespace Producto_2.Vista
         public Form7Reservas()
         {
             InitializeComponent();
-           
+            this.Move += new EventHandler(frm_Move);
+
+        }
+        private void frm_Move(Object sender, EventArgs e)
+        {
+            this.Location = new Point(0, 0);
         }
         public void cargarDatos() {
 

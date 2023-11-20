@@ -63,7 +63,7 @@
             // 
             // addServiceBTN
             // 
-            this.addServiceBTN.Location = new System.Drawing.Point(301, 353);
+            this.addServiceBTN.Location = new System.Drawing.Point(291, 444);
             this.addServiceBTN.Name = "addServiceBTN";
             this.addServiceBTN.Size = new System.Drawing.Size(197, 23);
             this.addServiceBTN.TabIndex = 2;
@@ -74,7 +74,7 @@
             // serviciosDG
             // 
             this.serviciosDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.serviciosDG.Location = new System.Drawing.Point(6, 44);
+            this.serviciosDG.Location = new System.Drawing.Point(6, 98);
             this.serviciosDG.Name = "serviciosDG";
             this.serviciosDG.Size = new System.Drawing.Size(766, 281);
             this.serviciosDG.TabIndex = 1;
@@ -92,7 +92,7 @@
             this.ALTA,
             this.precioNocheG,
             this.dscVipG});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 74);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(766, 29);
@@ -155,9 +155,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(799, 538);
+            this.ClientSize = new System.Drawing.Size(820, 583);
             this.Controls.Add(this.grpClientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormServicios11";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormServicios11";
             this.Load += new System.EventHandler(this.FormServicios11_Load);
             this.grpClientes.ResumeLayout(false);

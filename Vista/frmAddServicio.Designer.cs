@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gbAddService = new System.Windows.Forms.GroupBox();
+            this.porcentajeVipTB = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.ModificarReservaBT = new System.Windows.Forms.Button();
             this.MostrarSrvBT = new System.Windows.Forms.Button();
             this.AnularReservaBT = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@
             this.descServicioTXT = new System.Windows.Forms.TextBox();
             this.descB = new System.Windows.Forms.Label();
             this.labelDReserva = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.porcentajeVipTB = new System.Windows.Forms.TextBox();
             this.gbAddService.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,12 +86,27 @@
             this.gbAddService.Controls.Add(this.descServicioTXT);
             this.gbAddService.Controls.Add(this.descB);
             this.gbAddService.Controls.Add(this.labelDReserva);
-            this.gbAddService.Location = new System.Drawing.Point(24, 46);
+            this.gbAddService.Location = new System.Drawing.Point(29, 71);
             this.gbAddService.Name = "gbAddService";
             this.gbAddService.Size = new System.Drawing.Size(763, 440);
             this.gbAddService.TabIndex = 0;
             this.gbAddService.TabStop = false;
-            this.gbAddService.Text = "groupBox1";
+            // 
+            // porcentajeVipTB
+            // 
+            this.porcentajeVipTB.Location = new System.Drawing.Point(140, 248);
+            this.porcentajeVipTB.Name = "porcentajeVipTB";
+            this.porcentajeVipTB.Size = new System.Drawing.Size(120, 20);
+            this.porcentajeVipTB.TabIndex = 73;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(51, 251);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 13);
+            this.label8.TabIndex = 72;
+            this.label8.Text = "Porcentaje VIP";
             // 
             // ModificarReservaBT
             // 
@@ -307,30 +322,16 @@
             this.labelDReserva.TabIndex = 33;
             this.labelDReserva.Text = "DATOS DE LOS SERVICIOS";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(51, 251);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 13);
-            this.label8.TabIndex = 72;
-            this.label8.Text = "Porcentaje VIP";
-            // 
-            // porcentajeVipTB
-            // 
-            this.porcentajeVipTB.Location = new System.Drawing.Point(140, 248);
-            this.porcentajeVipTB.Name = "porcentajeVipTB";
-            this.porcentajeVipTB.Size = new System.Drawing.Size(120, 20);
-            this.porcentajeVipTB.TabIndex = 73;
-            // 
             // frmAddServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(799, 538);
+            this.ClientSize = new System.Drawing.Size(820, 583);
             this.Controls.Add(this.gbAddService);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddServicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmAddServicio";
             this.Load += new System.EventHandler(this.frmAddServicio_Load);
             this.gbAddService.ResumeLayout(false);

@@ -25,11 +25,11 @@ namespace Producto_2.Vista
         public frmCliente()
         {
             InitializeComponent();
-            this.Move += new EventHandler(frmCliente_Move);
+            this.Move += new EventHandler(frm_Move);
 
         }
 
-        private void frmCliente_Move(Object sender, EventArgs e)
+        private void frm_Move(Object sender, EventArgs e)
         {
             this.Location = new Point(0, 0);
         }
@@ -42,11 +42,7 @@ namespace Producto_2.Vista
 
         }
 
-        public void activarBtnMenu()
-        {
-           
-        }
-
+        
         private void limpiarForm()
         {
             textBoxNIF.Text = string.Empty;
@@ -77,7 +73,7 @@ namespace Producto_2.Vista
             {
                 grpClientes.Visible = true;
                 dbGrid.DataSource = controlador.ObtenerClientes();
-                dbGrid.Columns[16].Visible = false;
+                //dbGrid.Columns[16].Visible = false;
 
 
             }
@@ -165,44 +161,12 @@ namespace Producto_2.Vista
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "XML Files (*.xml)|*.xml";
-            saveFileDialog.DefaultExt = "xml";
-            saveFileDialog.AddExtension = true;
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string rutaArchivo = saveFileDialog.FileName;
-                List<Clientes> listaClientes = controlador.ObtenerClientes();
-                controlador.ExportarClientesAXML(listaClientes, rutaArchivo);
-                MessageBox.Show("Datos exportados con éxito!");
-
-            }
+           
         }
 
         private void btnImportar_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "XML Files (*.xml)|*.xml";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string rutaArchivo = openFileDialog.FileName;
-                List<Clientes> listaClientesImportados = controlador.ImportarXML(rutaArchivo);
-
-                foreach (var cliente in listaClientesImportados)
-                {
-                    try
-                    {
-                        controlador.AgregarCliente(cliente);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al agregar el cliente: " + ex.Message);
-                    }
-                }
-                MessageBox.Show("Datos importados y agregados con éxito!");
-                dbGrid.DataSource = controlador.ObtenerClientes();
-            }
+            
 
         }
 

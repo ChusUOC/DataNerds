@@ -199,18 +199,18 @@
             // 
             // frmAutenticacion
             // 
+            this.AcceptButton = this.btnEntrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(820, 600);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(820, 583);
             this.Controls.Add(this.grpUsuariosInicio);
             this.Controls.Add(this.grpAltaUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAutenticacion";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Autenticacion";
             this.Load += new System.EventHandler(this.frmAutenticacion_Load);
             this.grpUsuariosInicio.ResumeLayout(false);
