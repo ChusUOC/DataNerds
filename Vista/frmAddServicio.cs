@@ -139,6 +139,7 @@ namespace Producto_2.Vista
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.Message);
             }
         }
