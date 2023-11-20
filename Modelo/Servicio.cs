@@ -34,6 +34,5 @@ namespace Producto_2.Modelo
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HistoricoServicios> HistoricoServicios { get; set; }
-        public virtual TipoServicio TipoServicio { get; set; }
     }
 }

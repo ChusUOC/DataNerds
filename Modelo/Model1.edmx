@@ -118,16 +118,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <Property Name="permisoBaja" Type="tinyint" />
           <Property Name="descVIP" Type="float" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="Temporada">
           <Key>
             <PropertyRef Name="temporadaID" />
@@ -140,13 +130,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
             <PropertyRef Name="tipoID" />
           </Key>
           <Property Name="tipoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="descripcion" Type="nchar" MaxLength="200" />
-        </EntityType>
-        <EntityType Name="TipoServicio">
-          <Key>
-            <PropertyRef Name="tipoServicioID" />
-          </Key>
-          <Property Name="tipoServicioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="descripcion" Type="nchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -265,18 +248,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Servicio_TipoServicio">
-          <End Role="TipoServicio" Type="Self.TipoServicio" Multiplicity="1" />
-          <End Role="Servicio" Type="Self.Servicio" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TipoServicio">
-              <PropertyRef Name="tipoServicioID" />
-            </Principal>
-            <Dependent Role="Servicio">
-              <PropertyRef Name="tipoServicioID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="HotelSQLModelStoreContainer">
           <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
@@ -286,10 +257,8 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <EntitySet Name="RegimenPension" EntityType="Self.RegimenPension" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reservas" EntityType="Self.Reservas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Servicio" EntityType="Self.Servicio" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Temporada" EntityType="Self.Temporada" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoHabitacion" EntityType="Self.TipoHabitacion" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HistoricoServicios" EntityType="Self.HistoricoServicios" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -333,10 +302,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <AssociationSet Name="FK_Reservas_Temporada" Association="Self.FK_Reservas_Temporada">
             <End Role="Temporada" EntitySet="Temporada" />
             <End Role="Reservas" EntitySet="Reservas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Servicio_TipoServicio" Association="Self.FK_Servicio_TipoServicio">
-            <End Role="TipoServicio" EntitySet="TipoServicio" />
-            <End Role="Servicio" EntitySet="Servicio" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -458,17 +423,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <Property Name="permisoBaja" Type="Byte" />
           <Property Name="descVIP" Type="Double" />
           <NavigationProperty Name="HistoricoServicios" Relationship="Self.FK_HistoricoServicios_Servicio" FromRole="Servicio" ToRole="HistoricoServicios" />
-          <NavigationProperty Name="TipoServicio" Relationship="Self.FK_Servicio_TipoServicio" FromRole="Servicio" ToRole="TipoServicio" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Temporada">
           <Key>
@@ -485,14 +439,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <Property Name="tipoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Habitacion" Relationship="Self.FK_Habitacion_TipoHabitacion" FromRole="TipoHabitacion" ToRole="Habitacion" />
-        </EntityType>
-        <EntityType Name="TipoServicio">
-          <Key>
-            <PropertyRef Name="tipoServicioID" />
-          </Key>
-          <Property Name="tipoServicioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="Servicio" Relationship="Self.FK_Servicio_TipoServicio" FromRole="TipoServicio" ToRole="Servicio" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -622,18 +568,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Servicio_TipoServicio">
-          <End Role="TipoServicio" Type="Self.TipoServicio" Multiplicity="1" />
-          <End Role="Servicio" Type="Self.Servicio" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TipoServicio">
-              <PropertyRef Name="tipoServicioID" />
-            </Principal>
-            <Dependent Role="Servicio">
-              <PropertyRef Name="tipoServicioID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="dbHotelSQLEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clientes" EntityType="Self.Clientes" />
           <EntitySet Name="Factura" EntityType="Self.Factura" />
@@ -643,10 +577,8 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <EntitySet Name="RegimenPension" EntityType="Self.RegimenPension" />
           <EntitySet Name="Reservas" EntityType="Self.Reservas" />
           <EntitySet Name="Servicio" EntityType="Self.Servicio" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Temporada" EntityType="Self.Temporada" />
           <EntitySet Name="TipoHabitacion" EntityType="Self.TipoHabitacion" />
-          <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="HistoricoServicios" EntityType="Self.HistoricoServicios" />
           <AssociationSet Name="FK_Reservas_Clientes" Association="Self.FK_Reservas_Clientes">
@@ -684,10 +616,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <AssociationSet Name="FK_HistoricoServicios_Servicio" Association="Self.FK_HistoricoServicios_Servicio">
             <End Role="Servicio" EntitySet="Servicio" />
             <End Role="HistoricoServicios" EntitySet="HistoricoServicios" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Servicio_TipoServicio" Association="Self.FK_Servicio_TipoServicio">
-            <End Role="TipoServicio" EntitySet="TipoServicio" />
-            <End Role="Servicio" EntitySet="Servicio" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -805,17 +733,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="HotelSQLModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Temporada">
             <EntityTypeMapping TypeName="HotelSQLModel.Temporada">
               <MappingFragment StoreEntitySet="Temporada">
@@ -828,14 +745,6 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
             <EntityTypeMapping TypeName="HotelSQLModel.TipoHabitacion">
               <MappingFragment StoreEntitySet="TipoHabitacion">
                 <ScalarProperty Name="tipoID" ColumnName="tipoID" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TipoServicio">
-            <EntityTypeMapping TypeName="HotelSQLModel.TipoServicio">
-              <MappingFragment StoreEntitySet="TipoServicio">
-                <ScalarProperty Name="tipoServicioID" ColumnName="tipoServicioID" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
               </MappingFragment>
             </EntityTypeMapping>

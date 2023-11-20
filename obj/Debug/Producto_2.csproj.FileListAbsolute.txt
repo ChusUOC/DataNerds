@@ -79,3 +79,4 @@ C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework
 C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework.xml
 C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.csproj.CopyComplete
+C:\Users\jf3pa\OneDrive\Desktop\Persistencia\DataNerds\obj\Debug\Producto_2.Vista.frmAddServicio.resources

@@ -114,17 +114,6 @@
     <Property Name="permisoBaja" Type="Byte" />
     <Property Name="descVIP" Type="Double" />
     <NavigationProperty Name="HistoricoServicios" Relationship="Self.FK_HistoricoServicios_Servicio" FromRole="Servicio" ToRole="HistoricoServicios" />
-    <NavigationProperty Name="TipoServicio" Relationship="Self.FK_Servicio_TipoServicio" FromRole="Servicio" ToRole="TipoServicio" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Temporada">
     <Key>
@@ -141,14 +130,6 @@
     <Property Name="tipoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
     <NavigationProperty Name="Habitacion" Relationship="Self.FK_Habitacion_TipoHabitacion" FromRole="TipoHabitacion" ToRole="Habitacion" />
-  </EntityType>
-  <EntityType Name="TipoServicio">
-    <Key>
-      <PropertyRef Name="tipoServicioID" />
-    </Key>
-    <Property Name="tipoServicioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
-    <NavigationProperty Name="Servicio" Relationship="Self.FK_Servicio_TipoServicio" FromRole="TipoServicio" ToRole="Servicio" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -278,18 +259,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Servicio_TipoServicio">
-    <End Role="TipoServicio" Type="Self.TipoServicio" Multiplicity="1" />
-    <End Role="Servicio" Type="Self.Servicio" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TipoServicio">
-        <PropertyRef Name="tipoServicioID" />
-      </Principal>
-      <Dependent Role="Servicio">
-        <PropertyRef Name="tipoServicioID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="dbHotelSQLEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Clientes" EntityType="Self.Clientes" />
     <EntitySet Name="Factura" EntityType="Self.Factura" />
@@ -299,10 +268,8 @@
     <EntitySet Name="RegimenPension" EntityType="Self.RegimenPension" />
     <EntitySet Name="Reservas" EntityType="Self.Reservas" />
     <EntitySet Name="Servicio" EntityType="Self.Servicio" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Temporada" EntityType="Self.Temporada" />
     <EntitySet Name="TipoHabitacion" EntityType="Self.TipoHabitacion" />
-    <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <EntitySet Name="HistoricoServicios" EntityType="Self.HistoricoServicios" />
     <AssociationSet Name="FK_Reservas_Clientes" Association="Self.FK_Reservas_Clientes">
@@ -340,10 +307,6 @@
     <AssociationSet Name="FK_HistoricoServicios_Servicio" Association="Self.FK_HistoricoServicios_Servicio">
       <End Role="Servicio" EntitySet="Servicio" />
       <End Role="HistoricoServicios" EntitySet="HistoricoServicios" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Servicio_TipoServicio" Association="Self.FK_Servicio_TipoServicio">
-      <End Role="TipoServicio" EntitySet="TipoServicio" />
-      <End Role="Servicio" EntitySet="Servicio" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
