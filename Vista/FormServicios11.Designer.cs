@@ -67,8 +67,9 @@
             this.addServiceBTN.Name = "addServiceBTN";
             this.addServiceBTN.Size = new System.Drawing.Size(197, 23);
             this.addServiceBTN.TabIndex = 2;
-            this.addServiceBTN.Text = "Add nuevo servicio";
+            this.addServiceBTN.Text = "Modificar servicio";
             this.addServiceBTN.UseVisualStyleBackColor = true;
+            this.addServiceBTN.Click += new System.EventHandler(this.addServiceBTN_Click);
             // 
             // serviciosDG
             // 
@@ -153,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(799, 538);
             this.Controls.Add(this.grpClientes);
             this.Name = "FormServicios11";

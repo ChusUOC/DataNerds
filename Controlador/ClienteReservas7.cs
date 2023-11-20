@@ -10,20 +10,15 @@ namespace Producto_2.Controlador
     
     internal class ClienteReservas7
     {
-        public List<historicoReservas> obtenerHistoricoReservas()
+        public List<Reservas> obtenerHistoricoReservas()
         {
             using (dbHotelSQLEntities db = new dbHotelSQLEntities())
             {
-                return db.historicoReservas.ToList();
+                return db.Reservas.ToList();
             }
         }
-        public List<Incidencias> obtenerHistoricoIncidencias() {
-            using (dbHotelSQLEntities db = new dbHotelSQLEntities()) { 
-            return db.Incidencias.ToList();
-            }
-        }
-
         
+
 
     }
 }

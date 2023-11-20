@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -250,7 +250,6 @@ namespace Producto_2.Vista
 
             DateTime fechaEntrada = fechaEDTP.Value.Date;
             DateTime fechaSalida = fechaSDTP.Value.Date;
-            MessageBox.Show(fechaSalida.ToString());
 
             Reservas reserva = new Reservas
             {
@@ -296,7 +295,7 @@ namespace Producto_2.Vista
                     TipoPensionCB.SelectedValue = reserva.pensionID;
                     HabitacionCBox.SelectedValue = reserva.numeroHabitacion;      
                     TemporadaCbox.SelectedValue = reserva.temporadaID;
-                    especial = (byte)reserva.firmado;
+                    CHKFirm.Checked = Convert.ToBoolean(reserva.firmado);
 
                 }
                 calculodias();
