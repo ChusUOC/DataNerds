@@ -65,7 +65,6 @@
             this.mnuInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuInicio.Name = "mnuInicio";
             this.mnuInicio.Size = new System.Drawing.Size(95, 50);
-            this.mnuInicio.Text = "toolStripButton1";
             this.mnuInicio.ToolTipText = "Inicio";
             this.mnuInicio.Click += new System.EventHandler(this.mnuInicio_Click);
             // 
@@ -73,7 +72,7 @@
             // 
             this.mnuClientes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.mnuClientes.Image = ((System.Drawing.Image)(resources.GetObject("mnuClientes.Image")));
-            this.mnuClientes.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.mnuClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuClientes.Name = "mnuClientes";
             this.mnuClientes.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
             this.mnuClientes.Size = new System.Drawing.Size(95, 50);
@@ -88,7 +87,6 @@
             this.mnuReservas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuReservas.Name = "mnuReservas";
             this.mnuReservas.Size = new System.Drawing.Size(95, 50);
-            this.mnuReservas.Text = "toolStripButton2";
             this.mnuReservas.ToolTipText = "Reservas";
             this.mnuReservas.Click += new System.EventHandler(this.mnuReservas_Click);
             // 
@@ -99,7 +97,6 @@
             this.mnuHabitaciones.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuHabitaciones.Name = "mnuHabitaciones";
             this.mnuHabitaciones.Size = new System.Drawing.Size(95, 50);
-            this.mnuHabitaciones.Text = "toolStripButton3";
             this.mnuHabitaciones.ToolTipText = "Habitaciones";
             this.mnuHabitaciones.Click += new System.EventHandler(this.mnuHabitaciones_Click);
             // 
@@ -110,7 +107,6 @@
             this.mnuServicios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuServicios.Name = "mnuServicios";
             this.mnuServicios.Size = new System.Drawing.Size(95, 50);
-            this.mnuServicios.Text = "mnuServicios";
             this.mnuServicios.ToolTipText = "Servicios";
             this.mnuServicios.Click += new System.EventHandler(this.mnuServicios_Click);
             // 
@@ -121,7 +117,6 @@
             this.mnuFacturas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuFacturas.Name = "mnuFacturas";
             this.mnuFacturas.Size = new System.Drawing.Size(95, 50);
-            this.mnuFacturas.Text = "toolStripButton1";
             this.mnuFacturas.ToolTipText = "Facturas";
             this.mnuFacturas.Click += new System.EventHandler(this.mnuFacturas_Click);
             // 

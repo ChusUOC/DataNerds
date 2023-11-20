@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.grpReserva = new System.Windows.Forms.GroupBox();
+            this.TemporadaCbox = new System.Windows.Forms.ComboBox();
+            this.fechaSDTP = new System.Windows.Forms.DateTimePicker();
+            this.fechaEDTP = new System.Windows.Forms.DateTimePicker();
             this.ModificarReservaBT = new System.Windows.Forms.Button();
             this.CHKFirm = new System.Windows.Forms.CheckBox();
             this.MostrarReservaBT = new System.Windows.Forms.Button();
-            this.FacturarBT = new System.Windows.Forms.Button();
             this.AnularReservaBT = new System.Windows.Forms.Button();
             this.HabitacionCBox = new System.Windows.Forms.ComboBox();
             this.DiasTXT = new System.Windows.Forms.TextBox();
@@ -40,12 +42,6 @@
             this.CancelarBt = new System.Windows.Forms.Button();
             this.ContratarBT = new System.Windows.Forms.Button();
             this.Calendario = new System.Windows.Forms.MonthCalendar();
-            this.TotalPVPTXT = new System.Windows.Forms.Label();
-            this.PrecioTotal = new System.Windows.Forms.TextBox();
-            this.PrecioServiciosTXT = new System.Windows.Forms.TextBox();
-            this.PrecioPensionTXT = new System.Windows.Forms.TextBox();
-            this.PrecioHabitacionTXT = new System.Windows.Forms.TextBox();
-            this.PrecioLB = new System.Windows.Forms.Label();
             this.TemporadaLB = new System.Windows.Forms.Label();
             this.ServiciosLBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,9 +56,6 @@
             this.ReservaTXT = new System.Windows.Forms.TextBox();
             this.ReservaLB = new System.Windows.Forms.Label();
             this.labelDReserva = new System.Windows.Forms.Label();
-            this.fechaEDTP = new System.Windows.Forms.DateTimePicker();
-            this.fechaSDTP = new System.Windows.Forms.DateTimePicker();
-            this.TemporadaCbox = new System.Windows.Forms.ComboBox();
             this.grpReserva.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +67,6 @@
             this.grpReserva.Controls.Add(this.ModificarReservaBT);
             this.grpReserva.Controls.Add(this.CHKFirm);
             this.grpReserva.Controls.Add(this.MostrarReservaBT);
-            this.grpReserva.Controls.Add(this.FacturarBT);
             this.grpReserva.Controls.Add(this.AnularReservaBT);
             this.grpReserva.Controls.Add(this.HabitacionCBox);
             this.grpReserva.Controls.Add(this.DiasTXT);
@@ -82,12 +74,6 @@
             this.grpReserva.Controls.Add(this.CancelarBt);
             this.grpReserva.Controls.Add(this.ContratarBT);
             this.grpReserva.Controls.Add(this.Calendario);
-            this.grpReserva.Controls.Add(this.TotalPVPTXT);
-            this.grpReserva.Controls.Add(this.PrecioTotal);
-            this.grpReserva.Controls.Add(this.PrecioServiciosTXT);
-            this.grpReserva.Controls.Add(this.PrecioPensionTXT);
-            this.grpReserva.Controls.Add(this.PrecioHabitacionTXT);
-            this.grpReserva.Controls.Add(this.PrecioLB);
             this.grpReserva.Controls.Add(this.TemporadaLB);
             this.grpReserva.Controls.Add(this.ServiciosLBox);
             this.grpReserva.Controls.Add(this.label1);
@@ -108,6 +94,30 @@
             this.grpReserva.TabIndex = 29;
             this.grpReserva.TabStop = false;
             // 
+            // TemporadaCbox
+            // 
+            this.TemporadaCbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TemporadaCbox.FormattingEnabled = true;
+            this.TemporadaCbox.Location = new System.Drawing.Point(113, 367);
+            this.TemporadaCbox.Name = "TemporadaCbox";
+            this.TemporadaCbox.Size = new System.Drawing.Size(121, 21);
+            this.TemporadaCbox.TabIndex = 69;
+            this.TemporadaCbox.SelectedIndexChanged += new System.EventHandler(this.TemporadaCbox_SelectedIndexChanged_1);
+            // 
+            // fechaSDTP
+            // 
+            this.fechaSDTP.Location = new System.Drawing.Point(213, 160);
+            this.fechaSDTP.Name = "fechaSDTP";
+            this.fechaSDTP.Size = new System.Drawing.Size(84, 20);
+            this.fechaSDTP.TabIndex = 68;
+            // 
+            // fechaEDTP
+            // 
+            this.fechaEDTP.Location = new System.Drawing.Point(123, 160);
+            this.fechaEDTP.Name = "fechaEDTP";
+            this.fechaEDTP.Size = new System.Drawing.Size(84, 20);
+            this.fechaEDTP.TabIndex = 67;
+            // 
             // ModificarReservaBT
             // 
             this.ModificarReservaBT.Location = new System.Drawing.Point(525, 284);
@@ -116,6 +126,7 @@
             this.ModificarReservaBT.TabIndex = 66;
             this.ModificarReservaBT.Text = "Modificar Reserva";
             this.ModificarReservaBT.UseVisualStyleBackColor = true;
+            this.ModificarReservaBT.Click += new System.EventHandler(this.ModificarReservaBT_Click);
             // 
             // CHKFirm
             // 
@@ -138,16 +149,6 @@
             this.MostrarReservaBT.Text = "Mostrar Reserva";
             this.MostrarReservaBT.UseVisualStyleBackColor = true;
             this.MostrarReservaBT.Click += new System.EventHandler(this.MostrarReservaBT_Click);
-            // 
-            // FacturarBT
-            // 
-            this.FacturarBT.Location = new System.Drawing.Point(525, 365);
-            this.FacturarBT.Name = "FacturarBT";
-            this.FacturarBT.Size = new System.Drawing.Size(106, 23);
-            this.FacturarBT.TabIndex = 63;
-            this.FacturarBT.Text = "Facturar Reserva";
-            this.FacturarBT.UseVisualStyleBackColor = true;
-            this.FacturarBT.Click += new System.EventHandler(this.FacturarBT_Click);
             // 
             // AnularReservaBT
             // 
@@ -211,56 +212,6 @@
             this.Calendario.Name = "Calendario";
             this.Calendario.TabIndex = 56;
             this.Calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendario_DateChanged);
-            // 
-            // TotalPVPTXT
-            // 
-            this.TotalPVPTXT.AutoSize = true;
-            this.TotalPVPTXT.Location = new System.Drawing.Point(326, 402);
-            this.TotalPVPTXT.Name = "TotalPVPTXT";
-            this.TotalPVPTXT.Size = new System.Drawing.Size(37, 13);
-            this.TotalPVPTXT.TabIndex = 55;
-            this.TotalPVPTXT.Text = "Total: ";
-            // 
-            // PrecioTotal
-            // 
-            this.PrecioTotal.Location = new System.Drawing.Point(375, 399);
-            this.PrecioTotal.Name = "PrecioTotal";
-            this.PrecioTotal.Size = new System.Drawing.Size(84, 20);
-            this.PrecioTotal.TabIndex = 54;
-            this.PrecioTotal.TextChanged += new System.EventHandler(this.PrecioTotal_TextChanged);
-            // 
-            // PrecioServiciosTXT
-            // 
-            this.PrecioServiciosTXT.Location = new System.Drawing.Point(375, 284);
-            this.PrecioServiciosTXT.Name = "PrecioServiciosTXT";
-            this.PrecioServiciosTXT.Size = new System.Drawing.Size(84, 20);
-            this.PrecioServiciosTXT.TabIndex = 53;
-            this.PrecioServiciosTXT.TextChanged += new System.EventHandler(this.PrecioServiciosTXT_TextChanged);
-            // 
-            // PrecioPensionTXT
-            // 
-            this.PrecioPensionTXT.Location = new System.Drawing.Point(375, 220);
-            this.PrecioPensionTXT.Name = "PrecioPensionTXT";
-            this.PrecioPensionTXT.Size = new System.Drawing.Size(84, 20);
-            this.PrecioPensionTXT.TabIndex = 52;
-            this.PrecioPensionTXT.TextChanged += new System.EventHandler(this.PrecioPensionTXT_TextChanged);
-            // 
-            // PrecioHabitacionTXT
-            // 
-            this.PrecioHabitacionTXT.Location = new System.Drawing.Point(375, 191);
-            this.PrecioHabitacionTXT.Name = "PrecioHabitacionTXT";
-            this.PrecioHabitacionTXT.Size = new System.Drawing.Size(84, 20);
-            this.PrecioHabitacionTXT.TabIndex = 51;
-            this.PrecioHabitacionTXT.TextChanged += new System.EventHandler(this.PrecioHabitacionTXT_TextChanged);
-            // 
-            // PrecioLB
-            // 
-            this.PrecioLB.AutoSize = true;
-            this.PrecioLB.Location = new System.Drawing.Point(326, 194);
-            this.PrecioLB.Name = "PrecioLB";
-            this.PrecioLB.Size = new System.Drawing.Size(43, 13);
-            this.PrecioLB.TabIndex = 50;
-            this.PrecioLB.Text = "Precio: ";
             // 
             // TemporadaLB
             // 
@@ -388,30 +339,6 @@
             this.labelDReserva.TabIndex = 32;
             this.labelDReserva.Text = "DATOS DE SERVICIOS A RESERVAR";
             // 
-            // fechaEDTP
-            // 
-            this.fechaEDTP.Location = new System.Drawing.Point(123, 160);
-            this.fechaEDTP.Name = "fechaEDTP";
-            this.fechaEDTP.Size = new System.Drawing.Size(84, 20);
-            this.fechaEDTP.TabIndex = 67;
-            // 
-            // fechaSDTP
-            // 
-            this.fechaSDTP.Location = new System.Drawing.Point(213, 160);
-            this.fechaSDTP.Name = "fechaSDTP";
-            this.fechaSDTP.Size = new System.Drawing.Size(84, 20);
-            this.fechaSDTP.TabIndex = 68;
-            // 
-            // TemporadaCbox
-            // 
-            this.TemporadaCbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TemporadaCbox.FormattingEnabled = true;
-            this.TemporadaCbox.Location = new System.Drawing.Point(113, 367);
-            this.TemporadaCbox.Name = "TemporadaCbox";
-            this.TemporadaCbox.Size = new System.Drawing.Size(121, 21);
-            this.TemporadaCbox.TabIndex = 69;
-            this.TemporadaCbox.SelectedIndexChanged += new System.EventHandler(this.TemporadaCbox_SelectedIndexChanged_1);
-            // 
             // InterfazReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,9 +347,7 @@
             this.ClientSize = new System.Drawing.Size(799, 538);
             this.Controls.Add(this.grpReserva);
             this.Name = "InterfazReserva";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hotel SOL";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InterfazServicio_Load);
             this.grpReserva.ResumeLayout(false);
             this.grpReserva.PerformLayout();
@@ -446,18 +371,11 @@
         private System.Windows.Forms.Label NHabitacion;
         private System.Windows.Forms.Label TemporadaLB;
         private System.Windows.Forms.ListBox ServiciosLBox;
-        private System.Windows.Forms.TextBox PrecioServiciosTXT;
-        private System.Windows.Forms.TextBox PrecioPensionTXT;
-        private System.Windows.Forms.TextBox PrecioHabitacionTXT;
-        private System.Windows.Forms.Label PrecioLB;
-        private System.Windows.Forms.Label TotalPVPTXT;
-        private System.Windows.Forms.TextBox PrecioTotal;
         private System.Windows.Forms.TextBox DiasTXT;
         private System.Windows.Forms.Label NDiasLB;
         private System.Windows.Forms.Button CancelarBt;
         private System.Windows.Forms.Button ContratarBT;
         private System.Windows.Forms.MonthCalendar Calendario;
-        private System.Windows.Forms.Button FacturarBT;
         private System.Windows.Forms.Button AnularReservaBT;
         private System.Windows.Forms.ComboBox HabitacionCBox;
         private System.Windows.Forms.Button MostrarReservaBT;

@@ -21,7 +21,8 @@ namespace Producto_2.Vista
         {
             InitializeComponent();
             this.IsMdiContainer = true;
-          
+            //BloquearBotones();
+            //MostrarLogin();
         }
 
         //Evita abrir mas de una instacia de un formulario
@@ -43,10 +44,9 @@ namespace Producto_2.Vista
                
                 formularioHijo.ControlBox = false;
                 formularioHijo.Refresh();   
-                formularioHijo.Size = this.ClientSize; // Ajusta el tamaño al área cliente del MDI Form
+                formularioHijo.Size = this.ClientSize;
                 formularioHijo.StartPosition = FormStartPosition.Manual;
                 formularioHijo.Location = new Point(0, 0);
-                formularioHijo.MaximumSize = this.ClientSize;
                 formularioHijo.Size = this.ClientSize;
                 formularioHijo.Show();
 
@@ -57,6 +57,35 @@ namespace Producto_2.Vista
         {
             cerrarForms();
             abrirFomulario(typeof(frmAutenticacion));
+           
+        }
+        private void MostrarLogin()
+        {
+            frmAutenticacion loginForm = new frmAutenticacion();
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                DesbloquearBotones();
+            }
+        }
+
+        private void BloquearBotones()
+        {
+            mnuServicios.Enabled = false;
+            mnuReservas.Enabled = false;    
+            mnuClientes.Enabled = false;
+            mnuFacturas.Enabled = false;
+            mnuHabitaciones.Enabled = false;
+            mnuInicio.Enabled = false;
+        }
+
+        private void DesbloquearBotones()
+        {
+            mnuServicios.Enabled = true;
+            mnuReservas.Enabled = true;
+            mnuClientes.Enabled = true;
+            mnuFacturas.Enabled = true;
+            mnuHabitaciones.Enabled = true;
+            mnuInicio.Enabled = true;
         }
 
         private void mnuFacturas_Click(object sender, EventArgs e)

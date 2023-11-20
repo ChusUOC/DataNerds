@@ -32,7 +32,8 @@ namespace Producto_2.Vista
         }
         private void frmAutenticacion_Load(object sender, EventArgs e)
         {
-
+          
+           
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

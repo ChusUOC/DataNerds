@@ -1,4 +1,4 @@
-namespace Producto_2.Vista
+﻿namespace Producto_2.Vista
 {
     partial class Form7Reservas
     {
@@ -35,8 +35,6 @@ namespace Producto_2.Vista
             this.checkoutHDG = new System.Windows.Forms.DataGridView();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nuevaReservaBTN = new System.Windows.Forms.Button();
-            this.todasReservasBTN = new System.Windows.Forms.Button();
-            this.buscarReservaBTN = new System.Windows.Forms.Button();
             this.pendienteLBL = new System.Windows.Forms.Label();
             this.checkInLBL = new System.Windows.Forms.Label();
             this.checkoutLBL = new System.Windows.Forms.Label();
@@ -46,6 +44,7 @@ namespace Producto_2.Vista
             this.historicoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.historicoReservasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.historicoReservasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.firmaBTN = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pendDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chinDG)).BeginInit();
@@ -60,13 +59,12 @@ namespace Producto_2.Vista
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.firmaBTN);
             this.groupBox1.Controls.Add(this.pendDG);
             this.groupBox1.Controls.Add(this.chinDG);
             this.groupBox1.Controls.Add(this.checkoutHDG);
             this.groupBox1.Controls.Add(this.dateTimePicker);
             this.groupBox1.Controls.Add(this.nuevaReservaBTN);
-            this.groupBox1.Controls.Add(this.todasReservasBTN);
-            this.groupBox1.Controls.Add(this.buscarReservaBTN);
             this.groupBox1.Controls.Add(this.pendienteLBL);
             this.groupBox1.Controls.Add(this.checkInLBL);
             this.groupBox1.Controls.Add(this.checkoutLBL);
@@ -110,31 +108,13 @@ namespace Producto_2.Vista
             // 
             // nuevaReservaBTN
             // 
-            this.nuevaReservaBTN.Location = new System.Drawing.Point(591, 213);
+            this.nuevaReservaBTN.Location = new System.Drawing.Point(594, 195);
             this.nuevaReservaBTN.Name = "nuevaReservaBTN";
             this.nuevaReservaBTN.Size = new System.Drawing.Size(135, 23);
             this.nuevaReservaBTN.TabIndex = 10;
-            this.nuevaReservaBTN.Text = "Nueva reserva";
+            this.nuevaReservaBTN.Text = "Gestion Reservas";
             this.nuevaReservaBTN.UseVisualStyleBackColor = true;
             this.nuevaReservaBTN.Click += new System.EventHandler(this.nuevaReservaBTN_Click);
-            // 
-            // todasReservasBTN
-            // 
-            this.todasReservasBTN.Location = new System.Drawing.Point(591, 175);
-            this.todasReservasBTN.Name = "todasReservasBTN";
-            this.todasReservasBTN.Size = new System.Drawing.Size(135, 23);
-            this.todasReservasBTN.TabIndex = 9;
-            this.todasReservasBTN.Text = "Todas las reservas";
-            this.todasReservasBTN.UseVisualStyleBackColor = true;
-            // 
-            // buscarReservaBTN
-            // 
-            this.buscarReservaBTN.Location = new System.Drawing.Point(591, 137);
-            this.buscarReservaBTN.Name = "buscarReservaBTN";
-            this.buscarReservaBTN.Size = new System.Drawing.Size(135, 23);
-            this.buscarReservaBTN.TabIndex = 8;
-            this.buscarReservaBTN.Text = "Buscar reserva";
-            this.buscarReservaBTN.UseVisualStyleBackColor = true;
             // 
             // pendienteLBL
             // 
@@ -190,20 +170,27 @@ namespace Producto_2.Vista
             // 
             this.historicoReservasBindingSource2.DataMember = "historicoReservas";
             // 
+            // firmaBTN
+            // 
+            this.firmaBTN.Location = new System.Drawing.Point(594, 303);
+            this.firmaBTN.Name = "firmaBTN";
+            this.firmaBTN.Size = new System.Drawing.Size(135, 23);
+            this.firmaBTN.TabIndex = 21;
+            this.firmaBTN.Text = "FIRMAR";
+            this.firmaBTN.UseVisualStyleBackColor = true;
+            this.firmaBTN.Click += new System.EventHandler(this.firmaBTN_Click);
+            // 
             // Form7Reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(799, 698);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(799, 500);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form7Reservas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form7Reservas";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form7Reservas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -225,9 +212,7 @@ namespace Producto_2.Vista
         private System.Windows.Forms.Label pendienteLBL;
         private System.Windows.Forms.Label checkInLBL;
         private System.Windows.Forms.Label checkoutLBL;
-        private System.Windows.Forms.Button buscarReservaBTN;
         private System.Windows.Forms.Button nuevaReservaBTN;
-        private System.Windows.Forms.Button todasReservasBTN;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.BindingSource historicoReservasBindingSource;
         private System.Windows.Forms.BindingSource historicoReservasBindingSource1;
@@ -261,5 +246,6 @@ namespace Producto_2.Vista
         private System.Windows.Forms.DataGridView checkoutHDG;
         private System.Windows.Forms.DataGridView pendDG;
         private System.Windows.Forms.DataGridView chinDG;
+        private System.Windows.Forms.Button firmaBTN;
     }
 }

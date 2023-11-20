@@ -25,29 +25,39 @@ namespace Producto_2.Vista
         {
 
             serviciosDG.DataSource = servicios.obtenerServicios();
-            serviciosDG.Columns[1].Visible = false;
-            serviciosDG.Columns[11].Visible = false;
-            serviciosDG.Columns[12].Visible = false;
-            serviciosDG.Columns[0].HeaderText = " ";
-            
-            serviciosDG.Columns[2].HeaderText = "TEMPORADA";
-            serviciosDG.Columns[3].HeaderText = " ";
-            serviciosDG.Columns[4].HeaderText = "BAJA";
-            serviciosDG.Columns[5].HeaderText = "MEDIA";
-            serviciosDG.Columns[6].HeaderText = "ALTA";
-            serviciosDG.Columns[7].HeaderText = "BAJA";
-            serviciosDG.Columns[8].HeaderText = "MEDIA";
-            serviciosDG.Columns[9].HeaderText = "ALTA";
-            serviciosDG.Columns[10].HeaderText = " ";
+            serviciosDG.Columns["precioServicio"].Visible = false;
 
-            serviciosDG.Columns[0].Width = 40;
-            serviciosDG.Columns[4].Width = 70;
-            serviciosDG.Columns[5].Width = 70;
-            serviciosDG.Columns[6].Width = 70;
-            serviciosDG.Columns[7].Width = 70;
-            serviciosDG.Columns[8].Width = 70;
-            serviciosDG.Columns[9].Width = 70;
-            serviciosDG.Columns[10].Width = 60;
+
+            serviciosDG.Columns["tipoServicioID"].HeaderText = " ";
+
+            serviciosDG.Columns["idServicio"].HeaderText = " ";
+            serviciosDG.Columns["idServicio"].Width = 40;
+
+            serviciosDG.Columns["precioAlta"].HeaderText = "Alta";
+            serviciosDG.Columns["precioAlta"].Width =70;
+            serviciosDG.Columns["precioMedia"].HeaderText = "Media";
+            serviciosDG.Columns["precioMedia"].Width = 70;
+            serviciosDG.Columns["precioBaja"].HeaderText = "Baja";
+            serviciosDG.Columns["precioBaja"].Width = 70;
+
+            serviciosDG.Columns["permisoAlta"].HeaderText = "Alta";
+            serviciosDG.Columns["permisoAlta"].Width = 70;
+            serviciosDG.Columns["permisoMedia"].HeaderText = "Media";
+            serviciosDG.Columns["permisoMedia"].Width = 70;
+            serviciosDG.Columns["permisoBaja"].HeaderText = "Baja";
+            serviciosDG.Columns["permisoBaja"].Width = 70;
+
+            serviciosDG.Columns["descVIP"].HeaderText = " ";
+            serviciosDG.Columns["descVIP"].Width = 60;
+
+        }
+
+        private void addServiceBTN_Click(object sender, EventArgs e)
+        {
+            frmAddServicio addServ  = new frmAddServicio();
+            addServ.MdiParent = this.MdiParent;
+            addServ.Show();
+            this.Close();
         }
     }
 }
