@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,10 +15,13 @@ namespace Producto_2.Vista
     {
         private int childFormNumber = 0;
 
+       
+
         public mdiHotelSol()
         {
             InitializeComponent();
-            this.IsMdiContainer = true; 
+            this.IsMdiContainer = true;
+          
         }
 
         //Evita abrir mas de una instacia de un formulario
@@ -27,18 +31,27 @@ namespace Producto_2.Vista
 
             if (formulariosabiertos != null)
             {
-                
+                formulariosabiertos.BringToFront();
+               
                 formulariosabiertos.Close();
             }
             else
             {
                 var formularioHijo = (Form)Activator.CreateInstance(tipoForm);
+
                 formularioHijo.MdiParent = this;
+               
+                formularioHijo.ControlBox = false;
+                formularioHijo.Refresh();   
+                formularioHijo.Size = this.ClientSize; // Ajusta el tamaño al área cliente del MDI Form
+                formularioHijo.StartPosition = FormStartPosition.Manual;
+                formularioHijo.Location = new Point(0, 0);
+                formularioHijo.MaximumSize = this.ClientSize;
+                formularioHijo.Size = this.ClientSize;
                 formularioHijo.Show();
+
             }
         }
-
-
 
         private void mdiHotelSol_Load(object sender, EventArgs e)
         {
@@ -46,22 +59,10 @@ namespace Producto_2.Vista
             abrirFomulario(typeof(frmAutenticacion));
         }
 
-        
-
         private void mnuFacturas_Click(object sender, EventArgs e)
         {
             cerrarForms();
             abrirFomulario(typeof(InterfazFacturas));
-        }
-
-        private void mnuIncidencias_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void mnuUsuarios_Click(object sender, EventArgs e)
-        {
-          //  abrirFomulario(typeof(InterfazUsuario));
         }
 
         private void mnuInicio_Click(object sender, EventArgs e)

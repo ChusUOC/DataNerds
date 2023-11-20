@@ -56,7 +56,7 @@
             this.grpUsuariosInicio.Controls.Add(this.txtPass);
             this.grpUsuariosInicio.Controls.Add(this.txtUsuario);
             this.grpUsuariosInicio.Controls.Add(this.label2);
-            this.grpUsuariosInicio.Location = new System.Drawing.Point(66, 48);
+            this.grpUsuariosInicio.Location = new System.Drawing.Point(73, 48);
             this.grpUsuariosInicio.Name = "grpUsuariosInicio";
             this.grpUsuariosInicio.Size = new System.Drawing.Size(674, 425);
             this.grpUsuariosInicio.TabIndex = 50;
@@ -135,7 +135,7 @@
             this.grpAltaUsuario.Controls.Add(this.txtNuevaPass);
             this.grpAltaUsuario.Controls.Add(this.btnCerrar);
             this.grpAltaUsuario.Controls.Add(this.btnAgregar);
-            this.grpAltaUsuario.Location = new System.Drawing.Point(66, 48);
+            this.grpAltaUsuario.Location = new System.Drawing.Point(73, 48);
             this.grpAltaUsuario.Name = "grpAltaUsuario";
             this.grpAltaUsuario.Size = new System.Drawing.Size(674, 425);
             this.grpAltaUsuario.TabIndex = 6;
@@ -202,17 +202,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(798, 561);
+            this.ClientSize = new System.Drawing.Size(820, 600);
             this.ControlBox = false;
             this.Controls.Add(this.grpUsuariosInicio);
             this.Controls.Add(this.grpAltaUsuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAutenticacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Autenticacion";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAutenticacion_Load);
             this.grpUsuariosInicio.ResumeLayout(false);
             this.grpUsuariosInicio.PerformLayout();

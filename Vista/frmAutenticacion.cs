@@ -13,26 +13,23 @@ namespace Producto_2.Vista
 {
     public partial class frmAutenticacion : Form
     {
+        
         public frmAutenticacion()
-        {
+        { 
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.ControlBox = false;
+            
+            this.Move += new EventHandler(frmAutenticacion_Move);
             grpUsuariosInicio.Visible = true;
             grpAltaUsuario.Visible = false;
            
         }
 
         private UtenticacionControlador autControler = new UtenticacionControlador();
-
-        private void FrmAutenticacion_VisibleChanged(object sender, EventArgs e)
+        
+        private void frmAutenticacion_Move (Object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            this.Location = new Point(0, 0);
         }
-
-       
-
         private void frmAutenticacion_Load(object sender, EventArgs e)
         {
 

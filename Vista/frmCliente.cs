@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.Entity.Validation;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,10 +25,14 @@ namespace Producto_2.Vista
         public frmCliente()
         {
             InitializeComponent();
+            this.Move += new EventHandler(frmCliente_Move);
 
         }
 
-
+        private void frmCliente_Move(Object sender, EventArgs e)
+        {
+            this.Location = new Point(0, 0);
+        }
 
         public void ocultarGrupos()
         {
