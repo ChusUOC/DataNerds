@@ -29,20 +29,25 @@
         private void InitializeComponent()
         {
             this.grpReserva = new System.Windows.Forms.GroupBox();
+            this.fechaFacturaDP = new System.Windows.Forms.DateTimePicker();
+            this.DateFinTXT = new System.Windows.Forms.DateTimePicker();
+            this.DateIniTXT = new System.Windows.Forms.DateTimePicker();
+            this.MostrarReserva = new System.Windows.Forms.Button();
+            this.PServicios = new System.Windows.Forms.Label();
+            this.PPensionLB = new System.Windows.Forms.Label();
             this.ImporteTotalTXT = new System.Windows.Forms.TextBox();
             this.ImporteTotalLB = new System.Windows.Forms.Label();
             this.BaseImponibleLB = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.BaseImponibleTXT = new System.Windows.Forms.TextBox();
             this.DNITXT = new System.Windows.Forms.TextBox();
             this.DNILB = new System.Windows.Forms.Label();
-            this.FFacturaTXT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.FacturaTXT = new System.Windows.Forms.TextBox();
             this.NFacturaLB = new System.Windows.Forms.Label();
             this.MostrarFacturaBT = new System.Windows.Forms.Button();
             this.AnularFacturaBT = new System.Windows.Forms.Button();
             this.HabitacionCBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NDiasTXT = new System.Windows.Forms.TextBox();
             this.NDiasLB = new System.Windows.Forms.Label();
             this.CancelarBt = new System.Windows.Forms.Button();
             this.ConfirmarFacturaBT = new System.Windows.Forms.Button();
@@ -59,8 +64,6 @@
             this.TipoPensionCB = new System.Windows.Forms.ComboBox();
             this.TipoPensionTXT = new System.Windows.Forms.Label();
             this.NHabitacion = new System.Windows.Forms.Label();
-            this.DateFinTXT = new System.Windows.Forms.TextBox();
-            this.DateIniTXT = new System.Windows.Forms.TextBox();
             this.FechasLB = new System.Windows.Forms.Label();
             this.NPersonasTXT = new System.Windows.Forms.TextBox();
             this.NPersonasLB = new System.Windows.Forms.Label();
@@ -72,20 +75,25 @@
             // 
             // grpReserva
             // 
+            this.grpReserva.Controls.Add(this.fechaFacturaDP);
+            this.grpReserva.Controls.Add(this.DateFinTXT);
+            this.grpReserva.Controls.Add(this.DateIniTXT);
+            this.grpReserva.Controls.Add(this.MostrarReserva);
+            this.grpReserva.Controls.Add(this.PServicios);
+            this.grpReserva.Controls.Add(this.PPensionLB);
             this.grpReserva.Controls.Add(this.ImporteTotalTXT);
             this.grpReserva.Controls.Add(this.ImporteTotalLB);
             this.grpReserva.Controls.Add(this.BaseImponibleLB);
-            this.grpReserva.Controls.Add(this.textBox3);
+            this.grpReserva.Controls.Add(this.BaseImponibleTXT);
             this.grpReserva.Controls.Add(this.DNITXT);
             this.grpReserva.Controls.Add(this.DNILB);
-            this.grpReserva.Controls.Add(this.FFacturaTXT);
             this.grpReserva.Controls.Add(this.label2);
-            this.grpReserva.Controls.Add(this.textBox2);
+            this.grpReserva.Controls.Add(this.FacturaTXT);
             this.grpReserva.Controls.Add(this.NFacturaLB);
             this.grpReserva.Controls.Add(this.MostrarFacturaBT);
             this.grpReserva.Controls.Add(this.AnularFacturaBT);
             this.grpReserva.Controls.Add(this.HabitacionCBox);
-            this.grpReserva.Controls.Add(this.textBox1);
+            this.grpReserva.Controls.Add(this.NDiasTXT);
             this.grpReserva.Controls.Add(this.NDiasLB);
             this.grpReserva.Controls.Add(this.CancelarBt);
             this.grpReserva.Controls.Add(this.ConfirmarFacturaBT);
@@ -102,8 +110,6 @@
             this.grpReserva.Controls.Add(this.TipoPensionCB);
             this.grpReserva.Controls.Add(this.TipoPensionTXT);
             this.grpReserva.Controls.Add(this.NHabitacion);
-            this.grpReserva.Controls.Add(this.DateFinTXT);
-            this.grpReserva.Controls.Add(this.DateIniTXT);
             this.grpReserva.Controls.Add(this.FechasLB);
             this.grpReserva.Controls.Add(this.NPersonasTXT);
             this.grpReserva.Controls.Add(this.NPersonasLB);
@@ -115,6 +121,61 @@
             this.grpReserva.Size = new System.Drawing.Size(680, 480);
             this.grpReserva.TabIndex = 71;
             this.grpReserva.TabStop = false;
+            // 
+            // fechaFacturaDP
+            // 
+            this.fechaFacturaDP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaFacturaDP.Location = new System.Drawing.Point(394, 61);
+            this.fechaFacturaDP.Name = "fechaFacturaDP";
+            this.fechaFacturaDP.Size = new System.Drawing.Size(82, 20);
+            this.fechaFacturaDP.TabIndex = 82;
+            // 
+            // DateFinTXT
+            // 
+            this.DateFinTXT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateFinTXT.Location = new System.Drawing.Point(214, 159);
+            this.DateFinTXT.Name = "DateFinTXT";
+            this.DateFinTXT.Size = new System.Drawing.Size(82, 20);
+            this.DateFinTXT.TabIndex = 81;
+            this.DateFinTXT.ValueChanged += new System.EventHandler(this.DateFinTXT_ValueChanged);
+            // 
+            // DateIniTXT
+            // 
+            this.DateIniTXT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateIniTXT.Location = new System.Drawing.Point(124, 159);
+            this.DateIniTXT.Name = "DateIniTXT";
+            this.DateIniTXT.Size = new System.Drawing.Size(84, 20);
+            this.DateIniTXT.TabIndex = 80;
+            this.DateIniTXT.ValueChanged += new System.EventHandler(this.DateIniTXT_ValueChanged);
+            // 
+            // MostrarReserva
+            // 
+            this.MostrarReserva.Location = new System.Drawing.Point(539, 23);
+            this.MostrarReserva.Name = "MostrarReserva";
+            this.MostrarReserva.Size = new System.Drawing.Size(106, 54);
+            this.MostrarReserva.TabIndex = 79;
+            this.MostrarReserva.Text = "Mostrar Reserva a facturar";
+            this.MostrarReserva.UseVisualStyleBackColor = true;
+            this.MostrarReserva.Click += new System.EventHandler(this.MostrarReserva_Click);
+            // 
+            // PServicios
+            // 
+            this.PServicios.AutoSize = true;
+            this.PServicios.Location = new System.Drawing.Point(283, 287);
+            this.PServicios.Name = "PServicios";
+            this.PServicios.Size = new System.Drawing.Size(89, 13);
+            this.PServicios.TabIndex = 78;
+            this.PServicios.Text = "Precio Servicios: ";
+            this.PServicios.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // PPensionLB
+            // 
+            this.PPensionLB.AutoSize = true;
+            this.PPensionLB.Location = new System.Drawing.Point(288, 223);
+            this.PPensionLB.Name = "PPensionLB";
+            this.PPensionLB.Size = new System.Drawing.Size(84, 13);
+            this.PPensionLB.TabIndex = 77;
+            this.PPensionLB.Text = "Precio Pensión: ";
             // 
             // ImporteTotalTXT
             // 
@@ -144,13 +205,13 @@
             this.BaseImponibleLB.TabIndex = 74;
             this.BaseImponibleLB.Text = "Base Imponible:";
             // 
-            // textBox3
+            // BaseImponibleTXT
             // 
-            this.textBox3.Location = new System.Drawing.Point(375, 370);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(84, 20);
-            this.textBox3.TabIndex = 73;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.BaseImponibleTXT.Location = new System.Drawing.Point(375, 370);
+            this.BaseImponibleTXT.Name = "BaseImponibleTXT";
+            this.BaseImponibleTXT.Size = new System.Drawing.Size(84, 20);
+            this.BaseImponibleTXT.TabIndex = 73;
+            this.BaseImponibleTXT.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // DNITXT
             // 
@@ -169,14 +230,6 @@
             this.DNILB.TabIndex = 71;
             this.DNILB.Text = "DNI Cliente: ";
             // 
-            // FFacturaTXT
-            // 
-            this.FFacturaTXT.Location = new System.Drawing.Point(397, 57);
-            this.FFacturaTXT.Name = "FFacturaTXT";
-            this.FFacturaTXT.Size = new System.Drawing.Size(84, 20);
-            this.FFacturaTXT.TabIndex = 70;
-            this.FFacturaTXT.TextChanged += new System.EventHandler(this.FFacturaTXT_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -186,14 +239,13 @@
             this.label2.TabIndex = 69;
             this.label2.Text = "Fecha de factura: ";
             // 
-            // textBox2
+            // FacturaTXT
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 68;
-            this.textBox2.Text = "Rellenar solo Búsqueda";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.FacturaTXT.Location = new System.Drawing.Point(114, 61);
+            this.FacturaTXT.Name = "FacturaTXT";
+            this.FacturaTXT.Size = new System.Drawing.Size(120, 20);
+            this.FacturaTXT.TabIndex = 68;
+            this.FacturaTXT.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // NFacturaLB
             // 
@@ -206,9 +258,9 @@
             // 
             // MostrarFacturaBT
             // 
-            this.MostrarFacturaBT.Location = new System.Drawing.Point(525, 325);
+            this.MostrarFacturaBT.Location = new System.Drawing.Point(539, 96);
             this.MostrarFacturaBT.Name = "MostrarFacturaBT";
-            this.MostrarFacturaBT.Size = new System.Drawing.Size(106, 23);
+            this.MostrarFacturaBT.Size = new System.Drawing.Size(106, 56);
             this.MostrarFacturaBT.TabIndex = 64;
             this.MostrarFacturaBT.Text = "Mostrar Factura";
             this.MostrarFacturaBT.UseVisualStyleBackColor = true;
@@ -233,13 +285,13 @@
             this.HabitacionCBox.TabIndex = 61;
             this.HabitacionCBox.SelectedIndexChanged += new System.EventHandler(this.HabitacionCBox_SelectedIndexChanged);
             // 
-            // textBox1
+            // NDiasTXT
             // 
-            this.textBox1.Location = new System.Drawing.Point(394, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 20);
-            this.textBox1.TabIndex = 60;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.NDiasTXT.Location = new System.Drawing.Point(394, 160);
+            this.NDiasTXT.Name = "NDiasTXT";
+            this.NDiasTXT.Size = new System.Drawing.Size(65, 20);
+            this.NDiasTXT.TabIndex = 60;
+            this.NDiasTXT.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // NDiasLB
             // 
@@ -254,9 +306,9 @@
             // 
             this.CancelarBt.Location = new System.Drawing.Point(525, 397);
             this.CancelarBt.Name = "CancelarBt";
-            this.CancelarBt.Size = new System.Drawing.Size(106, 23);
+            this.CancelarBt.Size = new System.Drawing.Size(106, 50);
             this.CancelarBt.TabIndex = 58;
-            this.CancelarBt.Text = "Cancelar";
+            this.CancelarBt.Text = "Cancelar / Limpiar Formulario";
             this.CancelarBt.UseVisualStyleBackColor = true;
             this.CancelarBt.Click += new System.EventHandler(this.CancelarBt_Click);
             // 
@@ -264,7 +316,7 @@
             // 
             this.ConfirmarFacturaBT.Location = new System.Drawing.Point(525, 284);
             this.ConfirmarFacturaBT.Name = "ConfirmarFacturaBT";
-            this.ConfirmarFacturaBT.Size = new System.Drawing.Size(106, 23);
+            this.ConfirmarFacturaBT.Size = new System.Drawing.Size(106, 53);
             this.ConfirmarFacturaBT.TabIndex = 57;
             this.ConfirmarFacturaBT.Text = "Confirmar Factura";
             this.ConfirmarFacturaBT.UseVisualStyleBackColor = true;
@@ -314,11 +366,11 @@
             // PrecioLB
             // 
             this.PrecioLB.AutoSize = true;
-            this.PrecioLB.Location = new System.Drawing.Point(326, 194);
+            this.PrecioLB.Location = new System.Drawing.Point(288, 194);
             this.PrecioLB.Name = "PrecioLB";
-            this.PrecioLB.Size = new System.Drawing.Size(43, 13);
+            this.PrecioLB.Size = new System.Drawing.Size(87, 13);
             this.PrecioLB.TabIndex = 50;
-            this.PrecioLB.Text = "Precio: ";
+            this.PrecioLB.Text = "Precio Estancia: ";
             // 
             // TemporadaCBox
             // 
@@ -383,22 +435,6 @@
             this.NHabitacion.TabIndex = 42;
             this.NHabitacion.Text = "Nº Habitación: ";
             // 
-            // DateFinTXT
-            // 
-            this.DateFinTXT.Location = new System.Drawing.Point(215, 160);
-            this.DateFinTXT.Name = "DateFinTXT";
-            this.DateFinTXT.Size = new System.Drawing.Size(84, 20);
-            this.DateFinTXT.TabIndex = 41;
-            this.DateFinTXT.TextChanged += new System.EventHandler(this.DateFinTXT_TextChanged);
-            // 
-            // DateIniTXT
-            // 
-            this.DateIniTXT.Location = new System.Drawing.Point(123, 160);
-            this.DateIniTXT.Name = "DateIniTXT";
-            this.DateIniTXT.Size = new System.Drawing.Size(84, 20);
-            this.DateIniTXT.TabIndex = 40;
-            this.DateIniTXT.TextChanged += new System.EventHandler(this.DateIniTXT_TextChanged);
-            // 
             // FechasLB
             // 
             this.FechasLB.AutoSize = true;
@@ -460,9 +496,8 @@
             this.ClientSize = new System.Drawing.Size(799, 538);
             this.Controls.Add(this.grpReserva);
             this.Name = "InterfazFacturas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hotel SOL";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.InterfazFacturas_Load);
             this.grpReserva.ResumeLayout(false);
             this.grpReserva.PerformLayout();
             this.ResumeLayout(false);
@@ -474,7 +509,7 @@
         private System.Windows.Forms.Button MostrarFacturaBT;
         private System.Windows.Forms.Button AnularFacturaBT;
         private System.Windows.Forms.ComboBox HabitacionCBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NDiasTXT;
         private System.Windows.Forms.Label NDiasLB;
         private System.Windows.Forms.Button CancelarBt;
         private System.Windows.Forms.Button ConfirmarFacturaBT;
@@ -491,8 +526,6 @@
         private System.Windows.Forms.ComboBox TipoPensionCB;
         private System.Windows.Forms.Label TipoPensionTXT;
         private System.Windows.Forms.Label NHabitacion;
-        private System.Windows.Forms.TextBox DateFinTXT;
-        private System.Windows.Forms.TextBox DateIniTXT;
         private System.Windows.Forms.Label FechasLB;
         private System.Windows.Forms.TextBox NPersonasTXT;
         private System.Windows.Forms.Label NPersonasLB;
@@ -500,14 +533,19 @@
         private System.Windows.Forms.Label ReservaLB;
         private System.Windows.Forms.Label labelDReserva;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox FacturaTXT;
         private System.Windows.Forms.Label NFacturaLB;
         private System.Windows.Forms.TextBox DNITXT;
         private System.Windows.Forms.Label DNILB;
-        private System.Windows.Forms.TextBox FFacturaTXT;
         private System.Windows.Forms.Label BaseImponibleLB;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox BaseImponibleTXT;
         private System.Windows.Forms.TextBox ImporteTotalTXT;
         private System.Windows.Forms.Label ImporteTotalLB;
+        private System.Windows.Forms.Label PPensionLB;
+        private System.Windows.Forms.Label PServicios;
+        private System.Windows.Forms.Button MostrarReserva;
+        private System.Windows.Forms.DateTimePicker DateIniTXT;
+        private System.Windows.Forms.DateTimePicker DateFinTXT;
+        private System.Windows.Forms.DateTimePicker fechaFacturaDP;
     }
 }
