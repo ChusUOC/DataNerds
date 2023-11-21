@@ -351,7 +351,7 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <Property Name="tipoID" Type="Int32" Nullable="false" />
           <Property Name="estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="fueraServicio" Type="Byte" />
-          </EntityType>
+        </EntityType>
         <EntityType Name="historicoReservas">
           <Key>
             <PropertyRef Name="reservaID" />
@@ -441,7 +441,7 @@ advertencia 6002: La tabla o vista 'HotelSQL.dbo.HistoricoServicios' no tiene de
           <Property Name="idServicio" Type="Int32" Nullable="false" />
           <Property Name="reservaID" Type="Int32" Nullable="false" />
           <Property Name="historicoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          </EntityType>
+        </EntityType>
         <Association Name="FK_Reservas_Clientes">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
           <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />

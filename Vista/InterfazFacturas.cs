@@ -23,10 +23,14 @@ namespace Producto_2.Vista
         public InterfazFacturas()
         {
             InitializeComponent();
+            this.Move += new EventHandler(frm_Move);
         }
 
         /*Métodos de botones de navegación*/
-
+        private void frm_Move(Object sender, EventArgs e)
+        {
+            this.Location = new Point(0, 0);
+        }
         private void InterfazFacturas_Load(object sender, EventArgs e)
         {
             controlador.cargarComboBox<Temporada>(TemporadaCBox, "descripcion", "temporadaID");
