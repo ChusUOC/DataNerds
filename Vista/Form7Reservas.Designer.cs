@@ -76,7 +76,7 @@
             // 
             // firmaBTN
             // 
-            this.firmaBTN.Location = new System.Drawing.Point(594, 303);
+            this.firmaBTN.Location = new System.Drawing.Point(603, 173);
             this.firmaBTN.Name = "firmaBTN";
             this.firmaBTN.Size = new System.Drawing.Size(135, 23);
             this.firmaBTN.TabIndex = 21;
@@ -87,9 +87,9 @@
             // pendDG
             // 
             this.pendDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pendDG.Location = new System.Drawing.Point(23, 303);
+            this.pendDG.Location = new System.Drawing.Point(23, 267);
             this.pendDG.Name = "pendDG";
-            this.pendDG.Size = new System.Drawing.Size(486, 90);
+            this.pendDG.Size = new System.Drawing.Size(486, 165);
             this.pendDG.TabIndex = 17;
             // 
             // chinDG
@@ -97,7 +97,7 @@
             this.chinDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.chinDG.Location = new System.Drawing.Point(23, 160);
             this.chinDG.Name = "chinDG";
-            this.chinDG.Size = new System.Drawing.Size(486, 119);
+            this.chinDG.Size = new System.Drawing.Size(486, 74);
             this.chinDG.TabIndex = 20;
             // 
             // checkoutHDG
@@ -117,7 +117,7 @@
             // 
             // nuevaReservaBTN
             // 
-            this.nuevaReservaBTN.Location = new System.Drawing.Point(594, 195);
+            this.nuevaReservaBTN.Location = new System.Drawing.Point(603, 85);
             this.nuevaReservaBTN.Name = "nuevaReservaBTN";
             this.nuevaReservaBTN.Size = new System.Drawing.Size(135, 23);
             this.nuevaReservaBTN.TabIndex = 10;
@@ -129,11 +129,11 @@
             // 
             this.pendienteLBL.AutoSize = true;
             this.pendienteLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pendienteLBL.Location = new System.Drawing.Point(20, 282);
+            this.pendienteLBL.Location = new System.Drawing.Point(20, 246);
             this.pendienteLBL.Name = "pendienteLBL";
-            this.pendienteLBL.Size = new System.Drawing.Size(263, 18);
+            this.pendienteLBL.Size = new System.Drawing.Size(192, 18);
             this.pendienteLBL.TabIndex = 3;
-            this.pendienteLBL.Text = "PENDIENTE DE CONFIRMACION";
+            this.pendienteLBL.Text = "TODAS LAS RESERVAS";
             // 
             // checkInLBL
             // 

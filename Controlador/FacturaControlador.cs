@@ -96,7 +96,7 @@ namespace Producto_2.Controlador
             List<Factura> reservaFacturada = BuscarReservaEnFactura(reservaEnFormulario);
             List<Reservas> reservaEncontrada = controladorR.BuscarReserva(reservaEnFormulario);
             Reservas reservas = reservaEncontrada[0];
-
+            
             if (reservas.firmado == 1)
             {
 
@@ -256,7 +256,7 @@ namespace Producto_2.Controlador
 
                 if (saberSiVIP(nif))
                 {
-                    contador = contador + 1;
+                    
 
                     foreach (HistoricoServicios NombreServicio in serviciosEncontrados)
 
@@ -334,18 +334,7 @@ namespace Producto_2.Controlador
             }
 
 
-           /* if (contador > 0)
-            {
-
-                MessageBox.Show("El cliente es VIP. ", "Informe del descuento", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-
-                MessageBox.Show("El cliente es NO VIP. ", "Proponga hacerlo VIP", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }*/
+          
 
             return precioServicio;
 

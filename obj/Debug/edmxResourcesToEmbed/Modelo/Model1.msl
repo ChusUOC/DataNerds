@@ -42,6 +42,11 @@
           <ScalarProperty Name="tipoHabitacion" ColumnName="tipoHabitacion" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="tipoID" ColumnName="tipoID" />
+          <ScalarProperty Name="minNoches" ColumnName="minNoches" />
+          <ScalarProperty Name="maxPersonas" ColumnName="maxPersonas" />
+          <ScalarProperty Name="precioAlta" ColumnName="precioAlta" />
+          <ScalarProperty Name="PrecioMedia" ColumnName="PrecioMedia" />
+          <ScalarProperty Name="precioBaja" ColumnName="precioBaja" />
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="fueraServicio" ColumnName="fueraServicio" />
         </MappingFragment>
@@ -57,6 +62,15 @@
           <ScalarProperty Name="salida" ColumnName="salida" />
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="idIncidencia" ColumnName="idIncidencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoricoServicios">
+      <EntityTypeMapping TypeName="HotelSQLModel.HistoricoServicios">
+        <MappingFragment StoreEntitySet="HistoricoServicios">
+          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
+          <ScalarProperty Name="reservaID" ColumnName="reservaID" />
+          <ScalarProperty Name="historicoID" ColumnName="historicoID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -132,15 +146,6 @@
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
           <ScalarProperty Name="password" ColumnName="password" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HistoricoServicios">
-      <EntityTypeMapping TypeName="HotelSQLModel.HistoricoServicios">
-        <MappingFragment StoreEntitySet="HistoricoServicios">
-          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
-          <ScalarProperty Name="reservaID" ColumnName="reservaID" />
-          <ScalarProperty Name="historicoID" ColumnName="historicoID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

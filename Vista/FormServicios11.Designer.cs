@@ -55,7 +55,7 @@
             this.grpClientes.Controls.Add(this.addServiceBTN);
             this.grpClientes.Controls.Add(this.serviciosDG);
             this.grpClientes.Controls.Add(this.dataGridView1);
-            this.grpClientes.Location = new System.Drawing.Point(12, 29);
+            this.grpClientes.Location = new System.Drawing.Point(21, 43);
             this.grpClientes.Name = "grpClientes";
             this.grpClientes.Size = new System.Drawing.Size(778, 497);
             this.grpClientes.TabIndex = 29;
@@ -63,7 +63,7 @@
             // 
             // addServiceBTN
             // 
-            this.addServiceBTN.Location = new System.Drawing.Point(291, 444);
+            this.addServiceBTN.Location = new System.Drawing.Point(301, 353);
             this.addServiceBTN.Name = "addServiceBTN";
             this.addServiceBTN.Size = new System.Drawing.Size(197, 23);
             this.addServiceBTN.TabIndex = 2;
@@ -74,7 +74,7 @@
             // serviciosDG
             // 
             this.serviciosDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.serviciosDG.Location = new System.Drawing.Point(6, 98);
+            this.serviciosDG.Location = new System.Drawing.Point(6, 44);
             this.serviciosDG.Name = "serviciosDG";
             this.serviciosDG.Size = new System.Drawing.Size(766, 281);
             this.serviciosDG.TabIndex = 1;
@@ -92,7 +92,7 @@
             this.ALTA,
             this.precioNocheG,
             this.dscVipG});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(766, 29);

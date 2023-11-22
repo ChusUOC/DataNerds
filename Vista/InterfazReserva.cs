@@ -18,18 +18,25 @@ namespace Producto_2.Vista
     {
         byte especial;
         private readonly ReservaControlador controlador = new ReservaControlador();
+        private readonly ServiciosControlador11 controladorServ = new ServiciosControlador11();
+
 
         public InterfazReserva()
         {
             InitializeComponent();
             this.Move += new EventHandler(frm_Move);
         }
-
-        /*Métodos de botones de navegación*/
         private void frm_Move(Object sender, EventArgs e)
         {
             this.Location = new Point(0, 0);
         }
+        public void limpiarBox() { 
+
+            ServiciosLBox.Items.Clear();
+        }
+
+        /*Métodos de botones de navegación*/
+
         private void limpiarForm()
         {
             ReservaTXT.Text = "";
@@ -48,6 +55,25 @@ namespace Producto_2.Vista
             controlador.cargarComboBox<Habitacion>(HabitacionCBox, "numeroHabitacion", "numeroHabitacion");
             controlador.cargarComboBox<RegimenPension>(TipoPensionCB, "descripcion", "pensionID");
 
+            foreach (Servicio serv in controladorServ.obtenerServicios()){ 
+            
+                lbListaServicios.Items.Add(serv.descripcion.ToString());
+            }
+
+        }
+
+        public void cargarServicios(int ID,ListBox lb ){
+
+            List<HistoricoServicios> serviciosList = controladorServ.historicoServicios().Where(s => s.reservaID == ID).ToList();
+            
+
+            lb.Items.Clear();
+            foreach (var srv in serviciosList) { 
+            
+                Servicio servicio = controladorServ.obtenerServicios().Where(r=> r.idServicio == srv.idServicio).FirstOrDefault();
+                lb.Items.Add(servicio.descripcion.ToString());
+            }
+            
         }
 
         public void ocultarGrupos()
@@ -300,6 +326,7 @@ namespace Producto_2.Vista
                     HabitacionCBox.SelectedValue = reserva.numeroHabitacion;      
                     TemporadaCbox.SelectedValue = reserva.temporadaID;
                     CHKFirm.Checked = Convert.ToBoolean(reserva.firmado);
+                    cargarServicios(ID, ServiciosLBox);
 
                 }
                 calculodias();
@@ -365,6 +392,32 @@ namespace Producto_2.Vista
 
         }
 
-       
+        private void addServBT_Click(object sender, EventArgs e)
+        {
+
+            var selectedItem = lbListaServicios.SelectedItem;
+            if (selectedItem != null)
+            {
+                string selectedDescription = selectedItem.ToString();
+                Servicio list = controladorServ.obtenerServicios()
+                    .FirstOrDefault(s => s.descripcion.Equals(selectedDescription, StringComparison.OrdinalIgnoreCase));
+
+                if (list.idServicio != null && list.idServicio != 0)
+                {
+
+                    controlador.addServicio(Convert.ToInt32(list.idServicio), Convert.ToInt32(ReservaTXT.Text));
+                    cargarServicios(Convert.ToInt32(ReservaTXT.Text), ServiciosLBox);
+                }
+                else {
+                    MessageBox.Show("EL servicio no es valido");
+                }
+
+            }  
+        }
+
+        private void lbListaServicios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

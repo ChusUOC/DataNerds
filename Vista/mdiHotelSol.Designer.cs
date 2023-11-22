@@ -31,16 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiHotelSol));
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.mnuInicio = new System.Windows.Forms.ToolStripButton();
             this.mnuClientes = new System.Windows.Forms.ToolStripButton();
             this.mnuReservas = new System.Windows.Forms.ToolStripButton();
             this.mnuHabitaciones = new System.Windows.Forms.ToolStripButton();
             this.mnuServicios = new System.Windows.Forms.ToolStripButton();
             this.mnuFacturas = new System.Windows.Forms.ToolStripButton();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuImportarXML = new System.Windows.Forms.ToolStripButton();
             this.mnuExportarXML = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +47,6 @@
             // 
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(91, 46);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuInicio,
             this.mnuClientes,
             this.mnuReservas,
             this.mnuHabitaciones,
@@ -64,16 +62,6 @@
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             this.toolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip_ItemClicked);
-            // 
-            // mnuInicio
-            // 
-            this.mnuInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuInicio.Image = ((System.Drawing.Image)(resources.GetObject("mnuInicio.Image")));
-            this.mnuInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.mnuInicio.Name = "mnuInicio";
-            this.mnuInicio.Size = new System.Drawing.Size(95, 50);
-            this.mnuInicio.ToolTipText = "Inicio";
-            this.mnuInicio.Click += new System.EventHandler(this.mnuInicio_Click);
             // 
             // mnuClientes
             // 
@@ -127,6 +115,11 @@
             this.mnuFacturas.ToolTipText = "Facturas";
             this.mnuFacturas.Click += new System.EventHandler(this.mnuFacturas_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
+            // 
             // mnuImportarXML
             // 
             this.mnuImportarXML.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -148,11 +141,6 @@
             this.mnuExportarXML.Text = "toolStripButton2";
             this.mnuExportarXML.ToolTipText = "Exportar";
             this.mnuExportarXML.Click += new System.EventHandler(this.mnuExportarXML_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
             // 
             // mdiHotelSol
             // 
@@ -178,7 +166,6 @@
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton mnuClientes;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripButton mnuInicio;
         private System.Windows.Forms.ToolStripButton mnuReservas;
         private System.Windows.Forms.ToolStripButton mnuHabitaciones;
         private System.Windows.Forms.ToolStripButton mnuServicios;

@@ -14,8 +14,17 @@ namespace Producto_2.Modelo
     
     public partial class RegimenPension
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public RegimenPension()
+        {
+            this.Reservas = new HashSet<Reservas>();
+        }
+    
         public int pensionID { get; set; }
         public string descripcion { get; set; }
         public Nullable<double> precio { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        internal virtual ICollection<Reservas> Reservas { get; set; }
     }
 }

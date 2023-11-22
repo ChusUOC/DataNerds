@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.grpReserva = new System.Windows.Forms.GroupBox();
+            this.addServBT = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbListaServicios = new System.Windows.Forms.ListBox();
             this.TemporadaCbox = new System.Windows.Forms.ComboBox();
             this.fechaSDTP = new System.Windows.Forms.DateTimePicker();
             this.fechaEDTP = new System.Windows.Forms.DateTimePicker();
@@ -61,6 +64,9 @@
             // 
             // grpReserva
             // 
+            this.grpReserva.Controls.Add(this.addServBT);
+            this.grpReserva.Controls.Add(this.label2);
+            this.grpReserva.Controls.Add(this.lbListaServicios);
             this.grpReserva.Controls.Add(this.TemporadaCbox);
             this.grpReserva.Controls.Add(this.fechaSDTP);
             this.grpReserva.Controls.Add(this.fechaEDTP);
@@ -94,6 +100,35 @@
             this.grpReserva.TabIndex = 29;
             this.grpReserva.TabStop = false;
             // 
+            // addServBT
+            // 
+            this.addServBT.Location = new System.Drawing.Point(394, 374);
+            this.addServBT.Name = "addServBT";
+            this.addServBT.Size = new System.Drawing.Size(106, 23);
+            this.addServBT.TabIndex = 72;
+            this.addServBT.Text = "Añadir";
+            this.addServBT.UseVisualStyleBackColor = true;
+            this.addServBT.Click += new System.EventHandler(this.addServBT_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(391, 257);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 13);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "Selecciona los servicios";
+            // 
+            // lbListaServicios
+            // 
+            this.lbListaServicios.BackColor = System.Drawing.SystemColors.Info;
+            this.lbListaServicios.FormattingEnabled = true;
+            this.lbListaServicios.Location = new System.Drawing.Point(394, 273);
+            this.lbListaServicios.Name = "lbListaServicios";
+            this.lbListaServicios.Size = new System.Drawing.Size(120, 95);
+            this.lbListaServicios.TabIndex = 70;
+            this.lbListaServicios.SelectedIndexChanged += new System.EventHandler(this.lbListaServicios_SelectedIndexChanged);
+            // 
             // TemporadaCbox
             // 
             this.TemporadaCbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -120,7 +155,7 @@
             // 
             // ModificarReservaBT
             // 
-            this.ModificarReservaBT.Location = new System.Drawing.Point(525, 284);
+            this.ModificarReservaBT.Location = new System.Drawing.Point(525, 304);
             this.ModificarReservaBT.Name = "ModificarReservaBT";
             this.ModificarReservaBT.Size = new System.Drawing.Size(106, 23);
             this.ModificarReservaBT.TabIndex = 66;
@@ -142,7 +177,7 @@
             // 
             // MostrarReservaBT
             // 
-            this.MostrarReservaBT.Location = new System.Drawing.Point(525, 248);
+            this.MostrarReservaBT.Location = new System.Drawing.Point(525, 268);
             this.MostrarReservaBT.Name = "MostrarReservaBT";
             this.MostrarReservaBT.Size = new System.Drawing.Size(106, 23);
             this.MostrarReservaBT.TabIndex = 64;
@@ -152,7 +187,7 @@
             // 
             // AnularReservaBT
             // 
-            this.AnularReservaBT.Location = new System.Drawing.Point(525, 325);
+            this.AnularReservaBT.Location = new System.Drawing.Point(525, 345);
             this.AnularReservaBT.Name = "AnularReservaBT";
             this.AnularReservaBT.Size = new System.Drawing.Size(106, 23);
             this.AnularReservaBT.TabIndex = 62;
@@ -198,7 +233,7 @@
             // 
             // ContratarBT
             // 
-            this.ContratarBT.Location = new System.Drawing.Point(525, 213);
+            this.ContratarBT.Location = new System.Drawing.Point(525, 233);
             this.ContratarBT.Name = "ContratarBT";
             this.ContratarBT.Size = new System.Drawing.Size(106, 23);
             this.ContratarBT.TabIndex = 57;
@@ -386,5 +421,8 @@
         private System.Windows.Forms.DateTimePicker fechaSDTP;
         private System.Windows.Forms.DateTimePicker fechaEDTP;
         private System.Windows.Forms.ComboBox TemporadaCbox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox lbListaServicios;
+        private System.Windows.Forms.Button addServBT;
     }
 }

@@ -310,6 +310,19 @@ namespace Producto_2.Vista
                                 precioServicios = controlador.PrecioServicio(NReserva);
                             }
 
+                            if (controlador.saberSiVIP(reserva.NIF))
+                            {
+                                ServiciosLBox.Items.Add("Se aplican descuentos").ToString();
+                                ServiciosLBox.Items.Add("al Cliente VIP").ToString();
+                                MessageBox.Show("El cliente es VIP. ", "Informe del descuento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                            else
+                            {
+
+                                MessageBox.Show("El cliente es NO VIP. ", "Proponga hacerlo VIP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
                             FacturaTXT.Text = numeroFactura.ToString();
                             ReservaTXT.Text = NReserva.ToString();
                             DNITXT.Text = factura.idCliente.ToString();
@@ -389,6 +402,18 @@ namespace Producto_2.Vista
                         precioServicios = controlador.PrecioServicio(ID);
                     }
 
+                    if (controlador.saberSiVIP(reserva.NIF))
+                    {
+                        ServiciosLBox.Items.Add("Se aplican descuentos").ToString();
+                        ServiciosLBox.Items.Add("al Cliente VIP").ToString();
+                        MessageBox.Show("El cliente es VIP. ", "Informe del descuento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("El cliente es NO VIP. ", "Proponga hacerlo VIP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                     ReservaTXT.Text = ID.ToString();
                     DNITXT.Text = reserva.NIF.ToString();
@@ -400,7 +425,7 @@ namespace Producto_2.Vista
                     TemporadaCBox.SelectedValue = reserva.temporadaID;
                     DateIniTXT.ValueChanged += textBox1_TextChanged;
                     DateFinTXT.ValueChanged += textBox1_TextChanged;
-                    precioHabitacion = ((PVD * (habitacion.tipoID)) * (calculoDias()));
+                    precioHabitacion = (float)((PVD * (habitacion.tipoID)) * (calculoDias()));
                     precioPension = (float)(((pension.precio) * (habitacion.tipoID)) * (calculoDias()));
                     PrecioServiciosTXT.Text = (precioServicios * calculoDias()).ToString();
                     PrecioHabitacionTXT.Text = precioHabitacion.ToString();

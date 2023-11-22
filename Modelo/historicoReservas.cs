@@ -21,5 +21,7 @@ namespace Producto_2.Modelo
         public Nullable<System.DateTime> salida { get; set; }
         public string estado { get; set; }
         public Nullable<int> idIncidencia { get; set; }
+    
+        internal virtual Reservas Reservas { get; set; }
     }
 }

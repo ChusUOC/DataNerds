@@ -4,28 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c2a34ea37fec433ca7ff4527db99b763" Name="Diagram1">
+      <Diagram DiagramId="600d8d0c8ca14d08b5d32d226aa969c6" Name="Diagram1">
         <EntityTypeShape EntityType="HotelSQLModel.Clientes" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Factura" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Habitacion" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.historicoReservas" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Incidencias" Width="1.5" PointX="9.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.RegimenPension" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Reservas" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Servicio" Width="1.5" PointX="8.25" PointY="12.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Temporada" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.TipoHabitacion" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.Usuario" Width="1.5" PointX="9.75" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelSQLModel.HistoricoServicios" Width="1.5" PointX="10.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Factura" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Habitacion" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.historicoReservas" Width="1.5" PointX="7.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.HistoricoServicios" Width="1.5" PointX="10.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Incidencias" Width="1.5" PointX="9.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.RegimenPension" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Reservas" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Servicio" Width="1.5" PointX="8.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Temporada" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.TipoHabitacion" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelSQLModel.Usuario" Width="1.5" PointX="9.75" PointY="10.625" IsExpanded="true" />
         <AssociationConnector Association="HotelSQLModel.FK_Reservas_Clientes" ManuallyRouted="false" />
         <AssociationConnector Association="HotelSQLModel.FK_Factura_Reservas" ManuallyRouted="false" />
         <AssociationConnector Association="HotelSQLModel.FK_Habitacion_TipoHabitacion" ManuallyRouted="false" />
         <AssociationConnector Association="HotelSQLModel.FK_Reservas_Habitacion" ManuallyRouted="false" />
         <AssociationConnector Association="HotelSQLModel.FK_HistoricoReservas_Reservas" ManuallyRouted="false" />
-        <AssociationConnector Association="HotelSQLModel.FK_Regimen_Pension" ManuallyRouted="false" />
         <AssociationConnector Association="HotelSQLModel.FK_HistoricoServicios_Reservas" ManuallyRouted="false" />
-        <AssociationConnector Association="HotelSQLModel.FK_Reservas_Temporada" ManuallyRouted="false" />
         <AssociationConnector Association="HotelSQLModel.FK_HistoricoServicios_Servicio" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelSQLModel.FK_Regimen_Pension" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelSQLModel.FK_Reservas_Temporada" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

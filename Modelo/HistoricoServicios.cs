@@ -17,5 +17,8 @@ namespace Producto_2.Modelo
         public int idServicio { get; set; }
         public int reservaID { get; set; }
         public int historicoID { get; set; }
+    
+        internal virtual Reservas Reservas { get; set; }
+        internal virtual Servicio Servicio { get; set; }
     }
 }

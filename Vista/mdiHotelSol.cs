@@ -58,7 +58,7 @@ namespace Producto_2.Vista
        
         public void HabilitarBoton()
         {
-            mnuInicio.Enabled = true;
+            //mnuInicio.Enabled = true;
             mnuClientes.Enabled = true;
             mnuReservas.Enabled = true;
             mnuHabitaciones.Enabled = true;
@@ -70,7 +70,7 @@ namespace Producto_2.Vista
 
         public void DeshabilitarBoton()
         {
-            mnuInicio.Enabled = false;
+            //mnuInicio.Enabled = false;
             mnuClientes.Enabled = false;
             mnuReservas.Enabled = false;
             mnuHabitaciones.Enabled = false;
@@ -86,11 +86,7 @@ namespace Producto_2.Vista
             abrirFomulario(typeof(InterfazFacturas));
         }
 
-        private void mnuInicio_Click(object sender, EventArgs e)
-        {
-            cerrarForms();
-            abrirFomulario(typeof(FrmMenuInicio));
-        }
+       
 
         private void mnuClientes_Click(object sender, EventArgs e)
         {

@@ -125,6 +125,45 @@ namespace Producto_2.Controlador
                 }
             }
         }
+
+        public void addServicio(int idServicio, int idReserva)
+        {
+
+            using (dbHotelSQLEntities db = new dbHotelSQLEntities())
+            {
+                
+                try
+                {
+                    HistoricoServicios hist = new HistoricoServicios();
+                    hist.reservaID = idReserva;
+                    hist.idServicio = idServicio;
+                    db.HistoricoServicios.Add(hist);
+                    db.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var validationErrors in ex.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            sb.AppendLine($"Property: {validationError.PropertyName}, Error: {validationError.ErrorMessage}");
+                        }
+                    }
+                    throw new Exception(sb.ToString());
+                }
+                catch (DbUpdateException ex)
+                {
+                    throw new Exception("Error al agregar historicoServicio: " + ex.InnerException?.Message ?? ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al agregar historicoServicio: " + ex.Message);
+                }
+
+            }
+
+        }
     }
 
 }

@@ -153,6 +153,11 @@ namespace Producto_2.Vista
 
            
         }
+
+        private void CancelarBt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

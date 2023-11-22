@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\NUnit.3.14.0\build\NUnit.props" Condition="Exists('packages\NUnit.3.14.0\build\NUnit.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,11 +8,13 @@
     <ProjectGuid>{51D42F3D-F6B2-4880-8072-6ADFC5F00B1D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Producto_2</RootNamespace>
-    <AssemblyName>Producto_2</AssemblyName>
+    <AssemblyName>Hotel_Sol</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Hotel.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -40,6 +46,9 @@
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="nunit.framework, Version=3.14.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.3.14.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -127,12 +136,6 @@
     <Compile Include="Vista\Form7Reservas.Designer.cs">
       <DependentUpon>Form7Reservas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormMenuInicioAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormMenuInicioAdmin.Designer.cs">
-      <DependentUpon>FormMenuInicioAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\FormServicios11.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,23 +160,11 @@
     <Compile Include="Vista\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FrmDatosHabitaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FrmDatosHabitaciones.Designer.cs">
-      <DependentUpon>FrmDatosHabitaciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\FrmHabitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\FrmHabitaciones.Designer.cs">
       <DependentUpon>FrmHabitaciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FrmMenuInicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FrmMenuInicio.Designer.cs">
-      <DependentUpon>FrmMenuInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\InterfazFacturas.cs">
       <SubType>Form</SubType>
@@ -206,9 +197,6 @@
     <EmbeddedResource Include="Vista\Form7Reservas.resx">
       <DependentUpon>Form7Reservas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormMenuInicioAdmin.resx">
-      <DependentUpon>FormMenuInicioAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormServicios11.resx">
       <DependentUpon>FormServicios11.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,14 +209,8 @@
     <EmbeddedResource Include="Vista\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FrmDatosHabitaciones.resx">
-      <DependentUpon>FrmDatosHabitaciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmHabitaciones.resx">
       <DependentUpon>FrmHabitaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FrmMenuInicio.resx">
-      <DependentUpon>FrmMenuInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\InterfazFacturas.resx">
       <DependentUpon>InterfazFacturas.cs</DependentUpon>
@@ -265,6 +247,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Hotel.ico" />
     <Content Include="Modelo\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -277,4 +260,10 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\NUnit.3.14.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit.3.14.0\build\NUnit.props'))" />
+  </Target>
 </Project>

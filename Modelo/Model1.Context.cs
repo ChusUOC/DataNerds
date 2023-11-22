@@ -29,6 +29,7 @@ namespace Producto_2.Modelo
         public virtual DbSet<Factura> Factura { get; set; }
         public virtual DbSet<Habitacion> Habitacion { get; set; }
         public virtual DbSet<historicoReservas> historicoReservas { get; set; }
+        public virtual DbSet<HistoricoServicios> HistoricoServicios { get; set; }
         public virtual DbSet<Incidencias> Incidencias { get; set; }
         public virtual DbSet<RegimenPension> RegimenPension { get; set; }
         public virtual DbSet<Reservas> Reservas { get; set; }
@@ -36,6 +37,5 @@ namespace Producto_2.Modelo
         public virtual DbSet<Temporada> Temporada { get; set; }
         public virtual DbSet<TipoHabitacion> TipoHabitacion { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
-        public virtual DbSet<HistoricoServicios> HistoricoServicios { get; set; }
     }
 }

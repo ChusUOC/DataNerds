@@ -14,6 +14,13 @@ namespace Producto_2.Modelo
     
     public partial class Reservas
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Reservas()
+        {
+            this.Factura = new HashSet<Factura>();
+            this.HistoricoServicios = new HashSet<HistoricoServicios>();
+        }
+    
         public int reservaID { get; set; }
         public Nullable<byte> firmado { get; set; }
         public Nullable<System.DateTime> fechaEntrada { get; set; }
@@ -22,5 +29,15 @@ namespace Producto_2.Modelo
         public int numeroHabitacion { get; set; }
         public int temporadaID { get; set; }
         public int pensionID { get; set; }
+    
+        internal virtual Clientes Clientes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        internal virtual ICollection<Factura> Factura { get; set; }
+        internal virtual Habitacion Habitacion { get; set; }
+        internal virtual historicoReservas historicoReservas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        internal virtual ICollection<HistoricoServicios> HistoricoServicios { get; set; }
+        internal virtual RegimenPension RegimenPension { get; set; }
+        internal virtual Temporada Temporada { get; set; }
     }
 }

@@ -36,9 +36,9 @@ namespace Producto_2.Vista
 
                 List<Reservas> historicoReservas = reservas.obtenerHistoricoReservas();
 
-                List<Reservas> reservasFiltradasIN = historicoReservas.Where(r => r.firmado == 1 && r.fechaEntrada < ahora).ToList();
-                List<Reservas> reservasFiltradasOUT = historicoReservas.Where(r => r.firmado == 1 && r.fechaSalida >= ahora).ToList();
-                List<Reservas> reservasFiltradasFalse = historicoReservas.Where(r => r.firmado == 0).ToList();
+                List<Reservas> reservasFiltradasIN = historicoReservas.Where(r => r.firmado == 0).ToList();
+                List<Reservas> reservasFiltradasOUT = historicoReservas.Where(r => r.firmado == 1).ToList();
+                List<Reservas> reservasFiltradasFalse = historicoReservas.ToList();
 
 
                 checkoutHDG.DataSource = reservasFiltradasOUT;
@@ -57,7 +57,7 @@ namespace Producto_2.Vista
 
 
                 checkoutHDG.Columns["numeroHabitacion"].HeaderText = "Nº Habitacion";
-                checkoutHDG.Columns["numeroHabitacion"].Width = 80;
+                checkoutHDG.Columns["numeroHabitacion"].Width = 100;
 
                 checkoutHDG.Columns["reservaID"].HeaderText = "Reserva";
 
@@ -74,7 +74,7 @@ namespace Producto_2.Vista
                 chinDG.Columns["firmado"].Visible = false;
 
                 chinDG.Columns["numeroHabitacion"].HeaderText = "Nº Habitacion";
-                chinDG.Columns["numeroHabitacion"].Width = 80;
+                chinDG.Columns["numeroHabitacion"].Width = 100;
 
                 chinDG.Columns["reservaID"].HeaderText = "Reserva";
 
@@ -130,10 +130,10 @@ namespace Producto_2.Vista
         private void firmaBTN_Click(object sender, EventArgs e)
         {
             
-            if (pendDG.SelectedRows.Count > 0) { 
+            if (chinDG.SelectedRows.Count > 0) { 
             
                 
-                DataGridViewRow row = pendDG.SelectedRows[0];
+                DataGridViewRow row = chinDG.SelectedRows[0];
 
                 if (row != null)
 
@@ -158,7 +158,7 @@ namespace Producto_2.Vista
                         }
 
                       
-                        pendDG.Refresh();
+                        chinDG.Refresh();
                     }
                     catch (Exception ex)
                     {
