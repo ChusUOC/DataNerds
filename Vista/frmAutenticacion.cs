@@ -48,6 +48,7 @@ namespace Producto_2.Vista
             {
                 MessageBox.Show("Te has logueado con exito");
                 mdiHotelSol.HabilitarBoton();
+                mdiHotelSol.abrirFomulario(typeof(Form7Reservas));
                 this.Close();
                 
                 
@@ -96,6 +97,8 @@ namespace Producto_2.Vista
             txtPass.Text = string.Empty;
             txtNuevoUsu.Text = string.Empty;
             txtUsuario.Text = string.Empty;
+            grpUsuariosInicio.Visible = true;
+            grpAltaUsuario.Visible = false;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

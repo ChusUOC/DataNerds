@@ -377,7 +377,15 @@ namespace Producto_2.Vista
 
         private void CancelarBt_Click(object sender, EventArgs e)
         {
+            mdiHotelSol mdiParent = this.MdiChildren as mdiHotelSol;
+            if (mdiParent != null)
+            {
+                Form7Reservas form7Reservas = new Form7Reservas();
+                mdiParent.abrirFomulario(form7Reservas);
+            }
             limpiarForm();
+            this.Close();   
+           
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

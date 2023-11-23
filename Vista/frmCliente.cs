@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using Producto_2.Controlador;
 using Producto_2.Modelo;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -25,6 +26,7 @@ namespace Producto_2.Vista
         public frmCliente()
         {
             InitializeComponent();
+            
             this.Move += new EventHandler(frm_Move);
 
         }
@@ -355,6 +357,11 @@ namespace Producto_2.Vista
         }
 
         private void cmbPrefijos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarCli_TextChanged(object sender, EventArgs e)
         {
 
         }

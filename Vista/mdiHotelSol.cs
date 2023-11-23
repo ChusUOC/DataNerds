@@ -28,7 +28,7 @@ namespace Producto_2.Vista
         }
 
         //Evita abrir mas de una instacia de un formulario
-        private void abrirFomulario(Type tipoForm)
+        public void abrirFomulario(Type tipoForm)
         {
             var formulariosabiertos = this.MdiChildren.FirstOrDefault(f =>  f.GetType() == tipoForm);
 

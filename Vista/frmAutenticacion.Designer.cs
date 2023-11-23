@@ -204,8 +204,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(820, 583);
-            this.Controls.Add(this.grpUsuariosInicio);
             this.Controls.Add(this.grpAltaUsuario);
+            this.Controls.Add(this.grpUsuariosInicio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

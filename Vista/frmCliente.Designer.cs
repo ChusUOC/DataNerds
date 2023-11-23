@@ -455,6 +455,7 @@
             this.txtBuscarCli.Size = new System.Drawing.Size(237, 20);
             this.txtBuscarCli.TabIndex = 32;
             this.txtBuscarCli.Text = "Cliente a buscar...";
+            this.txtBuscarCli.TextChanged += new System.EventHandler(this.txtBuscarCli_TextChanged);
             this.txtBuscarCli.Enter += new System.EventHandler(this.txtBuscarCli_Enter);
             // 
             // btnExportar
@@ -521,8 +522,8 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(820, 583);
             this.ControlBox = false;
-            this.Controls.Add(this.grpClientes);
             this.Controls.Add(this.grpClientesDatos);
+            this.Controls.Add(this.grpClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "frmCliente";

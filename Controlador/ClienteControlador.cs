@@ -11,10 +11,14 @@ using System.Xml;
 using Microsoft.VisualBasic.FileIO;
 using Producto_2.Vista;
 
+
 namespace Producto_2.Controlador
 {
     internal class ClienteControlador
     {
+
+      
+        
         public List<Clientes> ObtenerClientes()
         {
             using (dbHotelSQLEntities db = new dbHotelSQLEntities())

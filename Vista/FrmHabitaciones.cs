@@ -51,6 +51,9 @@ namespace Producto_2.Vista
             comboBoxTipoHab.ValueMember = "TipoID";
 
             ConfigurarColumnaCheckBox("fueraServicio");
+            txtBuscarHabitacion.Text = "Habitación a buscar...";
+            if (txtBuscarHabitacion.Text == "Habitación a buscar...") { txtBuscarHabitacion.Font = new Font(txtBuscarHabitacion.Font, FontStyle.Italic); }
+            else { txtBuscarHabitacion.Font = new Font(txtBuscarHabitacion.Font, FontStyle.Regular); }
 
         }
         private void ConfigurarColumnaCheckBox(string nombreColumna)
@@ -83,11 +86,17 @@ namespace Producto_2.Vista
         {
         }
 
+        private void txtBuscarHabitacion_Click(object sender, EventArgs e)
+        {
+            txtBuscarHabitacion.Text = string.Empty;
+            if (txtBuscarHabitacion.Text == "Habitación a buscar...") { txtBuscarHabitacion.Font = new Font(txtBuscarHabitacion.Font, FontStyle.Italic); }
+            else { txtBuscarHabitacion.Font = new Font(txtBuscarHabitacion.Font, FontStyle.Regular); }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dbGridHabitacion.DataSource = controlador.BuscarHabitacionPorNumero(txtBuscarHabitacion.Text);
-            txtBuscarHabitacion.Text = "Habitación a buscar...";
+         
         }
 
         private void dbGridHabitacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
